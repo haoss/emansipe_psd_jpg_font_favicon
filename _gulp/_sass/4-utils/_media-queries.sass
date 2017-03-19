@@ -14,35 +14,71 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
-  /**/
+  .advantages
+    &__block
+      display: block
+      text-align: center
+      &>div
+        display: block
+        &+div
+          padding: 15px 0 0 0
+      p
+        margin: 0 -5px 0 -5px
+    &__icon
+      margin-left: auto
+      margin-right: auto
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
+  .advantages
+    &__block
+      max-width: 200px
+      margin: 0 auto
+    .row
+      &>div
+        &:first-child, &:nth-child(2)
+          .advantages__block
+            margin-bottom: 20px
 
-  /*Disable Animation on Mobile Devices*/
-  .animated
-    /*CSS transitions*/
-		-o-transition-property: none !important
-		-moz-transition-property: none !important
-		-ms-transition-property: none !important
-		-webkit-transition-property: none !important
-		transition-property: none !important
-		/*CSS transforms*/
-		-o-transform: none !important
-		-moz-transform: none !important
-		-ms-transform: none !important
-		-webkit-transform: none !important
-		transform: none !important
-		/*CSS animations*/
-		-webkit-animation: none !important
-		-moz-animation: none !important
-		-o-animation: none !important
-		-ms-animation: none !important
-		animation: none !important
+  .section
+    padding: 30px 0
+
+  .footer
+    padding-top: 40px
+    padding-bottom: 40px
+    font-size: rem(15)
+    &__title
+      font-size: rem(21)
+      font-weight: 600
+    ul
+      margin-bottom: 20px
+      li
+        a
+          &::after
+            font-size: rem(14)
+  .copyright
+    text-align: center
+    font-size: rem(14)
+    max-width: 320px
+    margin: 0 auto 0
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
-  /**/
+  .col-xxs-12
+    width: 100% !important
+    float: none !important
+
+  .advantages
+    .row
+      &>div
+        &:not(:last-child)
+          .advantages__block
+            margin-bottom: 20px
+  .footer
+    padding-bottom: 35px
+    .col-xxs-12
+      max-width: 244px
+      margin: 0 auto
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

@@ -1,2 +1,72 @@
+#feedback.popup.mfp-hide
+  .popup__title обратный звонок
+  form(action="#!")
+    .form-group
+      label.hidden Ваше имя
+      input(type="text" placeholder="Ваше имя").form-control
+    .form-group
+      label.hidden Ваш телефон
+      input(type="text" placeholder="Ваш телефон").form-control
+    button(type="submit").btn.btn--default.btn--block перезвоните мне 
+    
+#enter.popup.mfp-hide
+  .popup__title войти на сайт
+  form(action="#!")
+    .form-group
+      label.hidden Ваш логин
+      input(type="text" placeholder="Ваш логин").form-control
+    .form-group
+      label.hidden Ваш пароль
+      input(type="text" placeholder="Ваш пароль").form-control
+    button(type="submit").btn.btn--default.btn--block войти на сайт
+    .clear10
+    .row.row--popup
+      .col-xs-6.text-center
+        a(href="#forgot-password").open-popup-link
+          small Забыли пароль?
+      .col-xs-6.text-center
+        a(href="#").open-popup-register 
+          small Зарегистрироваться
+          
+#forgot-password.popup.mfp-hide
+  .popup__title забыли пароль?
+  form(action="#!")
+    .form-group
+      label.hidden Ваш логин
+      input(type="text" placeholder="Ваш логин").form-control
+    button(type="submit").btn.btn--default.btn--block востановить доступ на сайт
+    .clear10
+    .text-center
+      a(href="#").open-popup-register 
+        small Зарегистрироваться
+    
+#register.popup.mfp-hide
+  .popup__title регистрация
+  form(action="#!")
+    .form-group
+      label.hidden Название организации
+      input(type="text" placeholder="Название организации").form-control
+    .form-group
+      label.hidden ФИО
+      input(type="text" placeholder="ФИО").form-control
+    .form-group
+      label.hidden Телефон
+      input(type="text" placeholder="Телефон").form-control
+    .form-group
+      label.hidden Ваш email
+      input(type="email" placeholder="Ваш email").form-control
+    .form-group
+      label.hidden Пароль
+      input(type="password" placeholder="Пароль").form-control
+    .form-group
+      label.hidden Повторите пароль
+      input(type="password" placeholder="Повторите пароль").form-control
+      
+    button(type="submit").btn.btn--default.btn--block войти на сайт
+    .clear10
+    .text-center
+      a(href="#").open-popup-enter 
+        small Вернуться на страницу входа
+
 .loader
   .loader__block

@@ -1,8 +1,78 @@
 /* header */
 .header
-  background-color: $color-gray
-  height: 100px
 
-  ul
-    li
-      display: inline
+  &__top
+    background: #f0f6f9
+    position: relative
+    color: #858585
+
+  &__contacts
+    float: right
+    font-size: rem(13)
+    font-family: $font-exo-condensed
+    font-weight: 700
+    +clearfix
+    &>div
+      float: left
+      height: 30px
+      line-height: 28px
+      &+div
+        padding-left: 35px
+
+  &__phones
+    +clearfix
+    &>div
+      float: left
+      &+div
+        padding-left: 15px
+
+  &__bottom
+    padding-top: 30px
+    padding-bottom: 15px
+
+  &__social, &__links
+    text-align: center
+    margin-top: 50px
+    a
+      float: left
+      height: 30px
+      width: 30px
+      border: 1px solid $color-s-lightbrown
+      background-color: $color-white
+      position: relative
+      &+a
+        margin-left: 10px
+      &:hover
+        background-color: $color-s-lightbrown
+    .icon--cart
+      &+span
+        position: absolute
+        width: 16px
+        height: 16px
+        border-radius: 50%
+        color: $color-white
+        font-size: rem(10)
+        font-family: $font-exo-condensed
+        background-color: $color-s-pink
+        right: -5px
+        top: -5px
+        text-align: center
+        line-height: 16px
+    div
+      display: inline-block
+      +clearfix
+
+// Logo
+.logo
+  position: relative
+  max-width: 325px
+  margin: 0 auto
+  a
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    z-index: 10
+  img
+    max-width: 100%

@@ -28,41 +28,46 @@ body
 
 body
   background: $color-white
-  font-size: rem(16)
-  font-family: $primary-font
+  font-size: rem(13)
+  font-family: $font-exo
   color: $primary-color
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
 
 //  Typography
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
+  font-family: $font-exo
   color: $primary-color
-  font-weight: bold
+  font-weight: 400
   text-decoration: none
   margin: 0 0 25px 0
 
 .h1, h1
-  font-size: rem(21)
+  font-family: $font-exo-condensed
+  font-size: rem(35)
   line-height: 1.05
   letter-spacing: -1px
+  text-transform: uppercase
 
 .h2, h2
-  font-size: rem(18)
+  font-size: rem(25)
   line-height: 1.14
+  text-transform: uppercase
+  color: $color-s-brown
 
 .h3, h3
-  font-size: rem(16)
+  font-size: rem(22)
   line-height: 1.38
 
 .h4, h4
-  font-size: rem(14)
+  font-size: rem(20)
   line-height: 1.38
 
 .h5, h5
-  font-size: rem(13)
+  font-size: rem(18)
 
 .h6, h6
-  font-size: rem(12)
+  font-size: rem(16)
 
 .small, small
   font-size: rem(12)
@@ -70,6 +75,7 @@ body
 
 p
   margin: 0 0 20px 0
+  line-height: 1.4
 
 em, i, .em, .i
   font-style: italic
@@ -124,22 +130,22 @@ a.link
   top: 0
   position: fixed
   z-index: 10000
-  background-color: #241e20
+  background-color: $color-white
 
   &__block
-    background: #927a64
+    background: $color-s-brown
     animation: load1 1s infinite ease-in-out
     width: 1em
     height: 4em
     position: absolute
     top: 50%
     left: 50%
-    color: #927a64
+    color: $color-s-brown
     text-indent: -9999em
     font-size: 11px
     animation-delay: -0.16s
     &:before, &:after
-      background: #927a64
+      background: $color-s-brown
       animation: load1 1s infinite ease-in-out
       width: 1em
       height: 4em
@@ -246,3 +252,103 @@ ol li
       margin-left: 0 !important
     &-right
       margin-right: 0 !important
+
+/**/
+.icon
+  display: inline-block
+  &--advantages-1
+    @include sprite($icon-advantages-1)
+  &--advantages-2
+    @include sprite($icon-advantages-2)
+  &--advantages-3
+    @include sprite($icon-advantages-3)
+  &--advantages-4
+    @include sprite($icon-advantages-4)
+  &--social-instagram
+    @include sprite($icon-social-instagram)
+  &--social-facebook
+    @include sprite($icon-social-facebook)
+  &--social-vkontakte
+    @include sprite($icon-social-vkontakte)
+  &--search
+    @include sprite($icon-search)
+  &--user
+    @include sprite($icon-user)
+  &--cart
+    @include sprite($icon-cart)
+
+a
+  &:hover
+    .icon
+      &--social-instagram
+        @include sprite($icon-social-instagram-hover)
+      &--social-facebook
+        @include sprite($icon-social-facebook-hover)
+      &--social-vkontakte
+        @include sprite($icon-social-vkontakte-hover)
+      &--search
+        @include sprite($icon-search-hover)
+      &--user
+        @include sprite($icon-user-hover)
+      &--cart
+        @include sprite($icon-cart-hover)
+
+/**/
+.mfp-bg
+  background-color: rgba($color-white, 0.8)
+.popup
+  position: relative
+  background: $color-white
+  padding: 25px 15px 30px 15px
+  width: auto
+  max-width: 300px
+  margin: 20px auto
+  border: 4px solid $color-s-lightbrown
+  &__title
+    color: $color-s-lightbrown
+    font-size: rem(30)
+    text-transform: uppercase
+    text-align: center
+    font-family: $font-exo-condensed
+    font-weight: 600
+    margin-bottom: 10px
+
+button.mfp-close, button.mfp-arrow
+  font-size: 0
+  // background-color: pink
+  width: 34px
+  height: 34px
+  top: -38px
+  right: -14px
+  opacity: 1
+  &:hover
+    &::after
+      color: $primary-color
+  &::after
+    font-family: $font-ionicons
+    content: "\f2d7"
+    font-size: rem(20)
+    color: #a6a6a6
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%,-50%)
+    transition: color 0.35s
+  &:active
+    top: -38px
+
+.mfp-bg--imgSmall
+  background-image: url('../img/mfp-bg--imgSmall.png')
+  background-position: center center
+  background-repeat: no-repeat
+
+.mfp-bg--imgSmall-double
+  background-image: url('../img/mfp-bg--imgSmall-double.png')
+  background-position: center center
+  background-repeat: no-repeat
+
+.row
+  &--popup
+    margin: 0 !important
+    &>div
+      padding: 0 !important

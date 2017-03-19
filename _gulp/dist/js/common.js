@@ -10,24 +10,6 @@ $(document).ready(function(){
     });
   };
 
-  // E-mail Ajax Send
-  // Documentation & Example: https://github.com/agragregra/uniMail
-  $("form").submit(function() { //Change
-    var th = $(this);
-    $.ajax({
-      type: "POST",
-      url: "mail.php", //Change
-      data: th.serialize()
-    }).done(function() {
-      alert("Thank you!");
-      setTimeout(function() {
-        // Done Functions
-        th.trigger("reset");
-      }, 1000);
-    });
-    return false;
-  });
-
   // Magnific popup gallery
   $('.gallery').each(function() {
     $(this).magnificPopup({
@@ -73,6 +55,44 @@ $(document).ready(function(){
     preloader: false,
     fixedContentPos: false
   });
+
+  $('.open-popup-link').magnificPopup({
+    type: 'inline',
+    midClick: true,
+    mainClass: 'mfp-bg--imgSmall'
+  });
+
+  $('.open-popup-register').on('click', function(e){
+    e.preventDefault();
+    $.magnificPopup.close();
+
+    setTimeout(function(){
+      $.magnificPopup.open({
+        items: {
+          src: '#register'
+        },
+        type: 'inline',
+        midClick: true,
+        mainClass: 'mfp-bg--imgSmall-double'
+      }, 0);
+    }, 0)
+  });
+
+  $('.open-popup-enter').on('click', function(e){
+    e.preventDefault();
+    $.magnificPopup.close();
+
+    setTimeout(function(){
+      $.magnificPopup.open({
+        items: {
+          src: '#enter'
+        },
+        type: 'inline',
+        midClick: true,
+        mainClass: 'mfp-bg--imgSmall'
+      }, 0);
+    }, 0)
+  })
 
   // Chrome Smooth Scroll
   try {

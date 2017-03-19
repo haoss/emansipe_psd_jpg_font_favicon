@@ -1,4 +1,59 @@
 /* footer */
 .footer
-  background-color: $color-gray
-  height: 100px
+  background: $color-lightninggray
+  border-top: 14px solid $color-s-gray
+  padding-top: 50px
+  padding-bottom: 45px
+  color: #777777
+  font-size: rem(12)
+  a
+    color: #777777
+    text-decoration: none
+    &:hover
+      text-decoration: underline
+  &__title
+    color: $color-s-brown
+    text-transform: uppercase
+    font-size: rem(16)
+    font-weight: 600
+    font-family: $font-exo-condensed
+    margin-bottom: 15px
+  &__logo
+    padding-left: 5px
+    margin-bottom: 10px
+    img
+      width: 100%
+      height: auto
+      max-width: 204px
+  &__contacts
+    display: table
+    &__row
+      display: table-row-group
+      &>div
+        display: table-cell
+        vertical-align: top
+        padding-bottom: 0px
+        &+div
+          padding-left: 15px
+      i
+        font-size: rem(14)
+        color: #a0a0a0
+  ul
+    margin: 0
+    padding: 0
+    li
+      margin: 0 0 3px 0
+      list-style: none
+      a
+        position: relative
+        padding-left: 16px
+        &::after
+          content: "\f10a"
+          font-family: $font-ionicons
+          position: absolute
+          left: 0
+          top: 0
+          font-size: rem(12)
+
+.copyright
+  font-size: rem(12)

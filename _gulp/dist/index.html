@@ -2,55 +2,250 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Главная - siteName</title>
+        <title>Главная - Emansipe</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <!-- Load CSS & WebFonts Main Function-->
-        <script>!function(e){"use strict";function t(e,t,n){e.addEventListener?e.addEventListener(t,n,!1):e.attachEvent&&e.attachEvent("on"+t,n)}function n(t,n){return e.localStorage&&localStorage[t+"_content"]&&localStorage[t+"_file"]===n}function a(t,a){if(e.localStorage&&e.XMLHttpRequest)n(t,a)?o(localStorage[t+"_content"]):l(t,a);else{var s=r.createElement("link");s.href=a,s.id=t,s.rel="stylesheet",s.type="text/css",r.getElementsByTagName("head")[0].appendChild(s),r.cookie=t}}function l(e,t){var n=new XMLHttpRequest;n.open("GET",t,!0),n.onreadystatechange=function(){4===n.readyState&&200===n.status&&(o(n.responseText),localStorage[e+"_content"]=n.responseText,localStorage[e+"_file"]=t)},n.send()}function o(e){var t=r.createElement("style");t.setAttribute("type","text/css"),r.getElementsByTagName("head")[0].appendChild(t),t.styleSheet?t.styleSheet.cssText=e:t.innerHTML=e}var r=e.document;e.loadCSS=function(e,t,n){var a,l=r.createElement("link");if(t)a=t;else{var o;o=r.querySelectorAll?r.querySelectorAll("style,link[rel=stylesheet],script"):(r.body||r.getElementsByTagName("head")[0]).childNodes,a=o[o.length-1]}var s=r.styleSheets;l.rel="stylesheet",l.href=e,l.media="only x",a.parentNode.insertBefore(l,t?a:a.nextSibling);var c=function(e){for(var t=l.href,n=s.length;n--;)if(s[n].href===t)return e();setTimeout(function(){c(e)})};return l.onloadcssdefined=c,c(function(){l.media=n||"all"}),l},e.loadLocalStorageCSS=function(l,o){n(l,o)||r.cookie.indexOf(l)>-1?a(l,o):t(e,"load",function(){a(l,o)})}}(this);</script>
-        <!-- Load CSS Start-->
-        <script>loadCSS( "./js/libs/magnific-popup/magnific-popup.css", false, "all" );</script>
-        <script>loadCSS( "./css/main.css?ver=1.0.0", false, "all" );</script>
-        <!-- Load CSS End-->
-        <!-- Load CSS Compiled without JS-->
-        <noscript>
-            <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
-            <link rel="stylesheet" href="./css/main.css">
-        </noscript>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
         <!-- Preloader-->
+        <div id="feedback" class="popup mfp-hide">
+            <div class="popup__title">обратный звонок</div>
+            <form action="#!">
+                <div class="form-group">
+                    <label class="hidden">Ваше имя</label>
+                    <input type="text" placeholder="Ваше имя" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="hidden">Ваш телефон</label>
+                    <input type="text" placeholder="Ваш телефон" class="form-control">
+                </div>
+                <button type="submit" class="btn btn--default btn--block">перезвоните мне </button>
+            </form>
+        </div>
+        <div id="enter" class="popup mfp-hide">
+            <div class="popup__title">войти на сайт</div>
+            <form action="#!">
+                <div class="form-group">
+                    <label class="hidden">Ваш логин</label>
+                    <input type="text" placeholder="Ваш логин" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="hidden">Ваш пароль</label>
+                    <input type="text" placeholder="Ваш пароль" class="form-control">
+                </div>
+                <button type="submit" class="btn btn--default btn--block">войти на сайт</button>
+                <div class="clear10"></div>
+                <div class="row row--popup">
+                    <div class="col-xs-6 text-center"><a href="#forgot-password" class="open-popup-link"><small>Забыли пароль?</small></a></div>
+                    <div class="col-xs-6 text-center"><a href="#" class="open-popup-register"> <small>Зарегистрироваться</small></a></div>
+                </div>
+            </form>
+        </div>
+        <div id="forgot-password" class="popup mfp-hide">
+            <div class="popup__title">забыли пароль?</div>
+            <form action="#!">
+                <div class="form-group">
+                    <label class="hidden">Ваш логин</label>
+                    <input type="text" placeholder="Ваш логин" class="form-control">
+                </div>
+                <button type="submit" class="btn btn--default btn--block">востановить доступ на сайт</button>
+                <div class="clear10"></div>
+                <div class="text-center"><a href="#" class="open-popup-register"> <small>Зарегистрироваться</small></a></div>
+            </form>
+        </div>
+        <div id="register" class="popup mfp-hide">
+            <div class="popup__title">регистрация</div>
+            <form action="#!">
+                <div class="form-group">
+                    <label class="hidden">Название организации</label>
+                    <input type="text" placeholder="Название организации" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="hidden">ФИО</label>
+                    <input type="text" placeholder="ФИО" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="hidden">Телефон</label>
+                    <input type="text" placeholder="Телефон" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="hidden">Ваш email</label>
+                    <input type="email" placeholder="Ваш email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="hidden">Пароль</label>
+                    <input type="password" placeholder="Пароль" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="hidden">Повторите пароль</label>
+                    <input type="password" placeholder="Повторите пароль" class="form-control">
+                </div>
+                <button type="submit" class="btn btn--default btn--block">войти на сайт</button>
+                <div class="clear10"></div>
+                <div class="text-center"><a href="#" class="open-popup-enter"> <small>Вернуться на страницу входа</small></a></div>
+            </form>
+        </div>
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
         <!-- Header-->
         <header class="header">
-            <div class="container">
-                <nav role="navigation" class="navigation">
-                    <ul>
-                        <li class="active"><a href="#" title="Главная">Главная</a></li>
-                        <li><a href="#" title="О нас">О нас</a></li>
-                        <li><a href="#" title="Продукция">Продукция</a></li>
-                        <li><a href="#" title="Сотрудничество">Сотрудничество</a></li>
-                        <li><a href="#" title="Наши магазины">Наши магазины</a></li>
-                        <li><a href="#" title="Контакты">Контакты</a></li>
-                    </ul>
-                </nav>
+            <div class="header__top">
+                <div class="container"><a href="#feedback" class="btn btn--default btn--feedback open-popup-link">Обратная связь</a>
+                    <div class="header__contacts">
+                        <div>Пн—Вс 10:00—19:00</div>
+                        <div>
+                            <div class="header__phones">
+                                <div>8 (966) 026-27-27</div>
+                                <div>8 (909) 952-27-77 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-lg-push-4">
+                            <div class="logo"><a href="#!"></a><img src="./img/logo.png" alt=""></div>
+                        </div>
+                        <div class="col-lg-3 col-lg-pull-4">
+                            <div class="header__social">
+                                <div><a href="#!"><i class="icon icon--social-instagram"></i></a><a href="#!"><i class="icon icon--social-facebook"></i></a><a href="#!"><i class="icon icon--social-vkontakte"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-lg-push-2">
+                            <div class="header__links">
+                                <div><a href="#!"><i class="icon icon--search"></i></a><a href="#enter" class="open-popup-link"><i class="icon icon--user"></i></a><a href="#!"><i class="icon icon--cart"></i><span>99</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
+        <!-- Content-->
         <div class="content">
             <div class="container">
                 <h1>Главная </h1>
-                <div class="row">
-                    <div class="col-md-4">4 collumns</div>
-                    <div class="col-md-8">8 collumns</div>
-                </div>
+                <!-- Advantages-->
+                <section class="section advantages">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-6 col-xxs-12">
+                            <div class="advantages__block">
+                                <div>
+                                    <div class="advantages__icon"><i class="icon icon--advantages-1"></i></div>
+                                </div>
+                                <div>
+                                    <p>Работа напрямую с производителем и главным офисом</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 col-xxs-12">
+                            <div class="advantages__block">
+                                <div>
+                                    <div class="advantages__icon"><i class="icon icon--advantages-2"></i></div>
+                                </div>
+                                <div>
+                                    <p>мы используем только  качественные материалы</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="visible-xs">
+                            <div class="clear"></div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 col-xxs-12">
+                            <div class="advantages__block">
+                                <div>
+                                    <div class="advantages__icon"><i class="icon icon--advantages-3"></i></div>
+                                </div>
+                                <div>
+                                    <p>постоянные Сезонные акции и скидки</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6 col-xxs-12">
+                            <div class="advantages__block">
+                                <div>
+                                    <div class="advantages__icon"><i class="icon icon--advantages-4"></i></div>
+                                </div>
+                                <div>
+                                    <p>Регулярное обновление ассортимента</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- About-->
+                <section class="section about">
+                    <div class="about__title">О компании</div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Компания EMANSIPE (Москва) производит и продаёт оптом элегантные платья для повседневных и праздничных выходов. Качественная и недорогая женская одежда соответствует тенденциям мировой моды. Продукция фабрики EMANSIPE помогает выглядеть обворожительно, акцентируя внимание на достоинствах фигуры. С помощью наших изделий легко создавать мягкие, тёплые, изысканные и женственные образы. Женская одежда российского производства стоит недорого, но при этом выглядит по-европейски стильно. Это уникальное преимущество бренда.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <p>Коллекция нового осенне-зимнего сезона побуждает провести ревизию в гардеробе и пополнить его новыми модными платьями. Очаровательные образы также будут уместны в разных ситуациях. Смелое сочетание разнофактурных тканей, комбинации цветов, контрастная отделка брендовой женской одежды неизменно притягивают взгляды. Кокетливо завязанные пояса превращаются в эффектный декор. <a href="#!">Подробнее</a></p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
         <!-- Footer-->
         <footer class="footer">
             <div class="container">
-                <div>&copy; 2016</div>
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs">
+                        <div class="footer__logo"><img src="./img/logo.png" alt=""></div>
+                        <div class="copyright">© 2017 Интернет магазин Emansipe. Все права зарегистрированы и защищены.</div>
+                    </div>
+                    <div class="col-sm-3 hidden-xs">
+                        <div class="footer__title">Контакты</div>
+                        <div class="footer__contacts">
+                            <div class="footer__contacts__row">
+                                <div><i class="ion-email"></i></div>
+                                <div><a href="#!">info@site-name.ru</a></div>
+                            </div>
+                            <div class="footer__contacts__row">
+                                <div><i class="ion-android-call"></i></div>
+                                <div>8(966)026-27-27</div>
+                            </div>
+                            <div class="footer__contacts__row">
+                                <div><i class="ion-social-whatsapp"></i></div>
+                                <div>8(909)952-27-77 </div>
+                            </div>
+                            <div class="footer__contacts__row">
+                                <div><i class="ion-home"></i></div>
+                                <div>г. Москва, ул. Иркутская, дом 11, <br>корп. 1, остановка "2-й <br>Иртышский проезд"</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 col-xxs-12">
+                        <div class="footer__title">Сотрудничество</div>
+                        <ul>
+                            <li><a href="#!">Как зарегистрироваться</a></li>
+                            <li><a href="#!">Условия сотрудничества</a></li>
+                            <li><a href="#!">О доставке</a></li>
+                            <li><a href="#!">Способы оплаты</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 col-xxs-12">
+                        <div class="footer__title">Личный кабинет</div>
+                        <ul>
+                            <li><a href="#!">Личные данные</a></li>
+                            <li><a href="#!">Состояние заказа</a></li>
+                            <li><a href="#!">Корзина</a></li>
+                            <li><a href="#!">Выход</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 visible-xs">
+                        <div class="copyright">© 2017 Интернет магазин Emansipe. Все права зарегистрированы и защищены.</div>
+                    </div>
+                </div>
             </div>
         </footer>
-        <div style="height: 1000px; background-color: #000"></div>
         <!--[if gte IE 9]
         <script src='./js/libs/html5shiv/es5-shim.min.js'>
         <script src='./js/libs/html5shiv/html5shiv.min.js'>
@@ -61,12 +256,5 @@
         <!-- Footer js-->
         <script src="./js/libs.js"></script>
         <script src="./js/common.js"></script>
-        <!-- Load Scripts-->
-        <script>
-            var scr = {"scripts":[
-            {"src" : "./js/libs.js", "async" : false},
-            {"src" : "./js/common.js", "async" : false}
-            ]};!function(t,n,r){"use strict";var c=function(t){if("[object Array]"!==Object.prototype.toString.call(t))return!1;for(var r=0;r<t.length;r++){var c=n.createElement("script"),e=t[r];c.src=e.src,c.async=e.async,n.body.appendChild(c)}return!0};t.addEventListener?t.addEventListener("load",function(){c(r.scripts);},!1):t.attachEvent?t.attachEvent("onload",function(){c(r.scripts)}):t.onload=function(){c(r.scripts)}}(window,document,scr);
-        </script>
     </body>
 </html>
