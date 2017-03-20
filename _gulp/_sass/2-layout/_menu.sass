@@ -1,8 +1,144 @@
 /* menu */
-[role="navigation"]
+.menu
+  font-family: $font-exo-condensed
+  font-size: rem(16)
+  text-transform: uppercase
+  font-weight: 600
+  text-align: center
+  &>ul
+    padding: 0
   ul
     margin: 0
-    padding: 0
     li
-        list-style: none
-        margin: 0
+      list-style: none
+      margin: 0
+      position: relative
+      text-align: left
+      a
+        color: $primary-color
+        text-decoration: none
+        display: inline-block
+        &:hover
+          color: $color-s-brown
+  &__ul1
+    display: inline-block
+  &__li1
+    display: inline-block
+    padding: 5px 0
+    &:not(:first-child)
+      &::before
+        content: "\f397"
+        font-family: $font-ionicons
+        font-size: rem(17)
+        color: #d1d1d1
+        font-weight: 400
+        position: relative
+        top: 1px
+    &>a
+      padding: 0 20px
+      position: relative
+      &::after, &::before
+        content: ''
+        width: 1px
+        height: 13px
+        position: absolute
+        left: 50%
+        transform: translateX(-50%) rotate(45deg)
+        top: -18px
+        background: $color-s-lightbrown
+        margin-left: 21px
+        opacity: 0
+        transition: 0.35s ease-in-out
+      &::before
+        top: inherit
+        bottom: -19px
+        margin-left: -21px
+      &:hover
+        &::after
+          opacity: 1
+          margin-left: 11px
+          top: -8px
+        &::before
+          opacity: 1
+          bottom: -9px
+          margin-left: -11px
+    &:hover
+      .menu__ul2
+        transform: translateY(0px)
+        opacity: 1
+        z-index: 25
+        // display: block
+      &>a
+        color: $color-s-brown
+        &::after
+          opacity: 1
+          margin-left: 11px
+          top: -8px
+        &::before
+          opacity: 1
+          bottom: -9px
+          margin-left: -11px
+    &.active
+      &>a
+        color: $color-s-brown
+        &::after
+          opacity: 1
+          margin-left: 11px
+          top: -8px
+        &::before
+          opacity: 1
+          bottom: -9px
+          margin-left: -11px
+
+  &__ul2
+    display: block
+    font-size: rem(13)
+    position: absolute
+    z-index: 25
+    width: 354px
+    min-height: 265px
+    border: 2px solid $color-s-lightbrown
+    padding: 35px 190px 20px 30px
+    top: 47px
+    left: -30px
+    transform: translateY(5px)
+    transition-delay: 0.5s
+    transition: 0.35s
+    opacity: 0
+    z-index: -1
+    background:
+      color: $color-white
+    ul
+      padding: 0
+      margin: 0
+
+
+  &__corner
+    position: relative
+    width: 26px
+    height: 15px
+    overflow: hidden
+    position: absolute
+    top: -15px
+    left: 62px
+    // background: pink
+    &::before, &::after
+      content: ''
+      background-color: $color-s-lightbrown
+      transform: rotate(-45deg)
+      position: absolute
+      width: 20px
+      height: 20px
+      left: 3px
+      top: 5px
+    &::after
+      background-color: $color-white
+      top: 2px
+      width: 16px
+      height: 16px
+      left: 5px
+      top: 7px
+
+  &__li2
+    &:not(:last-child)
+      margin-bottom: 10px
