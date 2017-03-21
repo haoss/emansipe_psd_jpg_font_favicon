@@ -1,0 +1,58 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Новости' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Новости - документ' + ' - Emansipe' //title страницы для генерации верстки 
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Breadcrumbs
+    .breadcrumbs
+      .container
+        
+        ul
+          li
+            a(href="#!") Emansipe
+          li 
+            a(href="#!") Новости
+          li
+            span 55 лучших образов Недели моды в Париже
+    
+    // Content
+    .content
+      .container
+        
+        .row
+          .col-sm-3
+            
+            +banner
+            
+          .col-sm-9
+            h1 55 лучших образов Недели моды в Париже
+            h2 Какие вещи гарантированно станут бестселлерами в будущем сезоне
+            p Подошла к концу последняя и, по традиции, самая насыщенная из четырех Недель моды – парижская. Французская столица принимает у себя показы старейших модных Домов и самых многообещающих новичков. Так, расписании Недели моды в Париже рядом стоят грандиозные шоу Chanel, Louis Vuitton и Dior, авангардные показы Rick Owens, Comme Des Garçons и Junya Watanabe и презентации коллекций самых обсуждаемых дизайнеров последних сезонов – создателя бренда Off-White Вирджила Абло и креативного директора Balenciaga Демны Гвасалии. В обзоре ELLE – лучшее с парижских подиумов за все 8 дней показов
+            p
+              img(src="./tmp/news-document.png", alt="").img-responsive
+
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    script(src='./js/libs.js')
+    include ./_include/_footer-js
+    script(src='./js/common.js')
+    include ./_include/_js-body-bottom

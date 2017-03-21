@@ -1,0 +1,85 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Новости' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Список новостей' + ' - Emansipe' //title страницы для генерации верстки 
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    
+    include ./_include/_header
+    
+    // Breadcrumbs
+    .breadcrumbs
+      .container
+        
+        ul
+          li
+            a(href="#!") Emansipe
+          li 
+            span Новости
+    
+    // Content
+    .content
+      .container
+        
+        .row
+          .col-sm-3
+            
+            +banner
+            
+          .col-sm-9
+            h1 Новости
+            
+            // News
+            .news
+              
+              .news__row.div-table
+                div.div-table-cell.hidden-xxs
+                  .news__img
+                    a(href="#!")
+                    img(src="./tmp/news-img-1.png", alt="").img-responsive
+                div.div-table-cell
+                  h2 55 лучших образов Недели моды в Париже
+                  p Подошла к концу последняя и, по традиции, самая насыщенная из четырех Недель моды – парижская. Французская столица принимает у себя показы старейших модных Домов и самых многообещающих новичков. Так, расписании Недели моды в Париже рядом стоят грандиозные шоу Chanel, Louis Vuitton и Dior, авангардные показы Rick Owens, Comme Des Garçons и Junya Watanabe и презентации коллекций самых обсуждаемых дизайнеров последних сезонов – создателя бренда Off-White Вирджила Абло и креативного директора Balenciaga Демны Гвасалии. В обзоре ELLE – лучшее с парижских подиумов за все 8 дней показов
+                  a(href="#!").btn.btn--border.btn--more Подробнее
+                  
+              .news__row.div-table
+                div.div-table-cell.hidden-xxs
+                  .news__img
+                    a(href="#!")
+                    img(src="./tmp/news-img-2.png", alt="").img-responsive
+                div.div-table-cell
+                  h2 Что современные мусульманки носят под паранджой?
+                  p Всю историю моды арабского мира можно свести к утверждению, что должна быть в женщине какая-то загадка. Казалось бы, никакие подиумные тренды огромной части населения планеты, которая исповедует ислам, не интересны - их целомудренная мода не меняется тысячелетиями. Однако это не совсем там. Попробуем разобраться, что же носит прекрасная половина мусульманского мира под паранджой
+                  a(href="#!").btn.btn--border.btn--more Подробнее
+                  
+              .news__row.div-table
+                div.div-table-cell.hidden-xxs
+                  .news__img
+                    a(href="#!")
+                    img(src="./tmp/news-img-3.png", alt="").img-responsive
+                div.div-table-cell
+                  h2 Фото дня: Мелания Трамп на приеме в Белом доме
+                  p Мелания Трамп приступила к прямым обязанностям первой леди США: в честь Международного женского дня супруга Дональда Трампа организовала праздничный прием в Белом доме. На ланче присутствовало около 50 женщин, причастных к решению социальных проблем в Америке, среди которых были замечены Иванка Трамп, супруга вице-президента Майка Пенса Карен Пенс с дочерью Шарлоттой, министр образования Бетси Девос и советник президента США Келлиэнн Конуэй
+                  a(href="#!").btn.btn--border.btn--more Подробнее
+
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    script(src='./js/libs.js')
+    include ./_include/_footer-js
+    script(src='./js/common.js')
+    include ./_include/_js-body-bottom

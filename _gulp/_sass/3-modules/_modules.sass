@@ -1,5 +1,30 @@
 /* modules */
 
+.breadcrumbs
+  color: #979797
+  font-size: 11px
+  background: #f9fafa
+  padding: 5px 0
+  ul
+    margin: 0
+    padding: 0
+    li
+      margin: 0
+      list-style: none
+      display: inline-block
+      &:not(:last-child)
+        margin-right: 5px
+        &::after
+          content: '/'
+          margin-left: 5px
+      &>a, &>span
+        display: inline-block
+        color: #979797
+      &>a
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+
 // Anvantages
 .advantages
   padding: 30px 0
@@ -320,3 +345,21 @@
         transition: width 0.35s
       &:hover
         color: $primary-color
+
+// news
+.news
+  &__row
+    margin-bottom: 30px
+    &>div
+      &:first-child
+        width: 1px
+  &__img
+    position: relative
+    width: 262px
+    a
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 10

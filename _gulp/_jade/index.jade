@@ -3,7 +3,7 @@ doctype
 html(lang="ru")
   
   -var active = 'Главная' //активный пункт меню, список в header.jade
-  -var pageTitle = 'Главная' + ' - Emansipe' //title страницы для генерации верстки  
+  -var pageTitle = 'Главная' + ' - Emansipe' //title страницы для генерации верстки 
 
   include ./_include/_head
 
@@ -15,7 +15,7 @@ html(lang="ru")
     include ./_include/_header
     
     // Content
-    .content
+    .content.content--main
       .container
         
         // Catalog
@@ -603,7 +603,6 @@ html(lang="ru")
 
     //- include ./_include/_footer-js
     script(src='./js/libs.js')
-    script(src='./js/libs/bootstrap/bootstrap.min.js')
-    script(src='./js/libs/slick/slick.min.js')
+    include ./_include/_footer-js
     script(src='./js/common.js')
     include ./_include/_js-body-bottom

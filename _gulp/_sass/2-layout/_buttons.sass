@@ -4,8 +4,6 @@
   display: inline-block
   padding: 0 12px
   margin-bottom: 0
-  font-size: rem(14)
-  font-weight: 400
   line-height: 1.42857143
   text-align: center
   white-space: nowrap
@@ -20,6 +18,10 @@
   border-radius: 0px
   height: 30px
   line-height: 28px
+  font-size: rem(14)
+  text-transform: uppercase
+  font-family: $font-exo-condensed
+  font-weight: 600
   transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease
 
   &:hover, &:focus, &:active
@@ -30,10 +32,7 @@
     background-color: $color-s-lightbrown
     border-color: $color-s-lightbrown
     text-decoration: none
-    font-size: rem(14)
-    text-transform: uppercase
-    font-family: $font-exo-condensed
-    font-weight: 700
+
     &:hover, &:active
       text-decoration: none
       color: $color-s-lightbrown
@@ -41,10 +40,6 @@
 
   &--block
     width: 100%
-
-  &--feedback
-    width: 100%
-    max-width: 200px
 
   &--phones
     font-size: rem(12)
@@ -56,3 +51,18 @@
     padding: 0 5px
     &:focus
       color: #858585
+
+  &--border
+    background-color: $color-white
+    border-color: $color-s-lightbrown
+    text-decoration: none
+    &:hover
+      background-color: $color-s-lightbrown
+      color: $color-white
+
+  &--feedback, &--more
+    width: 100%
+    max-width: 200px
+
+  &--more
+    max-width: 262px
