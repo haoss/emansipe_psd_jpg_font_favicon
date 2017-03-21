@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>О компании - Emansipe</title>
+        <title>Контакты - Emansipe</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -166,7 +166,8 @@
             <div class="container">
                 <ul>
                     <li><a href="#!">Emansipe</a></li>
-                    <li> <span>О компании</span></li>
+                    <li> <a href="#!">Новости</a></li>
+                    <li><span>55 лучших образов Недели моды в Париже</span></li>
                 </ul>
             </div>
         </div>
@@ -209,13 +210,77 @@
                                 <div class="banner hidden-xs"><img src="./tmp/banner.png" alt="" class="img-responsive"></div>
                     </div>
                     <div class="col-sm-9">
-                        <h1>о компании</h1>
+                        <h1>контакты</h1>
                         <h2>интернет магазин emansipe</h2>
-                        <p>Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. </p>
-                        <p><img src="./tmp/about-img-1.png" alt="" class="img-responsive"></p>
-                        <p>Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь. </p>
-                        <p>По дороге встретил текст рукопись. Она предупредила его: «В моей стране все переписывается по несколько раз. Единственное, что от меня осталось, это приставка «и». Возвращайся ты лучше в свою безопасную страну». Не послушавшись рукописи, наш текст продолжил свой путь. Вскоре ему повстречался коварный составитель рекламных текстов, напоивший его языком и речью и заманивший в свое агенство, которое использовало его снова и снова в своих проектах. И если его не переписали, то живет он там до сих пор.</p>
-                        <p><img src="./tmp/about-img-1.png" alt="" class="img-responsive"></p>
+                        <p><strong>г. Москва, ул. Первая деловая, д 2, оф 3</strong></p>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <table class="table">
+                                    <tr>
+                                        <td>Телефоны:</td>
+                                        <td><strong>0 800 987 654 32,<br>+7 987 654 321 0</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Email:</td>
+                                        <td><strong>hello@emansipe.ru</strong></td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="col-sm-6">
+                                <table class="table">
+                                    <tr>
+                                        <td>Skype:</td>
+                                        <td><strong>Emansipe</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Facebook:</td>
+                                        <td> <strong>EmansipeRU</strong></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Vkontakte:</td>
+                                        <td> <strong>EmansipeRU</strong></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="map_canvas"></div>
+                        <!-- Google Map-->
+                        <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+                        <script>
+                            function initialize() {
+                              var myLatlng = new google.maps.LatLng(55.7546967,37.6193328);
+                              var map_options = {
+                                zoom: 16,
+                                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                                center: myLatlng,
+                                scrollwheel: false,
+                                disableDefaultUI: true
+                              }
+                              var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
+                              var myIcon = new google.maps.MarkerImage('./img/marker.png', null, null, null, new google.maps.Size(105,109));
+                              var marker = new google.maps.Marker({
+                                position: myLatlng,
+                                map: map,
+                                icon: myIcon
+                              });
+                            /* Remove if you dont want B/W Google Map */
+                            /*
+                            var styles = [
+                            {
+                            featureType: "all",
+                            stylers: [
+                            { saturation: -100 }
+                            ]
+                            }
+                            ];
+                            map.setOptions({styles: styles});
+                            */
+                            }
+                            google.maps.event.addDomListener(window, 'load', initialize);
+                        </script>
+                        <!-- Google Map Ends!-->
+                        
+                        
                     </div>
                 </div>
             </div>
@@ -287,7 +352,7 @@
         <script src="./js/common.js"></script>
         <script>
             $(document).ready(function(){
-              $('.menu .menu__li1:nth-child(5)').addClass('active');
+              $('.menu .menu__li1:last-child').addClass('active');
             })
         </script>
     </body>

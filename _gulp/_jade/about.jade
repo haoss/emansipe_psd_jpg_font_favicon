@@ -11,18 +11,16 @@ html(lang="ru")
     
     // Preloader
     include ./_include/_preloader
-    
     include ./_include/_header
     
     // Breadcrumbs
     .breadcrumbs
       .container
-        
         ul
           li
             a(href="#!") Emansipe
           li 
-            span о компании
+            span О компании
     
     // Content
     .content
@@ -30,7 +28,7 @@ html(lang="ru")
         
         .row
           .col-sm-3
-            
+            include ./_include/_catalog-navigation
             +banner
             
           .col-sm-9
@@ -61,3 +59,8 @@ html(lang="ru")
     include ./_include/_footer-js
     script(src='./js/common.js')
     include ./_include/_js-body-bottom
+    
+    script.
+      $(document).ready(function(){
+        $('.menu .menu__li1:nth-child(5)').addClass('active');
+      })

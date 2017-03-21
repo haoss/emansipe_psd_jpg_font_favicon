@@ -1,1 +1,93 @@
 /* pagintaion */
+
+.pagination
+  font-size: rem(12)
+  font-family: $font-exo-condensed
+  text-transform: uppercase
+  margin-bottom: 25px
+  ul
+    margin: 0
+    padding: 0
+    white-space: nowrap
+    li
+      list-style: none
+      margin: 0
+      display: inline-block
+      vertical-align: middle
+      &+li
+        padding-left: 15px
+      &>span, &>a
+        display: inline-block
+        text-decoration: none
+        position: relative
+      &>a
+        color: #9d9d9d
+        &:hover
+          color: $color-s-brown
+      &.page
+        font-weight: 700
+        font-size: rem(14)
+        vertical-align: -3px
+        &.active
+          &>a
+            color: $color-s-brown
+            &::after
+              opacity: 1
+              margin-left: 11px
+              top: -8px
+            &::before
+              opacity: 1
+              bottom: -9px
+              margin-left: -11px
+        &>a
+          color: #636363
+          &::after, &::before
+            content: ''
+            width: 1px
+            height: 13px
+            position: absolute
+            left: 50%
+            transform: translateX(-50%) rotate(45deg)
+            top: -18px
+            background: $color-s-brown
+            margin-left: 21px
+            opacity: 0
+            transition: 0.35s ease-in-out
+          &::before
+            top: inherit
+            bottom: -19px
+            margin-left: -21px
+          &:hover
+            &::after
+              opacity: 1
+              margin-left: 11px
+              top: -8px
+            &::before
+              opacity: 1
+              bottom: -9px
+              margin-left: -11px
+          &:hover
+            color: $color-s-brown
+            &::after
+              opacity: 1
+              margin-left: 11px
+              top: -8px
+            &::before
+              opacity: 1
+              bottom: -9px
+              margin-left: -11px
+
+  display: table
+  width: 100%
+  &>div
+    display: table-cell
+    width: 50%
+    vertical-align: middle
+    background-image: linear-gradient(#dcdcdc, #dcdcdc)
+    background-size: 100% 1px
+    background-repeat: no-repeat
+    background-position: center
+    &:nth-child(2)
+      padding: 0 20px
+      width: auto
+      background: none

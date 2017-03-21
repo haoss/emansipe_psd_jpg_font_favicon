@@ -1,0 +1,126 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Контакты' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Контакты' + ' - Emansipe' //title страницы для генерации верстки 
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    include ./_include/_header
+    
+    // Breadcrumbs
+    .breadcrumbs
+      .container
+        ul
+          li
+            a(href="#!") Emansipe
+          li 
+            a(href="#!") Новости
+          li
+            span 55 лучших образов Недели моды в Париже
+    
+    // Content
+    .content
+      .container
+        
+        .row
+          .col-sm-3
+            include ./_include/_catalog-navigation
+            +banner
+            
+          .col-sm-9
+            h1 контакты
+            h2 интернет магазин emansipe
+            
+            p
+              strong г. Москва, ул. Первая деловая, д 2, оф 3
+              
+            .row
+              .col-sm-6
+                table.table
+                  tr
+                    td Телефоны:
+                    td
+                      strong 0 800 987 654 32,
+                        br
+                        | +7 987 654 321 0
+                  tr
+                    td Email:
+                    td
+                      strong hello@emansipe.ru
+              .col-sm-6
+                table.table
+                  tr
+                    td Skype:
+                    td
+                      strong Emansipe
+                  tr
+                    td Facebook:
+                    td 
+                      strong EmansipeRU
+                  tr
+                    td Vkontakte:
+                    td 
+                      strong EmansipeRU
+              
+            #map_canvas
+            // Google Map
+            script(src='https://maps.googleapis.com/maps/api/js?sensor=false')
+            script.
+              function initialize() {
+                var myLatlng = new google.maps.LatLng(55.7546967,37.6193328);
+                var map_options = {
+                  zoom: 16,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP,
+                  center: myLatlng,
+                  scrollwheel: false,
+                  disableDefaultUI: true
+                }
+                var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
+                var myIcon = new google.maps.MarkerImage('./img/marker.png', null, null, null, new google.maps.Size(105,109));
+                var marker = new google.maps.Marker({
+                  position: myLatlng,
+                  map: map,
+                  icon: myIcon
+                });
+              /* Remove if you dont want B/W Google Map */
+              /*
+              var styles = [
+              {
+              featureType: "all",
+              stylers: [
+              { saturation: -100 }
+              ]
+              }
+              ];
+              map.setOptions({styles: styles});
+              */
+              }
+              google.maps.event.addDomListener(window, 'load', initialize);
+            // Google Map Ends!
+
+
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    script(src='./js/libs.js')
+    include ./_include/_footer-js
+    script(src='./js/common.js')
+    include ./_include/_js-body-bottom
+    
+    script.
+      $(document).ready(function(){
+        $('.menu .menu__li1:last-child').addClass('active');
+      })

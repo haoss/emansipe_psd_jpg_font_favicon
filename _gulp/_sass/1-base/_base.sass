@@ -40,17 +40,17 @@ body
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6
   font-family: $font-exo
   color: $primary-color
-  font-weight: 400
   text-decoration: none
   margin: 0 0 15px 0
+  font-weight: 600
+  font-family: $font-exo-condensed
+
 
 .h1, h1
-  font-family: $font-exo-condensed
   font-size: rem(35)
   line-height: 1.05
   letter-spacing: -1px
   text-transform: uppercase
-  font-weight: 600
   margin-bottom: 20px
 
 .h2, h2
@@ -58,8 +58,6 @@ body
   line-height: 1.14
   text-transform: uppercase
   color: $color-s-brown
-  font-weight: 600
-  font-family: $font-exo-condensed
 
 .h3, h3
   font-size: rem(22)
@@ -68,12 +66,15 @@ body
 .h4, h4
   font-size: rem(20)
   line-height: 1.38
+  margin-bottom: 10px
 
 .h5, h5
   font-size: rem(18)
+  margin-bottom: 10px
 
 .h6, h6
   font-size: rem(16)
+  margin-bottom: 10px
 
 .small, small
   font-size: rem(12)
@@ -87,7 +88,9 @@ em, i, .em, .i
   font-style: italic
 
 strong, b, .strong, .b
-  font-weight: bold
+  font-weight: normal
+  font-family: $font-exo-condensed
+  font-weight: 700
 
 hr
   border: solid #ddd
@@ -132,6 +135,8 @@ a.link
     text-align: left
   &-right, &--right
     text-align: right
+  &-upper, &--upper
+    text-transform: uppercase
 
 /* loader */
 .loader
@@ -283,6 +288,10 @@ ol li
     &-right
       margin-right: 0 !important
 
+.color
+  &--brown
+    color: $color-s-brown !important
+
 /**/
 .icon
   display: inline-block
@@ -416,3 +425,38 @@ button.mfp-close, button.mfp-arrow
   &-table-cell
     display: table-cell
     vertical-align: top
+
+.ol--list, .ul--list
+  margin-left: 0
+  padding: 0
+  li
+    list-style: none
+    position: relative
+    padding-left: 20px
+    margin-bottom: 3px
+
+.ul--list
+  li
+    &::before
+      position: absolute
+      content: "\f2a6"
+      font-family: $font-ionicons
+      font-size: rem(13)
+      color: $color-s-brown
+      top: 5px
+      left: 2px
+
+.ol--list
+  li
+    &>span
+      position: absolute
+      left: 0
+      top: 2px
+      width: 15px
+      height: 15px
+      line-height: 15px
+      text-align: center
+      color: $color-white
+      background: $color-s-lightbrown
+      font-size: rem(9)
+      font-family: $font-exo-condensed

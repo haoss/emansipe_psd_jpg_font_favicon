@@ -11,13 +11,11 @@ html(lang="ru")
     
     // Preloader
     include ./_include/_preloader
-    
     include ./_include/_header
     
     // Breadcrumbs
     .breadcrumbs
       .container
-        
         ul
           li
             a(href="#!") Emansipe
@@ -30,19 +28,19 @@ html(lang="ru")
         
         .row
           .col-sm-3
-            
+            include ./_include/_catalog-navigation
             +banner
             
           .col-sm-9
             h1 Новости
             
             // News
-            .news
-              
+            .news              
               .news__row.div-table
                 div.div-table-cell.hidden-xxs
                   .news__img
                     a(href="#!")
+                    .news__date 10 марта 2017
                     img(src="./tmp/news-img-1.png", alt="").img-responsive
                 div.div-table-cell
                   h2 55 лучших образов Недели моды в Париже
@@ -53,6 +51,7 @@ html(lang="ru")
                 div.div-table-cell.hidden-xxs
                   .news__img
                     a(href="#!")
+                    .news__date 9 марта 2017
                     img(src="./tmp/news-img-2.png", alt="").img-responsive
                 div.div-table-cell
                   h2 Что современные мусульманки носят под паранджой?
@@ -63,12 +62,39 @@ html(lang="ru")
                 div.div-table-cell.hidden-xxs
                   .news__img
                     a(href="#!")
+                    .news__date 8 марта 2017
                     img(src="./tmp/news-img-3.png", alt="").img-responsive
                 div.div-table-cell
                   h2 Фото дня: Мелания Трамп на приеме в Белом доме
                   p Мелания Трамп приступила к прямым обязанностям первой леди США: в честь Международного женского дня супруга Дональда Трампа организовала праздничный прием в Белом доме. На ланче присутствовало около 50 женщин, причастных к решению социальных проблем в Америке, среди которых были замечены Иванка Трамп, супруга вице-президента Майка Пенса Карен Пенс с дочерью Шарлоттой, министр образования Бетси Девос и советник президента США Келлиэнн Конуэй
                   a(href="#!").btn.btn--border.btn--more Подробнее
 
+            // Pagination
+            .pagination
+              div
+              div
+                ul
+                  li.prev
+                    a(href="#!") назад
+                  li.page
+                    a(href="#!") 01
+                  li.page
+                    a(href="#!") 02
+                  li.page.active
+                    a(href="#!") 03
+                  li.page
+                    a(href="#!") 04
+                  li.page
+                    a(href="#!") 05
+                  li.page
+                    a(href="#!") 06
+                  li.page
+                    span ...
+                  li.page
+                    a(href="#!") 99
+                  li.next
+                    a(href="#!") вперед
+              div
     
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")

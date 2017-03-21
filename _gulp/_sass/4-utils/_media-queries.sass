@@ -16,6 +16,15 @@
     &__carousel
       &__block
         width: 212px
+    &__navigation
+      nav
+        ul
+          ul
+            li
+              &>a
+                padding-right: 55px
+                span
+                  width: 50px
   .news
     &__img
       width: 213px
@@ -46,9 +55,22 @@
     &__carousel
       &__block
         width: 220px
+
   .news
     &__img
       width: 157px
+
+@media (min-width: 768px) and (max-width: 991px)
+  .catalog
+    &__navigation
+      nav
+        ul
+          ul
+            li
+              &>a
+                padding-right: 15px
+                span
+                  display: none
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -122,6 +144,10 @@
     &__tabs
       float: none
       margin: 0 0 25px 0
+    &__navigation
+      button[type="button"]
+        cursor: pointer
+
   .news
     &__img
       width: 130px
@@ -183,6 +209,19 @@
         margin-left: auto
         margin-right: auto
         display: block
+
+  .pagination
+    margin-bottom: 15px
+    &>div
+      &:first-child, &:last-child
+        display: none
+      &:nth-child(2)
+        padding-left: 0
+        padding-right: 0
+        text-align: center
+    ul
+      li + li
+        padding-left: 10px
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

@@ -135,6 +135,22 @@ $(document).ready(function(){
     ]
   });
 
+  $('.catalog__navigation button').on('click', function(e){
+    e.preventDefault();
+    var width = $(window).width();
+
+    if (width > 767) return;
+
+    $(this).parent().toggleClass('is-active');
+    $('.catalog__navigation nav').slideToggle();
+  });
+  catalogNav();
+
+  $('ol.ol--list li').each(function(){
+    $(this).prepend('<span>' + ($(this).index() + 1) + '</span>');
+  });
+
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
@@ -163,7 +179,22 @@ $(window).on('load', function() {
 
 $(window).on('resize', function(){
   search();
-})
+  catalogNav();
+});
+
+function catalogNav(){
+  var width = $(window).width(),
+      menu = $('.catalog__navigation'),
+      nav = $('.catalog__navigation nav');
+
+  if (width <= 767) {
+    menu.addClass('is-active');
+    nav.hide();
+  } else if (width > 767) {
+    menu.removeClass('is-active');
+    nav.show();
+  }
+}
 
 function menuImg(){
   var a = $('.menu__li2 a');
@@ -189,8 +220,7 @@ function search(){
     'width': searchPos.left - socialPos.left + 30 + 'px'
   });
 
-  console.log(searchPos.top);
-
+  // console.log(searchPos.top);
 }
 
 /*
