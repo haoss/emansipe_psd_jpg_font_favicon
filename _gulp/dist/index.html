@@ -8,6 +8,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700">
         <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./js/libs/slick/slick.css">
+        <link rel="stylesheet" href="./js/libs/slick/slick-theme.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -92,33 +94,40 @@
         <div class="loader">
             <div class="loader__block"></div>
         </div>
+        <!-- Search-->
+        <div class="search">
+            <div class="search__background"></div>
+            <div class="search__block">
+                <form action="#!">
+                    <input type="text">
+                    <button type="submit"></button>
+                </form>
+            </div>
+        </div>
         <!-- Header-->
         <header class="header">
             <div class="header__top">
-                <div class="container"><a href="#feedback" class="btn btn--default btn--feedback open-popup-link">Обратная связь</a>
+                <div class="container">
                     <div class="header__contacts">
-                        <div>Пн—Вс 10:00—19:00</div>
-                        <div>
-                            <div class="header__phones">
-                                <div>8 (966) 026-27-27</div>
-                                <div>8 (909) 952-27-77 </div>
-                            </div>
-                        </div>
-                    </div>
+                        <div class="show">Пн—Вс 10:00—19:00</div>
+                        <div>8 (966) 026-27-27</div>
+                        <div class="hide">8 (909) 952-27-77</div>
+                        <div class="visible-xs"><a href="#!" class="btn btn--phones"><i class="ion-android-arrow-dropleft"></i></a></div>
+                    </div><a href="#feedback" class="btn btn--default btn--feedback open-popup-link">Обратная связь </a>
                 </div>
             </div>
             <div class="header__bottom">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-4 col-lg-push-4">
+                        <div class="col-sm-6 col-sm-push-3 col-xs-12">
                             <div class="logo"><a href="#!"></a><img src="./img/logo.png" alt=""></div>
                         </div>
-                        <div class="col-lg-3 col-lg-pull-4">
+                        <div class="col-sm-3 col-sm-pull-6 col-xs-6">
                             <div class="header__social">
                                 <div><a href="#!"><i class="icon icon--social-instagram"></i></a><a href="#!"><i class="icon icon--social-facebook"></i></a><a href="#!"><i class="icon icon--social-vkontakte"></i></a></div>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-lg-push-2">
+                        <div class="col-sm-3 col-xs-6">
                             <div class="header__links">
                                 <div><a href="#!"><i class="icon icon--search"></i></a><a href="#enter" class="open-popup-link"><i class="icon icon--user"></i></a><a href="#!"><i class="icon icon--cart"></i><span>99</span></a></div>
                             </div>
@@ -127,7 +136,7 @@
                 </div>
             </div>
             <!-- Menu-->
-            <nav role="navigation" class="menu">
+            <nav role="navigation" class="menu visible-lg">
                 <div class="container">
                     <ul class="menu__ul1">
                         <li class="menu__li1"><a href="#!">Новинки</a></li>
@@ -135,12 +144,12 @@
                             <div class="menu__ul2">
                                 <div class="menu__corner"></div>
                                 <ul>
-                                    <li class="menu__li2"><a href="#!">Повседневные платья</a></li>
-                                    <li class="menu__li2"><a href="#!">Вечерние платья</a></li>
-                                    <li class="menu__li2"><a href="#!">Коктейльные платья</a></li>
-                                    <li class="menu__li2"><a href="#!">Сарафаны</a></li>
-                                    <li class="menu__li2"><a href="#!">SEXY платья</a></li>
-                                </ul>
+                                    <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-1.png">Повседневные платья</a></li>
+                                    <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-2.png">Вечерние платья</a></li>
+                                    <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-3.png">Коктейльные платья</a></li>
+                                    <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-4.png">Сарафаны</a></li>
+                                    <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-5.png">SEXY платья</a></li>
+                                </ul><img src="./img/drop-menu-1.png" alt="" class="menu__img">
                             </div>
                         </li>
                         <li class="menu__li1"><a href="#!">Костюмы</a></li>
@@ -160,93 +169,456 @@
                     <div class="section__head">
                         <div class="h1">модный товар<small class="small">мы подобрали лучшее </small></div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="catalog__block"><a href="#!" class="catalog__link"></a>
-                                <div class="catalog__img">
-                                    <div class="catalog__hover">
-                                        <div class="catalog__shadow"></div>
-                                        <div class="catalog__line1"><i></i></div>
-                                        <div class="catalog__line2"><i></i></div>
-                                        <div class="catalog__line3"><i></i></div>
-                                        <div class="catalog__line4"><i></i></div>
-                                        <div class="catalog__size">
-                                            <div class="catalog__size__name">доступные размеры</div>
-                                            <div class="catalog__size__label">40</div>
-                                            <div class="catalog__size__label">42</div>
-                                            <div class="catalog__size__label">43</div>
-                                            <div class="catalog__size__label">44</div>
-                                            <div class="catalog__size__label">46</div>
-                                            <div class="catalog__size__label">48</div>
+                    <!-- Nav tabs-->
+                    <div class="catalog__tabs">
+                        <ul role="tablist">
+                            <li role="presentation" class="active"><a href="#catalog-new" aria-controls="catalog-new" role="tab" data-toggle="tab">Новинки</a></li>
+                            <li role="presentation"><a href="#catalog-sale" aria-controls="catalog-sale" role="tab" data-toggle="tab">Скидки</a></li>
+                            <li role="presentation"><a href="#catalog-week" aria-controls="catalog-week" role="tab" data-toggle="tab">Товар недели</a></li>
+                        </ul>
+                    </div>
+                    <!-- Tab panes-->
+                    <div class="tab-content">
+                        <div id="catalog-new" role="tabpanel" class="tab-pane active">
+                            <div class="catalog__carousel">
+                                <div class="catalog__carousel__block"> 
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                    <div class="catalog__size__label">43</div>
+                                                    <div class="catalog__size__label">44</div>
+                                                    <div class="catalog__size__label">46</div>
+                                                    <div class="catalog__size__label">48</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-1.png" alt="" class="img-responsive">
                                         </div>
-                                    </div><img src="./tmp/catalog-img-girl-1.png" alt="" class="img-responsive">
+                                        <div class="catalog__name">название Платья № 23465454 </div>
+                                        <div class="catalog__price">
+                                            <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="catalog__name">название Платья № 23465454 </div>
+                                <div class="catalog__carousel__block">
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                    <div class="catalog__size__label">43</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-2.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="catalog__name">название Платья № 23465454 </div>
+                                        <div class="catalog__price">
+                                            <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
+                                            <div><span class="old"><strong>21 999 </strong><sup>руб</sup></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__carousel__block">
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-3.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="catalog__name">название Платья № 23465454</div>
+                                        <div class="catalog__price">
+                                            <div><small> <span>цена скрыта,</span><a href="#!">зарегистрируйтесь</a></small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__carousel__block">
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                    <div class="catalog__size__label">43</div>
+                                                    <div class="catalog__size__label">44</div>
+                                                    <div class="catalog__size__label">46</div>
+                                                    <div class="catalog__size__label">48</div>
+                                                    <div class="catalog__size__label">50</div>
+                                                    <div class="catalog__size__label">52</div>
+                                                    <div class="catalog__size__label">54</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-4.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="catalog__name">название Платья № 23465454 </div>
+                                        <div class="catalog__price">
+                                            <div><small> <span>цена скрыта,</span><a href="#!">зарегистрируйтесь</a></small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__carousel__block"> 
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                    <div class="catalog__size__label">43</div>
+                                                    <div class="catalog__size__label">44</div>
+                                                    <div class="catalog__size__label">46</div>
+                                                    <div class="catalog__size__label">48</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-1.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="catalog__name">название Платья № 23465454 </div>
+                                        <div class="catalog__price">
+                                            <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__carousel__block">
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                    <div class="catalog__size__label">43</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-2.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="catalog__name">название Платья № 23465454 </div>
+                                        <div class="catalog__price">
+                                            <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
+                                            <div><span class="old"><strong>21 999 </strong><sup>руб</sup></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__carousel__block">
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-3.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="catalog__name">название Платья № 23465454</div>
+                                        <div class="catalog__price">
+                                            <div><small> <span>цена скрыта,</span><a href="#!">зарегистрируйтесь</a></small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__carousel__block">
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                    <div class="catalog__size__label">43</div>
+                                                    <div class="catalog__size__label">44</div>
+                                                    <div class="catalog__size__label">46</div>
+                                                    <div class="catalog__size__label">48</div>
+                                                    <div class="catalog__size__label">50</div>
+                                                    <div class="catalog__size__label">52</div>
+                                                    <div class="catalog__size__label">54</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-4.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="catalog__name">название Платья № 23465454 </div>
+                                        <div class="catalog__price">
+                                            <div><small> <span>цена скрыта,</span><a href="#!">зарегистрируйтесь</a></small></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="catalog__block"><a href="#!" class="catalog__link"></a>
-                                <div class="catalog__img">
-                                    <div class="catalog__hover">
-                                        <div class="catalog__shadow"></div>
-                                        <div class="catalog__line1"><i></i></div>
-                                        <div class="catalog__line2"><i></i></div>
-                                        <div class="catalog__line3"><i></i></div>
-                                        <div class="catalog__line4"><i></i></div>
-                                        <div class="catalog__size">
-                                            <div class="catalog__size__name">доступные размеры</div>
-                                            <div class="catalog__size__label">40</div>
-                                            <div class="catalog__size__label">42</div>
-                                            <div class="catalog__size__label">43</div>
+                        <div id="catalog-sale" role="tabpanel" class="tab-pane">
+                            <div class="catalog__carousel">
+                                <div class="catalog__carousel__block"> 
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                    <div class="catalog__size__label">43</div>
+                                                    <div class="catalog__size__label">44</div>
+                                                    <div class="catalog__size__label">46</div>
+                                                    <div class="catalog__size__label">48</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-1.png" alt="" class="img-responsive">
                                         </div>
-                                    </div><img src="./tmp/catalog-img-girl-2.png" alt="" class="img-responsive">
+                                        <div class="catalog__name">название Платья № 23465454 </div>
+                                        <div class="catalog__price">
+                                            <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="catalog__name">название Платья № 23465454 </div>
+                                <div class="catalog__carousel__block">
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                    <div class="catalog__size__label">43</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-2.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="catalog__name">название Платья № 23465454 </div>
+                                        <div class="catalog__price">
+                                            <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
+                                            <div><span class="old"><strong>21 999 </strong><sup>руб</sup></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__carousel__block">
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-3.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="catalog__name">название Платья № 23465454</div>
+                                        <div class="catalog__price">
+                                            <div><small> <span>цена скрыта,</span><a href="#!">зарегистрируйтесь</a></small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__carousel__block">
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                    <div class="catalog__size__label">43</div>
+                                                    <div class="catalog__size__label">44</div>
+                                                    <div class="catalog__size__label">46</div>
+                                                    <div class="catalog__size__label">48</div>
+                                                    <div class="catalog__size__label">50</div>
+                                                    <div class="catalog__size__label">52</div>
+                                                    <div class="catalog__size__label">54</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-4.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="catalog__name">название Платья № 23465454 </div>
+                                        <div class="catalog__price">
+                                            <div><small> <span>цена скрыта,</span><a href="#!">зарегистрируйтесь</a></small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__carousel__block"> 
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                    <div class="catalog__size__label">43</div>
+                                                    <div class="catalog__size__label">44</div>
+                                                    <div class="catalog__size__label">46</div>
+                                                    <div class="catalog__size__label">48</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-1.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="catalog__name">название Платья № 23465454 </div>
+                                        <div class="catalog__price">
+                                            <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="catalog__block"><a href="#!" class="catalog__link"></a>
-                                <div class="catalog__img">
-                                    <div class="catalog__hover">
-                                        <div class="catalog__shadow"></div>
-                                        <div class="catalog__line1"><i></i></div>
-                                        <div class="catalog__line2"><i></i></div>
-                                        <div class="catalog__line3"><i></i></div>
-                                        <div class="catalog__line4"><i></i></div>
-                                        <div class="catalog__size">
-                                            <div class="catalog__size__name">доступные размеры</div>
-                                            <div class="catalog__size__label">40</div>
-                                            <div class="catalog__size__label">42</div>
+                        <div id="catalog-week" role="tabpanel" class="tab-pane">
+                            <div class="catalog__carousel">
+                                <div class="catalog__carousel__block"> 
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                    <div class="catalog__size__label">43</div>
+                                                    <div class="catalog__size__label">44</div>
+                                                    <div class="catalog__size__label">46</div>
+                                                    <div class="catalog__size__label">48</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-1.png" alt="" class="img-responsive">
                                         </div>
-                                    </div><img src="./tmp/catalog-img-girl-3.png" alt="" class="img-responsive">
-                                </div>
-                                <div class="catalog__name">название Платья № 23465454 </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="catalog__block"><a href="#!" class="catalog__link"></a>
-                                <div class="catalog__img">
-                                    <div class="catalog__hover">
-                                        <div class="catalog__shadow"></div>
-                                        <div class="catalog__line1"><i></i></div>
-                                        <div class="catalog__line2"><i></i></div>
-                                        <div class="catalog__line3"><i></i></div>
-                                        <div class="catalog__line4"><i></i></div>
-                                        <div class="catalog__size">
-                                            <div class="catalog__size__name">доступные размеры</div>
-                                            <div class="catalog__size__label">40</div>
-                                            <div class="catalog__size__label">42</div>
-                                            <div class="catalog__size__label">43</div>
-                                            <div class="catalog__size__label">44</div>
-                                            <div class="catalog__size__label">46</div>
-                                            <div class="catalog__size__label">48</div>
-                                            <div class="catalog__size__label">50</div>
-                                            <div class="catalog__size__label">52</div>
-                                            <div class="catalog__size__label">54</div>
+                                        <div class="catalog__name">название Платья № 23465454 </div>
+                                        <div class="catalog__price">
+                                            <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
                                         </div>
-                                    </div><img src="./tmp/catalog-img-girl-4.png" alt="" class="img-responsive">
+                                    </div>
                                 </div>
-                                <div class="catalog__name">название Платья № 23465454 </div>
+                                <div class="catalog__carousel__block">
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                    <div class="catalog__size__label">43</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-2.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="catalog__name">название Платья № 23465454 </div>
+                                        <div class="catalog__price">
+                                            <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
+                                            <div><span class="old"><strong>21 999 </strong><sup>руб</sup></span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__carousel__block">
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-3.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="catalog__name">название Платья № 23465454</div>
+                                        <div class="catalog__price">
+                                            <div><small> <span>цена скрыта,</span><a href="#!">зарегистрируйтесь</a></small></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="catalog__carousel__block">
+                                    <div class="catalog__block">
+                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                            <div class="catalog__hover">
+                                                <div class="catalog__shadow"></div>
+                                                <div class="catalog__line1"><i></i></div>
+                                                <div class="catalog__line2"><i></i></div>
+                                                <div class="catalog__line3"><i></i></div>
+                                                <div class="catalog__line4"><i></i></div>
+                                                <div class="catalog__size">
+                                                    <div class="catalog__size__name">доступные размеры</div>
+                                                    <div class="catalog__size__label">40</div>
+                                                    <div class="catalog__size__label">42</div>
+                                                    <div class="catalog__size__label">43</div>
+                                                    <div class="catalog__size__label">44</div>
+                                                    <div class="catalog__size__label">46</div>
+                                                    <div class="catalog__size__label">48</div>
+                                                    <div class="catalog__size__label">50</div>
+                                                    <div class="catalog__size__label">52</div>
+                                                    <div class="catalog__size__label">54</div>
+                                                </div>
+                                            </div><img src="./tmp/catalog-img-girl-4.png" alt="" class="img-responsive">
+                                        </div>
+                                        <div class="catalog__name">название Платья № 23465454 </div>
+                                        <div class="catalog__price">
+                                            <div><small> <span>цена скрыта,</span><a href="#!">зарегистрируйтесь</a></small></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -373,8 +745,9 @@
         <script src='./js/libs/html5shiv/respond.min.js'><![endif]
         
         -->
-        <!-- Footer js-->
         <script src="./js/libs.js"></script>
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/libs/slick/slick.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

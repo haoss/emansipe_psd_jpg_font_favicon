@@ -10,7 +10,12 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1199px)
-  /**/
+  .catalog
+    &__block
+      max-width: 212px
+    &__carousel
+      &__block
+        width: 212px
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
@@ -27,6 +32,17 @@
     &__icon
       margin-left: auto
       margin-right: auto
+
+  .catalog
+    &__tabs
+      a
+        padding-left: 25px
+        padding-right: 25px
+    &__block
+      max-width: 220px
+    &__carousel
+      &__block
+        width: 220px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -62,6 +78,53 @@
     max-width: 320px
     margin: 0 auto 0
 
+  .header
+    &__top
+      text-align: center
+    &__contacts
+      float: none
+      display: inline-flex
+      justify-content: flex-end
+      width: 258px
+      &>div
+        &.hide
+          display: none !important
+      &.is-active
+        color: $primary-color
+        &>div
+          &.show
+            width: 0
+            overflow: hidden
+            padding: 0
+          &.hide
+            display: block !important
+        .btn
+          color: $primary-color
+
+    &__bottom
+      padding-top: 60px
+    &__social, &__links
+      margin-top: 20px
+
+  .btn
+    &--feedback
+      max-width: 480px
+      margin: 0 auto
+      float: none
+      display: block
+  .catalog
+    &__tabs
+      float: none
+      margin: 0 0 25px 0
+
+
+@media only screen and (max-width: 599px)
+  .header
+    &__social
+      text-align: left
+    &__links
+      text-align: right
+
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 479px)
   .col-xxs-12
@@ -79,6 +142,25 @@
     .col-xxs-12
       max-width: 244px
       margin: 0 auto
+
+  .logo
+    max-width: 224px
+
+  .catalog
+    &__tabs
+      max-width: 290px
+      margin-left: auto
+      margin-right: auto
+      text-align: center
+      ul
+        display: inline-block
+      a
+        padding-left: 15px
+        padding-right: 15px
+    &__carousel
+      &__block
+        margin-right: 0
+    
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

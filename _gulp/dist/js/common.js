@@ -92,7 +92,48 @@ $(document).ready(function(){
         mainClass: 'mfp-bg--imgSmall'
       }, 0);
     }, 0)
-  })
+  });
+
+  $('.btn--phones').on('click', function(e){
+    e.preventDefault();
+    $(this).parents('.header__contacts').toggleClass('is-active');
+  });
+
+  menuImg();
+  search();
+
+  $('.catalog__carousel').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    variableWidth: true,
+    dots: true,
+    infinite: true,
+    speed: 300,
+    // autoplay: true,
+    autoplaySpeed: 2000,
+    draggable: false,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 479,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: false
+        }
+      }
+    ]
+  });
 
   // Chrome Smooth Scroll
   try {
@@ -111,7 +152,46 @@ $(document).ready(function(){
 $(window).on('load', function() {
   // $(".loader_inner").fadeOut();
   $(".loader").delay(400).fadeOut("slow");
+
+  $('.slides').on('setPosition', function () {
+    $(this).find('.slick-slide').height('auto');
+      var slickTrack = $(this).find('.slick-track');
+      var slickTrackHeight = $(slickTrack).height();
+      $(this).find('.slick-slide').css('height', slickTrackHeight + 'px');
+  });
 });
+
+$(window).on('resize', function(){
+  search();
+})
+
+function menuImg(){
+  var a = $('.menu__li2 a');
+
+  a.on('hover', function(e){
+    console.log($(this).data('img'));
+    $('.menu__ul2 .menu__img').attr('src', $(this).data('img'))
+  });
+}
+
+function search(){
+  if ($('.search').hide()) return;
+  $('body').css('position', 'fixed');
+
+  var social = $('.header__social a:last-child'),
+      search = $('.header__links a:first-child'),
+      socialPos = social.offset(),
+      searchPos = search.offset();
+
+  $('.search__block').css({
+    'top': socialPos.top + 'px',
+    'left': socialPos.left + 'px',
+    'width': searchPos.left - socialPos.left + 30 + 'px'
+  });
+
+  console.log(searchPos.top);
+
+}
 
 /*
 version 2015-09-23 14:30 GMT +2

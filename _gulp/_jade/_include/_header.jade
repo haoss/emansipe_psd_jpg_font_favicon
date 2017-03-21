@@ -3,26 +3,28 @@ header.header
   
   .header__top
     .container
-      a(href="#feedback").btn.btn--default.btn--feedback.open-popup-link Обратная связь
       
       .header__contacts
-        div Пн—Вс 10:00—19:00
-        div
-          .header__phones
-            div 8 (966) 026-27-27
-            div 8 (909) 952-27-77 
+        div.show Пн—Вс 10:00—19:00
+        div 8 (966) 026-27-27
+        div.hide 8 (909) 952-27-77
+        div.visible-xs
+          a(href="#!").btn.btn--phones
+            i.ion-android-arrow-dropleft
+      
+      a(href="#feedback").btn.btn--default.btn--feedback.open-popup-link Обратная связь 
   
   .header__bottom
     .container
       
       .row
-        .col-lg-4.col-lg-push-4
+        .col-sm-6.col-sm-push-3.col-xs-12
           .logo
             a(href="#!")
             img(src="./img/logo.png", alt="")
           
       
-        .col-lg-3.col-lg-pull-4
+        .col-sm-3.col-sm-pull-6.col-xs-6
           
           .header__social
             div
@@ -33,7 +35,7 @@ header.header
               a(href="#!")
                 i.icon.icon--social-vkontakte
           
-        .col-lg-3.col-lg-push-2
+        .col-sm-3.col-xs-6
           
           .header__links
             div
@@ -46,7 +48,7 @@ header.header
                 span 99
                 
   // Menu
-  nav(role="navigation").menu
+  nav(role="navigation").menu.visible-lg
     .container
     
       ul.menu__ul1
@@ -58,15 +60,16 @@ header.header
             .menu__corner
             ul
               li.menu__li2
-                a(href="#!") Повседневные платья
+                a(href="#!" data-img="./img/drop-menu-1.png") Повседневные платья
               li.menu__li2
-                a(href="#!") Вечерние платья
+                a(href="#!" data-img="./img/drop-menu-2.png") Вечерние платья
               li.menu__li2
-                a(href="#!") Коктейльные платья
+                a(href="#!" data-img="./img/drop-menu-3.png") Коктейльные платья
               li.menu__li2
-                a(href="#!") Сарафаны
+                a(href="#!" data-img="./img/drop-menu-4.png") Сарафаны
               li.menu__li2
-                a(href="#!") SEXY платья
+                a(href="#!" data-img="./img/drop-menu-5.png") SEXY платья
+            img(src="./img/drop-menu-1.png", alt="").menu__img
 
         li.menu__li1
           a(href="#!") Костюмы

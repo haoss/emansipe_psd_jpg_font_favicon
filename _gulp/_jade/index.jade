@@ -24,103 +24,523 @@ html(lang="ru")
           .section__head
             .h1 модный товар
               small.small мы подобрали лучшее 
+          
+          // Nav tabs
+          .catalog__tabs
+            ul(role='tablist')
+              li.active(role='presentation')
+                a(href='#catalog-new', aria-controls='catalog-new', role='tab', data-toggle='tab') Новинки
+              li(role='presentation')
+                a(href='#catalog-sale', aria-controls='catalog-sale', role='tab', data-toggle='tab') Скидки
+              li(role='presentation')
+                a(href='#catalog-week', aria-controls='catalog-week', role='tab', data-toggle='tab') Товар недели
               
-          .row
-            .col-md-3
-              .catalog__block
-                a(href="#!").catalog__link
-                .catalog__img
-                  .catalog__hover
-                    .catalog__shadow
-                    .catalog__line1
-                      i
-                    .catalog__line2
-                      i
-                    .catalog__line3
-                      i
-                    .catalog__line4
-                      i
-                    .catalog__size
-                      .catalog__size__name доступные размеры
-                      .catalog__size__label 40
-                      .catalog__size__label 42
-                      .catalog__size__label 43
-                      .catalog__size__label 44
-                      .catalog__size__label 46
-                      .catalog__size__label 48
-                  img(src="./tmp/catalog-img-girl-1.png", alt="").img-responsive
-                .catalog__name название Платья № 23465454 
+          // Tab panes
+          .tab-content
+            #catalog-new.tab-pane.active(role='tabpanel')
+              .catalog__carousel
+                .catalog__carousel__block 
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                          .catalog__size__label 43
+                          .catalog__size__label 44
+                          .catalog__size__label 46
+                          .catalog__size__label 48
+                      img(src="./tmp/catalog-img-girl-1.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454 
+                    .catalog__price
+                      div
+                        span
+                          strong 15 999 
+                          sup руб
+                .catalog__carousel__block
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                          .catalog__size__label 43
+                      img(src="./tmp/catalog-img-girl-2.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454 
+                    .catalog__price
+                      div
+                        span
+                          strong 15 999 
+                          sup руб
+                      div
+                        span.old
+                          strong 21 999 
+                          sup руб
+                .catalog__carousel__block
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                      img(src="./tmp/catalog-img-girl-3.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454
+                    .catalog__price
+                      div
+                        small 
+                          span цена скрыта,
+                          a(href="#!") зарегистрируйтесь
+                .catalog__carousel__block
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                          .catalog__size__label 43
+                          .catalog__size__label 44
+                          .catalog__size__label 46
+                          .catalog__size__label 48
+                          .catalog__size__label 50
+                          .catalog__size__label 52
+                          .catalog__size__label 54
+                      img(src="./tmp/catalog-img-girl-4.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454 
+                    .catalog__price
+                      div
+                        small 
+                          span цена скрыта,
+                          a(href="#!") зарегистрируйтесь
+                          
+                .catalog__carousel__block 
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                          .catalog__size__label 43
+                          .catalog__size__label 44
+                          .catalog__size__label 46
+                          .catalog__size__label 48
+                      img(src="./tmp/catalog-img-girl-1.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454 
+                    .catalog__price
+                      div
+                        span
+                          strong 15 999 
+                          sup руб
+                .catalog__carousel__block
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                          .catalog__size__label 43
+                      img(src="./tmp/catalog-img-girl-2.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454 
+                    .catalog__price
+                      div
+                        span
+                          strong 15 999 
+                          sup руб
+                      div
+                        span.old
+                          strong 21 999 
+                          sup руб
+                .catalog__carousel__block
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                      img(src="./tmp/catalog-img-girl-3.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454
+                    .catalog__price
+                      div
+                        small 
+                          span цена скрыта,
+                          a(href="#!") зарегистрируйтесь
+                .catalog__carousel__block
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                          .catalog__size__label 43
+                          .catalog__size__label 44
+                          .catalog__size__label 46
+                          .catalog__size__label 48
+                          .catalog__size__label 50
+                          .catalog__size__label 52
+                          .catalog__size__label 54
+                      img(src="./tmp/catalog-img-girl-4.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454 
+                    .catalog__price
+                      div
+                        small 
+                          span цена скрыта,
+                          a(href="#!") зарегистрируйтесь
+                          
+            #catalog-sale.tab-pane(role='tabpanel')
+              .catalog__carousel
+                .catalog__carousel__block 
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                          .catalog__size__label 43
+                          .catalog__size__label 44
+                          .catalog__size__label 46
+                          .catalog__size__label 48
+                      img(src="./tmp/catalog-img-girl-1.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454 
+                    .catalog__price
+                      div
+                        span
+                          strong 15 999 
+                          sup руб
+                .catalog__carousel__block
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                          .catalog__size__label 43
+                      img(src="./tmp/catalog-img-girl-2.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454 
+                    .catalog__price
+                      div
+                        span
+                          strong 15 999 
+                          sup руб
+                      div
+                        span.old
+                          strong 21 999 
+                          sup руб
+                .catalog__carousel__block
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                      img(src="./tmp/catalog-img-girl-3.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454
+                    .catalog__price
+                      div
+                        small 
+                          span цена скрыта,
+                          a(href="#!") зарегистрируйтесь
+                .catalog__carousel__block
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                          .catalog__size__label 43
+                          .catalog__size__label 44
+                          .catalog__size__label 46
+                          .catalog__size__label 48
+                          .catalog__size__label 50
+                          .catalog__size__label 52
+                          .catalog__size__label 54
+                      img(src="./tmp/catalog-img-girl-4.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454 
+                    .catalog__price
+                      div
+                        small 
+                          span цена скрыта,
+                          a(href="#!") зарегистрируйтесь
+                          
+                .catalog__carousel__block 
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                          .catalog__size__label 43
+                          .catalog__size__label 44
+                          .catalog__size__label 46
+                          .catalog__size__label 48
+                      img(src="./tmp/catalog-img-girl-1.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454 
+                    .catalog__price
+                      div
+                        span
+                          strong 15 999 
+                          sup руб
                 
-            .col-md-3
-              .catalog__block
-                a(href="#!").catalog__link
-                .catalog__img
-                  .catalog__hover
-                    .catalog__shadow
-                    .catalog__line1
-                      i
-                    .catalog__line2
-                      i
-                    .catalog__line3
-                      i
-                    .catalog__line4
-                      i
-                    .catalog__size
-                      .catalog__size__name доступные размеры
-                      .catalog__size__label 40
-                      .catalog__size__label 42
-                      .catalog__size__label 43
-                  img(src="./tmp/catalog-img-girl-2.png", alt="").img-responsive
-                .catalog__name название Платья № 23465454 
-                 
-            .col-md-3
-              .catalog__block
-                a(href="#!").catalog__link
-                .catalog__img
-                  .catalog__hover
-                    .catalog__shadow
-                    .catalog__line1
-                      i
-                    .catalog__line2
-                      i
-                    .catalog__line3
-                      i
-                    .catalog__line4
-                      i
-                    .catalog__size
-                      .catalog__size__name доступные размеры
-                      .catalog__size__label 40
-                      .catalog__size__label 42
-                  img(src="./tmp/catalog-img-girl-3.png", alt="").img-responsive
-                .catalog__name название Платья № 23465454 
-                 
-            .col-md-3
-              .catalog__block
-                a(href="#!").catalog__link
-                .catalog__img
-                  .catalog__hover
-                    .catalog__shadow
-                    .catalog__line1
-                      i
-                    .catalog__line2
-                      i
-                    .catalog__line3
-                      i
-                    .catalog__line4
-                      i
-                    .catalog__size
-                      .catalog__size__name доступные размеры
-                      .catalog__size__label 40
-                      .catalog__size__label 42
-                      .catalog__size__label 43
-                      .catalog__size__label 44
-                      .catalog__size__label 46
-                      .catalog__size__label 48
-                      .catalog__size__label 50
-                      .catalog__size__label 52
-                      .catalog__size__label 54
-                  img(src="./tmp/catalog-img-girl-4.png", alt="").img-responsive
-                .catalog__name название Платья № 23465454 
+            #catalog-week.tab-pane(role='tabpanel')
+              .catalog__carousel
+                .catalog__carousel__block 
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                          .catalog__size__label 43
+                          .catalog__size__label 44
+                          .catalog__size__label 46
+                          .catalog__size__label 48
+                      img(src="./tmp/catalog-img-girl-1.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454 
+                    .catalog__price
+                      div
+                        span
+                          strong 15 999 
+                          sup руб
+                .catalog__carousel__block
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                          .catalog__size__label 43
+                      img(src="./tmp/catalog-img-girl-2.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454 
+                    .catalog__price
+                      div
+                        span
+                          strong 15 999 
+                          sup руб
+                      div
+                        span.old
+                          strong 21 999 
+                          sup руб
+                .catalog__carousel__block
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                      img(src="./tmp/catalog-img-girl-3.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454
+                    .catalog__price
+                      div
+                        small 
+                          span цена скрыта,
+                          a(href="#!") зарегистрируйтесь
+                .catalog__carousel__block
+                  .catalog__block
+                    .catalog__img
+                      a(href="#!").catalog__link
+                      .catalog__hover
+                        .catalog__shadow
+                        .catalog__line1
+                          i
+                        .catalog__line2
+                          i
+                        .catalog__line3
+                          i
+                        .catalog__line4
+                          i
+                        .catalog__size
+                          .catalog__size__name доступные размеры
+                          .catalog__size__label 40
+                          .catalog__size__label 42
+                          .catalog__size__label 43
+                          .catalog__size__label 44
+                          .catalog__size__label 46
+                          .catalog__size__label 48
+                          .catalog__size__label 50
+                          .catalog__size__label 52
+                          .catalog__size__label 54
+                      img(src="./tmp/catalog-img-girl-4.png", alt="").img-responsive
+                    .catalog__name название Платья № 23465454 
+                    .catalog__price
+                      div
+                        small 
+                          span цена скрыта,
+                          a(href="#!") зарегистрируйтесь
+            
         
         // Advantages
         section.section.advantages
@@ -181,7 +601,9 @@ html(lang="ru")
       <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
       <script src='./js/libs/html5shiv/respond.min.js'><![endif]
 
-    include ./_include/_footer-js
+    //- include ./_include/_footer-js
     script(src='./js/libs.js')
+    script(src='./js/libs/bootstrap/bootstrap.min.js')
+    script(src='./js/libs/slick/slick.min.js')
     script(src='./js/common.js')
     include ./_include/_js-body-bottom

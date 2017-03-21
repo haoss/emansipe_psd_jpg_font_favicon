@@ -31,6 +31,7 @@ body
   font-size: rem(13)
   font-family: $font-exo
   color: $primary-color
+  width: 100%
   -webkit-font-smoothing: antialiased
   -webkit-text-size-adjust: 100%
 
@@ -356,12 +357,13 @@ button.mfp-close, button.mfp-arrow
   &:active
     top: -38px
 
-.mfp-bg--imgSmall
+.mfp-wrap.mfp-bg--imgSmall
   background-image: url('../img/mfp-bg--imgSmall.png')
   background-position: center center
   background-repeat: no-repeat
+  background-size: 413px 367px
 
-.mfp-bg--imgSmall-double
+.mfp-wrap.mfp-bg--imgSmall-double
   background-image: url('../img/mfp-bg--imgSmall-double.png')
   background-position: center center
   background-repeat: no-repeat
@@ -371,3 +373,17 @@ button.mfp-close, button.mfp-arrow
     margin: 0 !important
     &>div
       padding: 0 !important
+
+.tab-pane
+  display: none
+  &.active
+    display: block
+.tab-content
+  overflow: hidden
+.tab-content > .tab-pane, .pill-content > .pill-pane
+  display: block
+  height: 0
+  overflow: hidden
+
+.tab-content > .active, .pill-content > .active
+  height: auto

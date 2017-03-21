@@ -5,6 +5,7 @@
     background: #f0f6f9
     position: relative
     color: #858585
+    height: 30px
 
   &__contacts
     float: right
@@ -16,15 +17,13 @@
       float: left
       height: 30px
       line-height: 28px
-      &+div
-        padding-left: 35px
-
-  &__phones
-    +clearfix
-    &>div
-      float: left
-      &+div
-        padding-left: 15px
+      white-space: nowrap
+      &:not(:last-child)
+        padding-right: 15px
+      &.show
+        padding-right: 35px
+      &.hide
+        display: block !important
 
   &__bottom
     padding-top: 30px
@@ -76,3 +75,27 @@
     z-index: 10
   img
     max-width: 100%
+
+// Search
+.search
+  position: fixed
+  z-index: 100
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  display: none
+  &__background
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-color: rgba($color-white, 0.8)
+    z-index: 10
+  &__block
+    height: 30px
+    background: $color-s-brown
+    width: 100%
+    position: absolute
+    z-index: 20
