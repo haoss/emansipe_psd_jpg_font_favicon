@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <title>Личный кабинет - личные данные - Emansipe</title>
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700">
+        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
+        <link rel="stylesheet" href="./js/libs/slick/slick.css">
+        <link rel="stylesheet" href="./js/libs/slick/slick-theme.css">
+        <link rel="stylesheet" href="./css/main.css">
+    </head>
+    <body>
+        <!-- Preloader-->
+        <div id="feedback" class="popup mfp-hide">
+            <div class="popup__title">обратный звонок</div>
+            <form action="#!">
+                <div class="form-group">
+                    <label class="hidden">Ваше имя</label>
+                    <input type="text" placeholder="Ваше имя" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="hidden">Ваш телефон</label>
+                    <input type="text" placeholder="Ваш телефон" class="form-control">
+                </div>
+                <button type="submit" class="btn btn--default btn--block">перезвоните мне </button>
+            </form>
+        </div>
+        <div id="enter" class="popup mfp-hide">
+            <div class="popup__title">войти на сайт</div>
+            <form action="#!">
+                <div class="form-group">
+                    <label class="hidden">Ваш логин</label>
+                    <input type="text" placeholder="Ваш логин" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="hidden">Ваш пароль</label>
+                    <input type="text" placeholder="Ваш пароль" class="form-control">
+                </div>
+                <button type="submit" class="btn btn--default btn--block">войти на сайт</button>
+                <div class="clear10"></div>
+                <div class="row row--popup">
+                    <div class="col-xs-6 text-center"><a href="#forgot-password" class="open-popup-link"><small>Забыли пароль?</small></a></div>
+                    <div class="col-xs-6 text-center"><a href="#" class="open-popup-register"> <small>Зарегистрироваться</small></a></div>
+                </div>
+            </form>
+        </div>
+        <div id="forgot-password" class="popup mfp-hide">
+            <div class="popup__title">забыли пароль?</div>
+            <form action="#!">
+                <div class="form-group">
+                    <label class="hidden">Ваш логин</label>
+                    <input type="text" placeholder="Ваш логин" class="form-control">
+                </div>
+                <button type="submit" class="btn btn--default btn--block">востановить доступ на сайт</button>
+                <div class="clear10"></div>
+                <div class="text-center"><a href="#" class="open-popup-register"> <small>Зарегистрироваться</small></a></div>
+            </form>
+        </div>
+        <div id="register" class="popup mfp-hide">
+            <div class="popup__title">регистрация</div>
+            <form action="#!">
+                <div class="form-group">
+                    <label class="hidden">Название организации</label>
+                    <input type="text" placeholder="Название организации" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="hidden">ФИО</label>
+                    <input type="text" placeholder="ФИО" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="hidden">Телефон</label>
+                    <input type="text" placeholder="Телефон" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="hidden">Ваш email</label>
+                    <input type="email" placeholder="Ваш email" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="hidden">Пароль</label>
+                    <input type="password" placeholder="Пароль" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label class="hidden">Повторите пароль</label>
+                    <input type="password" placeholder="Повторите пароль" class="form-control">
+                </div>
+                <button type="submit" class="btn btn--default btn--block">войти на сайт</button>
+                <div class="clear10"></div>
+                <div class="text-center"><a href="#" class="open-popup-enter"> <small>Вернуться на страницу входа</small></a></div>
+            </form>
+        </div>
+        <div class="loader">
+            <div class="loader__block"></div>
+        </div>
+        <!-- Search-->
+        <div class="search">
+            <div class="search__background"></div>
+            <div class="search__block">
+                <form action="#!">
+                    <input type="text">
+                    <button type="submit"></button>
+                </form>
+            </div>
+        </div>
+        <!-- Header-->
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="header__contacts">
+                        <div class="show">Пн—Вс 10:00—19:00</div>
+                        <div>8 (966) 026-27-27</div>
+                        <div class="hide">8 (909) 952-27-77</div>
+                        <div class="visible-xs"><a href="#!" class="btn btn--phones"><i class="ion-android-arrow-dropleft"></i></a></div>
+                    </div><a href="#feedback" class="btn btn--default btn--feedback open-popup-link">Обратная связь </a>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-push-3 col-xs-12">
+                            <div class="logo"><a href="#!"></a><img src="./img/logo.png" alt=""></div>
+                        </div>
+                        <div class="col-sm-3 col-sm-pull-6 col-xs-6">
+                            <div class="header__social">
+                                <div><a href="#!"><i class="icon icon--social-instagram"></i></a><a href="#!"><i class="icon icon--social-facebook"></i></a><a href="#!"><i class="icon icon--social-vkontakte"></i></a></div>
+                            </div>
+                        </div>
+                        <div class="col-sm-3 col-xs-6">
+                            <div class="header__links">
+                                <div><a href="#!"><i class="icon icon--search"></i></a><a href="#enter" class="open-popup-link"><i class="icon icon--user"></i></a><a href="#!"><i class="icon icon--cart"></i><span>99</span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Menu-->
+            <nav role="navigation" class="menu visible-lg">
+                <div class="container">
+                    <ul class="menu__ul1">
+                        <li class="menu__li1"><a href="#!">Новинки</a></li>
+                        <li class="menu__li1"><a href="#!">Платья</a>
+                            <div class="menu__ul2">
+                                <div class="menu__corner"></div>
+                                <ul>
+                                    <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-1.png">Повседневные платья</a></li>
+                                    <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-2.png">Вечерние платья</a></li>
+                                    <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-3.png">Коктейльные платья</a></li>
+                                    <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-4.png">Сарафаны</a></li>
+                                    <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-5.png">SEXY платья</a></li>
+                                </ul><img src="./img/drop-menu-1.png" alt="" class="menu__img">
+                            </div>
+                        </li>
+                        <li class="menu__li1"><a href="#!">Костюмы</a></li>
+                        <li class="menu__li1"><a href="#!">Верхняя одежда</a></li>
+                        <li class="menu__li1"><a href="#!">О компании</a></li>
+                        <li class="menu__li1"><a href="#!">Скидки</a></li>
+                        <li class="menu__li1"><a href="#!">Контакты</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Breadcrumbs-->
+        <div class="breadcrumbs">
+            <div class="container">
+                <ul>
+                    <li><a href="#!">Emansipe</a></li>
+                    <li> <span>Личный кабинет</span></li>
+                </ul>
+            </div>
+        </div>
+        <!-- Content-->
+        <div class="content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <!-- Catalog navigation-->
+                        <div class="catalog__navigation">
+                            <button type="button">Каталог <span class="hidden-sm">продукции</span><i class="ion-chevron-up"></i></button>
+                            <nav role="navigation">
+                                <ul>
+                                    <li> <span>Платья</span>
+                                        <ul>
+                                            <li><a href="#!">Mini<span>(365)</span></a></li>
+                                            <li><a href="#!">Midi<span>(210)</span></a></li>
+                                            <li><a href="#!">Maxi<span>(675)</span></a></li>
+                                            <li><a href="#!">Вечерние платья<span>(55)</span></a></li>
+                                            <li><a href="#!">Все платья<span>(987)</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li> <span>Костюмы</span>
+                                        <ul>
+                                            <li><a href="#!">Все костюмы<span>(546)</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li> <span>Верхняя одежда </span>
+                                        <ul>
+                                            <li><a href="#!">Легкие пальто<span>(110)</span></a></li>
+                                            <li><a href="#!">Куртки<span>(853)</span></a></li>
+                                            <li><a href="#!">Плащи<span>(120)</span></a></li>
+                                            <li><a href="#!">Пальто<span>(555)</span></a></li>
+                                            <li><a href="#!">Вся верхняя одежда<span>(4562)</span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                                <div class="banner hidden-xs"><img src="./tmp/banner.png" alt="" class="img-responsive"></div>
+                    </div>
+                    <div class="col-sm-9">
+                        <h1>55 лучших образов Недели моды в Париже</h1>
+                        <h2>Какие вещи гарантированно станут бестселлерами в будущем сезоне</h2>
+                        <p>Подошла к концу последняя и, по традиции, самая насыщенная из четырех Недель моды – парижская. Французская столица принимает у себя показы старейших модных Домов и самых многообещающих новичков. Так, расписании Недели моды в Париже рядом стоят грандиозные шоу Chanel, Louis Vuitton и Dior, авангардные показы Rick Owens, Comme Des Garçons и Junya Watanabe и презентации коллекций самых обсуждаемых дизайнеров последних сезонов – создателя бренда Off-White Вирджила Абло и креативного директора Balenciaga Демны Гвасалии. В обзоре ELLE – лучшее с парижских подиумов за все 8 дней показов</p>
+                        <p><img src="./tmp/news-document.png" alt="" class="img-responsive"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer-->
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs">
+                        <div class="footer__logo"><img src="./img/logo.png" alt=""></div>
+                        <div class="copyright">© 2017 Интернет магазин Emansipe. Все права зарегистрированы и защищены.</div>
+                    </div>
+                    <div class="col-sm-3 hidden-xs">
+                        <div class="footer__title">Контакты</div>
+                        <div class="footer__contacts">
+                            <div class="footer__contacts__row">
+                                <div><i class="ion-email"></i></div>
+                                <div><a href="#!">info@site-name.ru</a></div>
+                            </div>
+                            <div class="footer__contacts__row">
+                                <div><i class="ion-android-call"></i></div>
+                                <div>8(966)026-27-27</div>
+                            </div>
+                            <div class="footer__contacts__row">
+                                <div><i class="ion-social-whatsapp"></i></div>
+                                <div>8(909)952-27-77 </div>
+                            </div>
+                            <div class="footer__contacts__row">
+                                <div><i class="ion-home"></i></div>
+                                <div>г. Москва, ул. Иркутская, дом 11, <br>корп. 1, остановка "2-й <br>Иртышский проезд"</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 col-xxs-12">
+                        <div class="footer__title">Сотрудничество</div>
+                        <ul>
+                            <li><a href="#!">Как зарегистрироваться</a></li>
+                            <li><a href="#!">Условия сотрудничества</a></li>
+                            <li><a href="#!">О доставке</a></li>
+                            <li><a href="#!">Способы оплаты</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3 col-xs-6 col-xxs-12">
+                        <div class="footer__title">Личный кабинет</div>
+                        <ul>
+                            <li><a href="#!">Личные данные</a></li>
+                            <li><a href="#!">Состояние заказа</a></li>
+                            <li><a href="#!">Корзина</a></li>
+                            <li><a href="#!">Выход</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 visible-xs">
+                        <div class="copyright">© 2017 Интернет магазин Emansipe. Все права зарегистрированы и защищены.</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--[if gte IE 9]
+        <script src='./js/libs/html5shiv/es5-shim.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv.min.js'>
+        <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+        <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+        
+        -->
+        <script src="./js/libs.js"></script>
+        <!-- Footer js-->
+        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
+        <script src="./js/libs/slick/slick.min.js"></script>
+        <script src="./js/common.js"></script>
+    </body>
+</html>
