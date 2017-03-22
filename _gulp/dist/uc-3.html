@@ -2,7 +2,7 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <title>Контакты - Emansipe</title>
+        <title>Личный кабинет - отзыв - Emansipe</title>
         <meta name="description" content="">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -213,121 +213,45 @@
             <div class="container">
                 <ul>
                     <li><a href="#!">Emansipe</a></li>
-                    <li> <a href="#!">Новости</a></li>
-                    <li><span>55 лучших образов Недели моды в Париже</span></li>
+                    <li> <span>Личный кабинет</span></li>
                 </ul>
             </div>
         </div>
         <!-- Content-->
         <div class="content">
             <div class="container">
+                <h1>личный кабинет</h1>
+                <!-- Discount-->
+                <div class="private__discount">
+                    <div class="table">
+                        <div class="table-cell"><b>ваша скидка <br>составляет: </b></div>
+                        <div class="table-cell"><strong>15%</strong></div>
+                    </div>
+                </div>
+                <div class="clear"></div>
                 <div class="row">
                     <div class="col-sm-3">
-                        <!-- Catalog navigation-->
-                        <div class="catalog__navigation">
-                            <button type="button">Каталог <span class="hidden-sm">продукции</span><i class="ion-chevron-up"></i></button>
-                            <nav role="navigation">
-                                <ul>
-                                    <li class="active"> <span>Платья</span>
-                                        <ul>
-                                            <li><a href="#!">Mini<span>(365)</span></a></li>
-                                            <li class="active"><a href="#!">Midi<span>(210)</span></a></li>
-                                            <li><a href="#!">Maxi<span>(675)</span></a></li>
-                                            <li><a href="#!">Вечерние платья<span>(55)</span></a></li>
-                                            <li class="last"><a href="#!">Все платья<span>(987)</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li> <span>Костюмы</span>
-                                        <ul>
-                                            <li><a href="#!">Все костюмы<span>(546)</span></a></li>
-                                        </ul>
-                                    </li>
-                                    <li> <span>Верхняя одежда </span>
-                                        <ul>
-                                            <li><a href="#!">Легкие пальто<span>(110)</span></a></li>
-                                            <li><a href="#!">Куртки<span>(853)</span></a></li>
-                                            <li><a href="#!">Плащи<span>(120)</span></a></li>
-                                            <li><a href="#!">Пальто<span>(555)</span></a></li>
-                                            <li><a href="#!">Вся верхняя одежда<span>(4562)</span></a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                                <div class="banner hidden-xs"><img src="./tmp/banner.png" alt="" class="img-responsive"></div>
+                        <!-- Private menu-->
+                        <nav role="navigation" class="private__menu">
+                            <ul>
+                                <li><a href="#!">личные данные</a></li>
+                                <li><a href="#!">заказы</a></li>
+                                <li class="active"><a href="#!">отзыв</a></li>
+                                <li><a href="#!">выйти с сайта</a></li>
+                            </ul>
+                        </nav>
                     </div>
                     <div class="col-sm-9">
-                        <h1>контакты</h1>
-                        <h2>интернет магазин emansipe</h2>
-                        <p><strong>г. Москва, ул. Первая деловая, д 2, оф 3</strong></p>
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <table class="table">
-                                    <tr>
-                                        <td>Телефоны:</td>
-                                        <td><strong>0 800 987 654 32,<br>+7 987 654 321 0</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Email:</td>
-                                        <td><strong>hello@emansipe.ru</strong></td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="col-sm-6">
-                                <table class="table">
-                                    <tr>
-                                        <td>Skype:</td>
-                                        <td><strong>Emansipe</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Facebook:</td>
-                                        <td> <strong>EmansipeRU</strong></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vkontakte:</td>
-                                        <td> <strong>EmansipeRU</strong></td>
-                                    </tr>
-                                </table>
-                            </div>
+                        <div class="form">
+                            <form action="#!">
+                                <div class="form-group">
+                                    <textarea placeholder="Ваше сообщение" rows="7" class="form-control"></textarea>
+                                </div>
+                                <div class="text-right">
+                                    <button type="submit" class="btn btn--default btn--mw200">Отправить сообщение</button>
+                                </div>
+                            </form>
                         </div>
-                        <div id="map_canvas"></div>
-                        <!-- Google Map-->
-                        <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
-                        <script>
-                            function initialize() {
-                              var myLatlng = new google.maps.LatLng(55.7546967,37.6193328);
-                              var map_options = {
-                                zoom: 16,
-                                mapTypeId: google.maps.MapTypeId.ROADMAP,
-                                center: myLatlng,
-                                scrollwheel: false,
-                                disableDefaultUI: true
-                              }
-                              var map = new google.maps.Map(document.getElementById('map_canvas'), map_options)
-                              var myIcon = new google.maps.MarkerImage('./img/marker.png', null, null, null, new google.maps.Size(105,109));
-                              var marker = new google.maps.Marker({
-                                position: myLatlng,
-                                map: map,
-                                icon: myIcon
-                              });
-                            /* Remove if you dont want B/W Google Map */
-                            /*
-                            var styles = [
-                            {
-                            featureType: "all",
-                            stylers: [
-                            { saturation: -100 }
-                            ]
-                            }
-                            ];
-                            map.setOptions({styles: styles});
-                            */
-                            }
-                            google.maps.event.addDomListener(window, 'load', initialize);
-                        </script>
-                        <!-- Google Map Ends!-->
-                        
-                        
                     </div>
                 </div>
             </div>
@@ -398,10 +322,5 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.7/javascripts/jquery.nanoscroller.min.js"></script>
         <script src="./js/common.js"></script>
-        <script>
-            $(document).ready(function(){
-              $('.menu .menu__li1:last-child').addClass('active');
-            })
-        </script>
     </body>
 </html>

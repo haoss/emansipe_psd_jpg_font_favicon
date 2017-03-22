@@ -350,6 +350,7 @@
     margin: 0 auto 30px
     border: 1px solid $color-s-lightbrown
     max-width: 262px
+    position: relative
     &.is-active
       button[type="button"]
         i
@@ -385,6 +386,8 @@
       font-family: $font-exo-condensed
       font-weight: 600
       padding: 10px 0
+      z-index: 10
+      background: $color-white
       ul
         margin: 0
         padding: 0
@@ -418,6 +421,10 @@
                 transform: translateY(-50%)
               &:hover
                 color: $color-s-lightbrown
+            &.active
+              &>a
+                color: $color-s-brown
+
 
 // news
 .news
@@ -472,10 +479,70 @@
   padding-bottom: 500px
   background: $color-white
 
-.table
+table.table
   margin-bottom: 25px
   td
     vertical-align: top
     padding: 2px 0
     &+td
       padding-left: 15px
+
+div.table
+  display: table
+  &>.table-cell
+    display: table-cell
+    vertical-align: top
+    &:first-child
+      width: 1px
+
+// Private
+.private
+  &__cabinet
+    &>div
+      padding: 0
+      &+div
+        padding-left: 30px
+
+  &__form
+    width: 361px
+    margin-bottom: 30px
+
+  &__terms
+    width: 457px
+    height: 370px
+    padding-right: 17px
+    margin-bottom: 30px
+
+  &__discount
+    text-transform: uppercase
+    font-family: $font-exo-condensed
+    font-size: rem(13)
+    float: right
+    margin-top: -57px
+    margin-bottom: 20px
+    b
+      text-align: right
+      white-space: nowrap
+      display: inline-block
+    strong
+      display: block
+      width: 40px
+      height: 40px
+      line-height: 40px
+      text-align: center
+      background: $color-s-lightbrown
+      color: $color-white
+      font-size: rem(20)
+      font-weight: 600
+    .table-cell
+      vertical-align: middle !important
+      &+div
+        padding-left: 10px
+
+
+.nano
+  &>.nano-pane
+    width: 5px
+  &>.nano-content
+    // right: 0 !important
+    padding-right: 15px

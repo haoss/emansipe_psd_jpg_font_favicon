@@ -39,7 +39,7 @@ header.header
           
           .header__links
             div
-              a(href="#!")
+              a(href="#!").link-search
                 i.icon.icon--search
               a(href="#enter").open-popup-link
                 i.icon.icon--user
@@ -48,10 +48,10 @@ header.header
                 span 99
                 
   // Menu
-  nav(role="navigation").menu.visible-lg
+  nav(role="navigation").menu
     .container
     
-      ul.menu__ul1
+      ul.menu__ul1.hidden-xs
         li.menu__li1
           a(href="#!") Новинки
         li.menu__li1
@@ -75,9 +75,82 @@ header.header
           a(href="#!") Костюмы
         li.menu__li1
           a(href="#!") Верхняя одежда
+          div.menu__ul2
+            .menu__corner
+            ul
+              li.menu__li2
+                a(href="#!" data-img="./img/drop-menu-1.png") Легкие пальто
+              li.menu__li2
+                a(href="#!" data-img="./img/drop-menu-2.png") Куртки
+              li.menu__li2
+                a(href="#!") Плащи
+              li.menu__li2
+                a(href="#!") Пальто
+            img(src="./img/drop-menu-1.png", alt="").menu__img
+            
         li.menu__li1
           a(href="#!") О компании
         li.menu__li1
           a(href="#!") Скидки
         li.menu__li1
           a(href="#!") Контакты
+      
+      .clear
+      
+      // Catalog navigation
+      .menu__mobile.visible-xs
+        button(type="button") 
+          i.ion-ios-albums-outline
+          | Меню
+        nav(role="navigation")
+          ul
+            li
+              a(href="#!") Новинки
+            li 
+              a(href="#!") Платья
+              ul
+                li.active
+                  a(href="#!") Mini
+                    span (365)
+                li
+                  a(href="#!") Midi
+                    span (210)
+                li
+                  a(href="#!") Maxi
+                    span (675)
+                li
+                  a(href="#!") Вечерние платья
+                    span (55)
+                li.last
+                  a(href="#!") Все платья
+                    span (987)
+            li 
+              span Костюмы
+              ul
+                li.last
+                  a(href="#!") Все костюмы
+                    span (546)
+            li 
+              span Верхняя одежда 
+              ul
+                li
+                  a(href="#!") Легкие пальто
+                    span (110)
+                li
+                  a(href="#!") Куртки
+                    span (853)
+                li
+                  a(href="#!") Плащи
+                    span (120)
+                li
+                  a(href="#!") Пальто
+                    span (555)
+                li.last
+                  a(href="#!") Вся верхняя одежда
+                    span (4562)
+            li
+              a(href="#!") О компании
+            li
+              a(href="#!") Скидки
+            li
+              a(href="#!") Контакты

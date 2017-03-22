@@ -142,14 +142,41 @@ $(document).ready(function(){
     if (width > 767) return;
 
     $(this).parent().toggleClass('is-active');
-    $('.catalog__navigation nav').slideToggle();
   });
-  catalogNav();
 
   $('ol.ol--list li').each(function(){
     $(this).prepend('<span>' + ($(this).index() + 1) + '</span>');
   });
 
+  $(".nano").nanoScroller({
+    alwaysVisible: true,
+    preventPageScrolling: true
+  });
+
+  $(document).on('click', '.link-search', function(e){
+    e.preventDefault();
+    $('body').css({
+      'position': 'fixed',
+      'padding-right': '15px'
+    });
+    $('.search').show();
+    search();
+  });
+
+  $(document).on('click', '.search', function(e){
+    $('body').removeAttr('style');
+    $(this).hide();
+  });
+
+  $('.search__block').on('click', function(e){
+    e.stopPropagation();
+  });
+
+  $('.menu__mobile button').on('click', function(e){
+    e.preventDefault();
+    $(this).parent().toggleClass('is-active');
+    // $(this).next('nav').slideToggle();
+  });
 
   // Chrome Smooth Scroll
   try {
@@ -179,46 +206,34 @@ $(window).on('load', function() {
 
 $(window).on('resize', function(){
   search();
-  catalogNav();
 });
 
-function catalogNav(){
-  var width = $(window).width(),
-      menu = $('.catalog__navigation'),
-      nav = $('.catalog__navigation nav');
-
-  if (width <= 767) {
-    menu.addClass('is-active');
-    nav.hide();
-  } else if (width > 767) {
-    menu.removeClass('is-active');
-    nav.show();
-  }
-}
 
 function menuImg(){
   var a = $('.menu__li2 a');
 
   a.on('hover', function(e){
     console.log($(this).data('img'));
-    $('.menu__ul2 .menu__img').attr('src', $(this).data('img'))
+    $(this).parents('.menu__ul2').find('.menu__img').attr('src', $(this).data('img'))
   });
 }
 
 function search(){
-  if ($('.search').hide()) return;
-  $('body').css('position', 'fixed');
+  // if ($('.search').hide()) return;
+  var width = $(window).width();
 
   var social = $('.header__social a:last-child'),
       search = $('.header__links a:first-child'),
       socialPos = social.offset(),
       searchPos = search.offset();
 
-  $('.search__block').css({
-    'top': socialPos.top + 'px',
-    'left': socialPos.left + 'px',
-    'width': searchPos.left - socialPos.left + 30 + 'px'
-  });
+  if (width > 767) {
+    $('.search__block').css({
+      'top': socialPos.top + 'px',
+      'left': socialPos.left + 'px',
+      'width': searchPos.left - socialPos.left + 30 + 'px'
+    });
+  }
 
   // console.log(searchPos.top);
 }

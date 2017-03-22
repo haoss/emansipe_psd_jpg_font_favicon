@@ -96,7 +96,39 @@
     z-index: 10
   &__block
     height: 30px
-    background: $color-s-brown
+    background: $color-s-lightbrown
     width: 100%
     position: absolute
     z-index: 20
+  input
+    background: transparent
+    // background: pink
+    border-color: transparent
+    width: 100%
+    height: 30px
+    color: $color-white
+    font-size: rem(14)
+    font-family: $font-exo
+    padding-left: 15px
+    padding-right: 15px
+    box-shadow: 5px 5px 0 #f1f2f2
+  ::-webkit-input-placeholder
+    color: $color-white
+  ::-moz-placeholder
+    color: $color-white
+  :-ms-input-placeholder
+    color: $color-white
+  input:-moz-placeholder
+    color: $color-white
+
+  button
+    width: 30px
+    height: 30px
+    text-align: center
+    position: absolute
+    right: 0
+    top: 0
+    background: $color-s-lightbrown
+    color: $color-white
+    font-size: rem(20)
+    border: 0

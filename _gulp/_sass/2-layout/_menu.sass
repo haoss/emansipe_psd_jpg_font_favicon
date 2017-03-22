@@ -9,6 +9,7 @@
     padding: 0
   ul
     margin: 0
+    padding: 0
     li
       list-style: none
       margin: 0
@@ -147,3 +148,157 @@
     position: absolute
     right: 18px
     bottom: 5px
+
+  &__mobile
+    margin: 0 auto
+    max-width: 262px
+    position: relative
+    &.is-active
+      button[type="button"]
+        color: $color-s-brown
+        i
+          color: $color-s-brown
+        &::after
+          opacity: 1
+          margin-left: 21px
+          top: -15px
+        &::before
+          opacity: 1
+          bottom: -16px
+          margin-left: -21px
+      nav
+        z-index: 50
+        opacity: 1
+        transform: translateY(0)
+    button[type="button"]
+      display: block
+      width: 130px
+      text-align: center
+      position: relative
+      color: $primary-color
+      text-transform: uppercase
+      height: 40px
+      line-height: 38px
+      border: 0
+      font-family: $font-exo-condensed
+      font-weight: 700
+      font-size: rem(30)
+      cursor: default
+      margin-left: auto
+      margin-right: auto
+      background: transparent
+      transition: color 0.35s
+      margin-bottom: 5px
+      &::after, &::before
+        content: ''
+        width: 1px
+        height: 23px
+        position: absolute
+        left: 50%
+        transform: translateX(-50%) rotate(45deg)
+        top: -28px
+        background: $color-s-lightbrown
+        margin-left: 31px
+        opacity: 0
+        transition: 0.35s ease-in-out
+      &::before
+        top: inherit
+        bottom: -29px
+        margin-left: -31px
+
+      i
+        font-size: rem(30)
+        color: #9b9b9b
+        margin-right: 10px
+        transition: color 0.35s
+
+    nav
+      font-size: rem(12)
+      text-transform: uppercase
+      font-family: $font-exo-condensed
+      font-weight: 600
+      padding: 15px 0
+      border: 1px solid $color-s-brown
+      position: absolute
+      background: $color-white
+      z-index: -1
+      width: 100%
+      opacity: 0
+      transform: translateY(10px)
+      transition: all 0.35s
+      // display: none
+      // opacity: 0
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2)
+      ul
+        margin: 0
+        padding: 0
+        li
+          margin: 0
+          list-style: none
+          &>a, &>span
+            display: block
+            color: $color-s-brown
+            padding: 1px 20px
+            font-size: rem(18)
+          &>a
+            &:hover
+              color: $color-s-lightbrown
+        ul
+          font-size: rem(12)
+          li
+            &>a, &>span
+              position: relative
+              padding: 4px 60px 4px 35px
+              text-decoration: none
+              color: $primary-color
+              font-size: rem(12)
+              &::before
+                position: absolute
+                left: 20px
+                top: 50%
+                transform: translateY(-50%)
+                content: "\f20b"
+                font-family: $font-ionicons
+                font-size: rem(10)
+              span
+                position: absolute
+                width: 55px
+                right: 0
+                top: 50%
+                transform: translateY(-50%)
+              &:hover
+                color: $color-s-lightbrown
+            &.active
+              &>a
+                color: $color-s-brown
+            &.last
+              &>a
+                &::before
+                  display: none
+
+/**/
+.private__menu
+  font-size: rem(16)
+  font-family: $font-exo-condensed
+  font-weight: 700
+  text-transform: uppercase
+  border: 2px solid $color-s-lightbrown
+  padding: 10px 0
+  margin-bottom: 30px
+
+  ul
+    margin: 0
+    padding: 0
+    li
+      margin: 0
+      list-style: none
+      &.active
+        &>a, &>span
+          color: $color-s-brown
+      &>a, &>span
+        display: block
+        color: $primary-color
+        padding: 5px 18px
+        text-decoration: none
+        &:hover
+          color: $color-s-brown

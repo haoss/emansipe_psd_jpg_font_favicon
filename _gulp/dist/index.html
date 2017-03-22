@@ -7,9 +7,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2:400,600,700">
-        <link rel="stylesheet" href="./js/libs/magnific-popup/magnific-popup.css">
-        <link rel="stylesheet" href="./js/libs/slick/slick.css">
-        <link rel="stylesheet" href="./js/libs/slick/slick-theme.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.7/css/nanoscroller.min.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -99,8 +100,8 @@
             <div class="search__background"></div>
             <div class="search__block">
                 <form action="#!">
-                    <input type="text">
-                    <button type="submit"></button>
+                    <input type="text" placeholder="Введите ваш запрос">
+                    <button type="submit"><i class="ion-search"></i></button>
                 </form>
             </div>
         </div>
@@ -129,16 +130,16 @@
                         </div>
                         <div class="col-sm-3 col-xs-6">
                             <div class="header__links">
-                                <div><a href="#!"><i class="icon icon--search"></i></a><a href="#enter" class="open-popup-link"><i class="icon icon--user"></i></a><a href="#!"><i class="icon icon--cart"></i><span>99</span></a></div>
+                                <div><a href="#!" class="link-search"><i class="icon icon--search"></i></a><a href="#enter" class="open-popup-link"><i class="icon icon--user"></i></a><a href="#!"><i class="icon icon--cart"></i><span>99</span></a></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Menu-->
-            <nav role="navigation" class="menu visible-lg">
+            <nav role="navigation" class="menu">
                 <div class="container">
-                    <ul class="menu__ul1">
+                    <ul class="menu__ul1 hidden-xs">
                         <li class="menu__li1"><a href="#!">Новинки</a></li>
                         <li class="menu__li1"><a href="#!">Платья</a>
                             <div class="menu__ul2">
@@ -153,11 +154,57 @@
                             </div>
                         </li>
                         <li class="menu__li1"><a href="#!">Костюмы</a></li>
-                        <li class="menu__li1"><a href="#!">Верхняя одежда</a></li>
+                        <li class="menu__li1"><a href="#!">Верхняя одежда</a>
+                            <div class="menu__ul2">
+                                <div class="menu__corner"></div>
+                                <ul>
+                                    <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-1.png">Легкие пальто</a></li>
+                                    <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-2.png">Куртки</a></li>
+                                    <li class="menu__li2"><a href="#!">Плащи</a></li>
+                                    <li class="menu__li2"><a href="#!">Пальто</a></li>
+                                </ul><img src="./img/drop-menu-1.png" alt="" class="menu__img">
+                            </div>
+                        </li>
                         <li class="menu__li1"><a href="#!">О компании</a></li>
                         <li class="menu__li1"><a href="#!">Скидки</a></li>
                         <li class="menu__li1"><a href="#!">Контакты</a></li>
                     </ul>
+                    <div class="clear"></div>
+                    <!-- Catalog navigation-->
+                    <div class="menu__mobile visible-xs">
+                        <button type="button"> <i class="ion-ios-albums-outline"></i>Меню</button>
+                        <nav role="navigation">
+                            <ul>
+                                <li><a href="#!">Новинки</a></li>
+                                <li> <a href="#!">Платья</a>
+                                    <ul>
+                                        <li class="active"><a href="#!">Mini<span>(365)</span></a></li>
+                                        <li><a href="#!">Midi<span>(210)</span></a></li>
+                                        <li><a href="#!">Maxi<span>(675)</span></a></li>
+                                        <li><a href="#!">Вечерние платья<span>(55)</span></a></li>
+                                        <li class="last"><a href="#!">Все платья<span>(987)</span></a></li>
+                                    </ul>
+                                </li>
+                                <li> <span>Костюмы</span>
+                                    <ul>
+                                        <li class="last"><a href="#!">Все костюмы<span>(546)</span></a></li>
+                                    </ul>
+                                </li>
+                                <li> <span>Верхняя одежда </span>
+                                    <ul>
+                                        <li><a href="#!">Легкие пальто<span>(110)</span></a></li>
+                                        <li><a href="#!">Куртки<span>(853)</span></a></li>
+                                        <li><a href="#!">Плащи<span>(120)</span></a></li>
+                                        <li><a href="#!">Пальто<span>(555)</span></a></li>
+                                        <li class="last"><a href="#!">Вся верхняя одежда<span>(4562)</span></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#!">О компании</a></li>
+                                <li><a href="#!">Скидки</a></li>
+                                <li><a href="#!">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -747,8 +794,9 @@
         -->
         <script src="./js/libs.js"></script>
         <!-- Footer js-->
-        <script src="./js/libs/bootstrap/bootstrap.min.js"></script>
-        <script src="./js/libs/slick/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.7/javascripts/jquery.nanoscroller.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>
