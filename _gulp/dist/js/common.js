@@ -56,12 +56,14 @@ $(document).ready(function(){
     fixedContentPos: false
   });
 
+  // Magnific popup inline block
   $('.open-popup-link').magnificPopup({
     type: 'inline',
     midClick: true,
     mainClass: 'mfp-bg--imgSmall'
   });
 
+  // Magnific popup register - double background in poup
   $('.open-popup-register').on('click', function(e){
     e.preventDefault();
     $.magnificPopup.close();
@@ -78,6 +80,7 @@ $(document).ready(function(){
     }, 0)
   });
 
+  // Magnific popup enter - remove double background in popup
   $('.open-popup-enter').on('click', function(e){
     e.preventDefault();
     $.magnificPopup.close();
@@ -94,14 +97,17 @@ $(document).ready(function(){
     }, 0)
   });
 
+  // Header top contacts mobile block
   $('.btn--phones').on('click', function(e){
     e.preventDefault();
     $(this).parents('.header__contacts').toggleClass('is-active');
   });
 
+  // Function
   menuImg();
   search();
 
+  // Main catalog carousel
   $('.catalog__carousel').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -135,24 +141,62 @@ $(document).ready(function(){
     ]
   });
 
+  // Product viewed
+  $('.catalog__viewed').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    variableWidth: true,
+    dots: false,
+    infinite: true,
+    speed: 300,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    draggable: true,
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 3
+        }
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 479,
+        settings: {
+          slidesToShow: 1,
+          variableWidth: false
+        }
+      }
+    ]
+  });
+
+  // Catalog navigation 767px
   $('.catalog__navigation button').on('click', function(e){
     e.preventDefault();
     var width = $(window).width();
 
     if (width > 767) return;
-
     $(this).parent().toggleClass('is-active');
+
   });
 
+  // Ol li custom marker
   $('ol.ol--list li').each(function(){
     $(this).prepend('<span>' + ($(this).index() + 1) + '</span>');
   });
 
+  // Custom scroll - vertical
   $(".nano").nanoScroller({
     alwaysVisible: true,
     preventPageScrolling: true
   });
 
+  // Open popup search block
   $(document).on('click', '.link-search', function(e){
     e.preventDefault();
     $('body').css({
@@ -160,18 +204,22 @@ $(document).ready(function(){
       'padding-right': '15px'
     });
     $('.search').show();
+    $('.search__block input').focus();
     search();
   });
 
+  // Close popup search block
   $(document).on('click', '.search', function(e){
     $('body').removeAttr('style');
     $(this).hide();
   });
 
+  // Search popup stop close
   $('.search__block').on('click', function(e){
     e.stopPropagation();
   });
 
+  // Mobile menu
   $('.menu__mobile button').on('click', function(e){
     e.preventDefault();
     $(this).parent().toggleClass('is-active');
@@ -192,10 +240,12 @@ $(document).ready(function(){
   simpleForm('form.form-callback');
 });
 
+// Window load
 $(window).on('load', function() {
   // $(".loader_inner").fadeOut();
   $(".loader").delay(400).fadeOut("slow");
 
+  // Active slick carousel in bootstrap tab
   $('.slides').on('setPosition', function () {
     $(this).find('.slick-slide').height('auto');
       var slickTrack = $(this).find('.slick-track');
@@ -204,29 +254,28 @@ $(window).on('load', function() {
   });
 });
 
+// Window resize
 $(window).on('resize', function(){
   search();
 });
 
-
+// Custom menu img link hover
 function menuImg(){
   var a = $('.menu__li2 a');
-
   a.on('hover', function(e){
-    console.log($(this).data('img'));
+    // console.log($(this).data('img'));
     $(this).parents('.menu__ul2').find('.menu__img').attr('src', $(this).data('img'))
   });
 }
 
+// Search popup
 function search(){
   // if ($('.search').hide()) return;
   var width = $(window).width();
-
   var social = $('.header__social a:last-child'),
       search = $('.header__links a:first-child'),
       socialPos = social.offset(),
       searchPos = search.offset();
-
   if (width > 767) {
     $('.search__block').css({
       'top': socialPos.top + 'px',
@@ -234,7 +283,6 @@ function search(){
       'width': searchPos.left - socialPos.left + 30 + 'px'
     });
   }
-
   // console.log(searchPos.top);
 }
 

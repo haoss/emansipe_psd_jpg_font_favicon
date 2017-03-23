@@ -24,3 +24,29 @@
     &.slick-active, &:hover
       button
         background: $color-gray
+
+.slick
+  &-next, &-prev
+    &:before
+      color: #828282
+      font-size: rem(20)
+      font-family: $font-ionicons
+      opacity: 1
+      transition: color 0.35s
+    &:hover
+      &::before
+        color: $color-s-brown
+  &-next:before
+    content: "\f125"
+  &-prev:before
+    content: "\f124"
+
+.catalog__viewed
+  .slick-next, .slick-prev
+    top: -38px
+    transform: translate(0,0)
+  .slick-next
+    right: 0
+  .slick-prev
+    left: inherit
+    right: 30px

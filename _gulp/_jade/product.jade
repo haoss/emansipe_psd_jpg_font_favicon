@@ -1,0 +1,207 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Платье № 3546576' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Платье № 3546576' + ' - Emansipe' //title страницы для генерации верстки 
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    include ./_include/_header
+    
+    // Breadcrumbs
+    .breadcrumbs
+      .container
+        ul
+          li
+            a(href="#!") Emansipe
+          li
+            a(href="#!") Платья
+          li
+            a(href="#!") Женские платья
+          li 
+            span Платье № 3546576
+    
+    // Content
+    .content
+      .container
+        
+        h1 Платье № 3546576
+        
+        // Product content
+        .product__content
+          .h2.color--dark Текстовое описание
+          
+          .product__content__body
+            .row
+              .col-md-6
+                p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. 
+              .col-md-6
+                p Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу.
+        
+        // Catalog
+        .catalog
+          .h2.color--dark ранее просматривали
+          
+          .catalog__viewed
+            .catalog__carousel__block 
+              .catalog__block
+                .catalog__img
+                  a(href="#!").catalog__link
+                  .catalog__hover
+                    .catalog__shadow
+                    .catalog__line1
+                      i
+                    .catalog__line2
+                      i
+                    .catalog__line3
+                      i
+                    .catalog__line4
+                      i
+                    .catalog__size
+                      .catalog__size__name доступные размеры
+                      .catalog__size__label 40
+                      .catalog__size__label 42
+                      .catalog__size__label 43
+                      .catalog__size__label 44
+                      .catalog__size__label 46
+                      .catalog__size__label 48
+                  img(src="./tmp/catalog-img-girl-1.png", alt="").img-responsive
+                .catalog__name очень длинное название са мо го кр ут ог о платья № 23465454 
+                .catalog__price
+                  div
+                    span
+                      strong 15 999 
+                      sup руб
+            .catalog__carousel__block 
+              .catalog__block
+                .catalog__img
+                  a(href="#!").catalog__link
+                  .catalog__hover
+                    .catalog__shadow
+                    .catalog__line1
+                      i
+                    .catalog__line2
+                      i
+                    .catalog__line3
+                      i
+                    .catalog__line4
+                      i
+                    .catalog__size
+                      .catalog__size__name доступные размеры
+                      .catalog__size__label 40
+                      .catalog__size__label 42
+                      .catalog__size__label 43
+                  img(src="./tmp/catalog-img-girl-2.png", alt="").img-responsive
+                .catalog__name название Платья № 23465454
+                .catalog__price
+                  div
+                    span
+                      strong 15 999 
+                      sup руб
+            .catalog__carousel__block 
+              .catalog__block
+                .catalog__img
+                  a(href="#!").catalog__link
+                  .catalog__hover
+                    .catalog__shadow
+                    .catalog__line1
+                      i
+                    .catalog__line2
+                      i
+                    .catalog__line3
+                      i
+                    .catalog__line4
+                      i
+                    .catalog__size
+                      .catalog__size__name доступные размеры
+                      .catalog__size__label 40
+                  img(src="./tmp/catalog-img-girl-3.png", alt="").img-responsive
+                .catalog__name название Платья № 23465454
+                .catalog__price
+                  div
+                    span
+                      strong 15 999 
+                      sup руб
+            .catalog__carousel__block 
+              .catalog__block
+                .catalog__img
+                  a(href="#!").catalog__link
+                  .catalog__hover
+                    .catalog__shadow
+                    .catalog__line1
+                      i
+                    .catalog__line2
+                      i
+                    .catalog__line3
+                      i
+                    .catalog__line4
+                      i
+                    .catalog__size
+                      .catalog__size__name доступные размеры
+                      .catalog__size__label 40
+                      .catalog__size__label 42
+                      .catalog__size__label 43
+                      .catalog__size__label 44
+                      .catalog__size__label 46
+                      .catalog__size__label 48
+                  img(src="./tmp/catalog-img-girl-4.png", alt="").img-responsive
+                .catalog__name название Платья № 23465454
+                .catalog__price
+                  div
+                    span
+                      strong 15 999 
+                      sup руб
+            .catalog__carousel__block 
+              .catalog__block
+                .catalog__img
+                  a(href="#!").catalog__link
+                  .catalog__hover
+                    .catalog__shadow
+                    .catalog__line1
+                      i
+                    .catalog__line2
+                      i
+                    .catalog__line3
+                      i
+                    .catalog__line4
+                      i
+                    .catalog__size
+                      .catalog__size__name доступные размеры
+                      .catalog__size__label 40
+                      .catalog__size__label 42
+                      .catalog__size__label 43
+                      .catalog__size__label 44
+                      .catalog__size__label 46
+                      .catalog__size__label 48
+                  img(src="./tmp/catalog-img-girl-4.png", alt="").img-responsive
+                .catalog__name название Платья № 23465454
+                .catalog__price
+                  div
+                    span
+                      strong 15 999 
+                      sup руб
+
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    script(src='./js/libs.js')
+    include ./_include/_footer-js
+    script(src='./js/common.js')
+    include ./_include/_js-body-bottom
+    
+    script.
+      $(document).ready(function(){
+        $('.menu .menu__li1:nth-child(2)').addClass('active');
+      })

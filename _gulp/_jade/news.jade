@@ -70,31 +70,7 @@ html(lang="ru")
                   a(href="#!").btn.btn--border.btn--more Подробнее
 
             // Pagination
-            .pagination
-              div
-              div
-                ul
-                  li.prev
-                    a(href="#!") назад
-                  li.page
-                    a(href="#!") 01
-                  li.page
-                    a(href="#!") 02
-                  li.page.active
-                    a(href="#!") 03
-                  li.page
-                    a(href="#!") 04
-                  li.page
-                    a(href="#!") 05
-                  li.page
-                    a(href="#!") 06
-                  li.page
-                    span ...
-                  li.page
-                    a(href="#!") 99
-                  li.next
-                    a(href="#!") вперед
-              div
+            +pagination
     
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")

@@ -40,3 +40,30 @@ head
   mixin banner
     .banner.hidden-xs
       img(src="./tmp/banner.png", alt="").img-responsive
+  
+  mixin pagination
+    .pagination
+      div
+      div
+        ul
+          li.prev
+            a(href="#!") назад
+          li.page
+            a(href="#!") 01
+          li.page
+            a(href="#!") 02
+          li.page.active
+            a(href="#!") 03
+          li.page
+            a(href="#!") 04
+          li.page
+            a(href="#!") 05
+          li.page
+            a(href="#!") 06
+          li.page
+            span ...
+          li.page
+            a(href="#!") 99
+          li.next
+            a(href="#!") вперед
+      div

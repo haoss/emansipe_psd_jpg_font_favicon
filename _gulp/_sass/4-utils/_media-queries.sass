@@ -115,6 +115,11 @@
                 padding-right: 15px
                 span
                   display: none
+    &__name
+      height: 40px
+    &__carousel
+      .catalog__name
+        height: 20px
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -213,6 +218,11 @@
         transform: translateY(10px)
         transition: all 0.35s
         box-shadow: 0 18px 50px -2px rgba(0, 0, 0, 0.2)
+    &__block
+      max-width: 260px
+    &__carousel
+      .catalog__block
+        // max-width: 210px
 
   .news
     &__img
@@ -275,6 +285,10 @@
     &__carousel
       &__block
         margin-right: 0
+    &__sort
+      float: none !important
+      &+.catalog__sort
+        margin-top: 5px
 
   .news
     &__row
@@ -287,7 +301,7 @@
         display: block
 
   .pagination
-    margin-bottom: 15px
+    // margin-bottom: 15px
     &>div
       &:first-child, &:last-child
         display: none

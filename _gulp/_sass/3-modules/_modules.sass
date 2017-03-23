@@ -64,6 +64,8 @@
 
 // Catalog
 .catalog
+  &--inside
+    padding-bottom: 10px
   &__block
     position: relative
     width: 100%
@@ -99,6 +101,9 @@
         box-shadow: 6px 6px 0 #f1f2f2
       .catalog__name
         color: $color-s-pink
+      .catalog__label
+        transform: translate(-2px,2px)
+        opacity: 0.5
 
   &__link
     position: absolute
@@ -109,7 +114,7 @@
     left: 0
   &__img
     position: relative
-    margin-bottom: 15px
+    margin-bottom: 10px
   &__hover
     position: absolute
     z-index: 10
@@ -251,6 +256,19 @@
     text-transform: uppercase
     font-weight: 600
     transition: color 0.35s
+    overflow: hidden
+    height: 20px
+    position: relative
+    margin-bottom: 3px
+    &::after
+      content: ""
+      width: 30px
+      height: 70px
+      position: absolute
+      right: 0
+      top: 0
+      z-index: 1
+      background: url('data:image/false;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAASCAQAAACDFlQtAAAAOElEQVR4AWP8H8DAwcAJxAjIDoQQkg0IWaEkCxQyQyETEDKCMBQCAYikkYGjBo4aOGrgqIGjBgIAll8j7yLmU8kAAAAASUVORK5CYII=') repeat-y 0 0
 
   &__price
     display: inline-table
@@ -425,6 +443,68 @@
               &>a
                 color: $color-s-brown
 
+  &__count
+    color: #d2d2d2
+    font-size: rem(16)
+    text-transform: none
+    display: inline-block
+    margin-left: 5px
+    font-weight: 400
+
+  &__sorting
+    +clearfix
+    margin-bottom: 25px
+    // background: green
+    padding-top: 2px
+    margin-top: -15px
+
+  &__sort
+    font-family: $font-exo-condensed
+    font-weight: 600
+    font-size: rem(12)
+    text-transform: uppercase
+    float: left
+    label
+      color: #909090
+      display: inline-block
+      margin-right: 5px
+      font-weight: 600
+    select
+      position: relative
+      vertical-align: 1px
+      border: 0
+      // background: pink
+      height: 25px
+      padding: 0 5px
+      font-weight: 600
+      text-transform: uppercase
+    &--limit
+      float: right
+
+  &__label
+    position: absolute
+    right: 10px
+    top: 10px
+    height: 20px
+    line-height: 20px
+    width: 84px
+    text-align: center
+    color: $color-white
+    background-color: $color-gray
+    text-transform: uppercase
+    z-index: 25
+    transform: translate(0px,0px)
+    transition: transform 0.35s
+    opacity: 1
+    &--action
+      background: $color-s-orange
+    &--sale
+      background: $color-s-red
+    &--new
+      background: $color-s-green
+
+  &__viewed
+    position: relative
 
 // news
 .news
@@ -546,3 +626,30 @@ div.table
   &>.nano-content
     // right: 0 !important
     padding-right: 15px
+
+// Seo-text
+.seo-text
+  color: $color-lightgray
+  font-size: rem(13)
+  &__title
+    font-size: rem(20)
+    text-transform: uppercase
+    color: $color-lightgray
+    font-family: $font-exo-condensed
+    font-weight: 700
+    margin-bottom: 15px
+  a
+    color: $color-lightgray
+
+// Product
+.product
+  &__content
+    font-size: rem(13)
+    margin-bottom: 25px
+    &__body
+      border-top: 1px solid #e5e5e5
+      border-bottom: 1px solid #e5e5e5
+      padding: 15px 0
+      p
+        &:last-child
+          margin-bottom: 0
