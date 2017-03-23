@@ -471,10 +471,10 @@
       font-weight: 600
     select
       position: relative
-      vertical-align: 1px
+      // vertical-align: 1px
       border: 0
       // background: pink
-      height: 25px
+      // height: 25px
       padding: 0 5px
       font-weight: 600
       text-transform: uppercase
@@ -653,3 +653,183 @@ div.table
       p
         &:last-child
           margin-bottom: 0
+
+// ordering
+.ordering
+  h5, .h5
+    margin-bottom: 15px
+  &__body
+    border-top: 1px solid #e5e5e5
+    padding-top: 20px
+
+  .input-label
+    small
+      font-family: $font-exo-condensed
+      font-weight: 400
+      white-space: nowrap
+  .form-control--address
+    font-weight: 600
+    color: $primary-color
+    resize: none
+    height: 44px
+    font-size: rem(13)
+    padding: 2px 10px
+    font-family: $font-exo
+    margin-left: 25px
+    width: calc(100% - 25px)
+  &__total
+    background: #fdfae3
+    margin-top: -20px
+    padding: 55px 15px
+    &>div
+      text-align: center
+      margin-bottom: 10px
+      color: #7f7f7f
+      white-space: nowrap
+      *
+        line-height: 1
+        display: inline-block
+      span
+        font-size: rem(14)
+        text-transform: uppercase
+      strong
+        font-size: rem(35)
+        color: $primary-color
+        padding: 0 5px
+      sup
+        font-size: rem(16)
+        position: relative
+        top: -16px
+
+.div-date-table
+  +clearfix
+  .div-date
+    &+div
+      padding-left: 5px
+    float: left
+    &--day, &--month
+      width: 22%
+    &--time
+      width: 56%
+  label
+    text-align: center
+    font-family: $font-exo-condensed
+    font-weight: 600
+    display: block
+    text-transform: uppercase
+    font-size: rem(10)
+  .form-control
+    text-align: center
+    font-weight: 600
+    color: $primary-color
+  &+p
+    letter-spacing: -1px
+
+// cart
+.cart
+  +clearfix
+  // margin-bottom: 30px
+  font-size: rem(13)
+  &>table
+    width: 100%
+    &>thead, &>tbody
+      &>tr
+        &>th, &>td
+          padding: 15px 5px
+          vertical-align: top
+          border-bottom: 1px solid #e8e8e8
+        &>th
+          padding-bottom: 8px
+          padding-top: 0
+    &>thead
+      &>tr
+        &>th
+          font-weight: 600
+          font-family: $font-exo-condensed
+          font-size: rem(12)
+          text-transform: uppercase
+          color: #818181
+
+          &.cart
+            &__th
+              &1
+                text-align: left
+                width: 35px
+              &2
+                width: 70px
+              &3, &5, &6
+                text-align: left
+              &7
+                width: 1px
+                text-align: left
+    &>tbody
+      &>tr
+        &>td
+
+          &.cart
+            &__td
+              &1
+                vertical-align: middle
+              &2
+                img
+                  max-width: 59px
+              &5, &6
+                font-size: rem(14)
+
+          .table
+            margin-bottom: 0
+            font-weight: 600
+            font-family: $font-exo-condensed
+          h4, .h4
+            margin-bottom: 5px
+            margin-top: -6px
+          strong
+            small
+              font-weight: 600
+
+  &__links
+    position: relative
+    font-size: rem(14)
+    padding-left: 16px
+    text-decoration: none
+    white-space: nowrap
+    font-family: $font-exo-condensed
+    display: inline-block
+    line-height: 1.1
+    font-weight: 600
+    &:hover
+      text-decoration: underline
+    i
+      position: absolute
+      left: 0
+      top: 1px
+      font-size: rem(14)
+    &--delete
+      color: $color-red
+      &:hover
+        color: $color-red
+
+  &__total
+    background: #fdfae3
+    padding: 25px 15px 20px 15px
+    width: 262px
+    float: right
+    &>div
+      text-align: center
+      margin-bottom: 10px
+      color: #7f7f7f
+      white-space: nowrap
+      *
+        line-height: 1
+        display: inline-block
+      span
+        font-size: rem(14)
+        text-transform: uppercase
+      strong
+        font-size: rem(35)
+        color: $primary-color
+        padding: 0 5px
+      sup
+        font-size: rem(16)
+        position: relative
+        top: -16px

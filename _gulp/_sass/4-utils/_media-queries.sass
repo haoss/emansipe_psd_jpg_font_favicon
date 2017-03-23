@@ -39,6 +39,30 @@
   body
     padding-right: 0 !important
 
+  .div-date-table
+    max-width: 120px
+    .div-date--day, .div-date--month
+      width: 50%
+    .div-date--time
+      width: 100%
+    .form-group
+      margin-bottom: 5px
+
+  .ordering
+    .input-label
+      small
+        white-space: normal
+    .form-control--address
+      width: 100%
+      margin-left: 0
+    &__total
+      &>div
+        text-align: left
+        span
+          display: block
+        strong
+          padding-left: 0
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
   .advantages
@@ -83,26 +107,50 @@
     &__terms
       width: 100%
     &__discount
-      float: none
-      margin-top: 0
-      width: 100%
-      .table
+      &--991
+        float: none
+        margin-top: 0
         width: 100%
-        &>div
-          width: auto !important
-      b
-        br
-          display: none
-      strong
-        float: right
-        height: 30px
-        line-height: 30px
-        width: 30px
-        font-size: rem(15)
+        .table
+          width: 100%
+          &>div
+            width: auto !important
+        b
+          br
+            display: none
+        strong
+          float: right
+          height: 30px
+          line-height: 30px
+          width: 30px
+          font-size: rem(15)
   .menu
     &__li1
       &>a
         padding: 0 10px
+
+  .ordering
+    &__total
+      margin: 0
+      padding: 20px 10px
+      text-align: center
+      &>div
+        display: inline-block
+        vertical-align: middle
+        margin-bottom: 0
+        margin-right: 10px
+        span
+          display: inline-block
+        strong
+          padding-left: 5px
+      .btn
+        display: inline-block
+        max-width: 200px
+        vertical-align: middle
+
+  .cart
+    &__links
+      white-space: normal
 
 @media (min-width: 768px) and (max-width: 991px)
   .catalog
@@ -241,6 +289,78 @@
     &__mobile
       margin-top: -50px
 
+  .ordering
+    .form-control--address
+      margin-left: 25px
+      width: calc(100% - 25px)
+      max-width: 400px
+    &__total
+      &>div
+        display: block
+        margin-right: 0
+        margin-bottom: 10px
+        text-align: center
+      .btn
+        max-width: 230px
+
+  .div-date-table
+    max-width: 240px
+  .div-date-table .div-date--day, .div-date-table .div-date--month
+    width: 25%
+  .div-date-table .div-date--time
+    width: 50%
+
+  .form
+    &-control
+      &--counter
+        margin-left: 0
+
+  .cart
+    margin-bottom: 30px
+    &__links
+      white-space: nowrap
+    &>table
+      &>tbody
+        &>tr
+          &>td
+            h4, .h4
+              margin-bottom: 0
+              line-height: 1.2
+      &>thead
+        &>tr
+          &>th
+            &.cart
+              &__th
+                &1
+                  width: 25px
+                &7
+                  width: auto
+    &__total
+      float: none
+      width: 100%
+      &>div
+        display: block
+        margin-right: 0
+        margin-bottom: 10px
+        text-align: center
+      .btn
+        max-width: 230px
+        margin-left: auto
+        margin-right: auto
+        display: block
+    .table
+      margin-bottom: 5px !important
+      td
+        padding-top: 0 !important
+        padding-bottom: 0 !important
+
+  .cart > table > tbody > tr > td.cart__td7
+    white-space: nowrap
+  .cart > table > thead > tr > th
+    font-size: rem(14)
+    strong
+      color: $primary-color
+
 @media only screen and (max-width: 599px)
   .header
     &__social
@@ -320,6 +440,13 @@
   .menu
     &__mobile
       margin-top: 0px
+
+  .cart > table > thead > tr > th, .cart > table > thead > tr > td, .cart > table > tbody > tr > th, .cart > table > tbody > tr > td
+    padding-left: 2px
+    padding-right: 2px
+  .cart > table > tbody > tr > td h4, .cart > table > tbody > tr > td .h4
+    font-size: rem(15)
+
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

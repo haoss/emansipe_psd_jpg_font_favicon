@@ -1,0 +1,247 @@
+doctype
+
+html(lang="ru")
+  
+  -var active = 'Корзина' //активный пункт меню, список в header.jade
+  -var pageTitle = 'Корзина' + ' - Emansipe' //title страницы для генерации верстки 
+
+  include ./_include/_head
+
+  body
+    
+    // Preloader
+    include ./_include/_preloader
+    include ./_include/_header
+    
+    // Breadcrumbs
+    .breadcrumbs
+      .container
+        ul
+          li
+            a(href="#!") Emansipe
+          li 
+            span Корзина
+    
+    // Content
+    .content
+      .container
+        
+        h1 Корзина
+        
+        // Discount
+        .private__discount
+          .table
+            .table-cell
+              b ваша скидка 
+                br
+                | составляет: 
+            .table-cell
+              strong 15%
+        
+        .clear
+          
+        // Cart
+        form(action="#!")
+          .cart
+            table
+              thead
+                tr
+                  th.cart__th1.visible-xs(colspan="3") заказ 
+                    strong 00233
+                  th.cart__th1.hidden-xs №
+                  th.cart__th2.hidden-xs &nbsp;
+                  th.cart__th3.hidden-xs описание
+                  th.cart__th4.hidden-xs количество
+                  th.cart__th5.hidden-xs цена
+                  th.cart__th6.hidden-xs сумма
+                  th.cart__th7
+                    span.visible-xs &nbsp;
+                    span.hidden-xs действие
+              tbody
+                tr
+                  td.cart__td1 1
+                  td.cart__td2(width="1")
+                    a(href="#!")
+                      img(src="./tmp/catalog-img-girl-1.png", alt="").img-responsive
+                  td.cart__td3
+                    h4 Платье №324654676546
+                    
+                    table.table
+                      tr
+                        td Цвет: 
+                        td синий
+                      tr
+                        td Размер: 
+                        td 38
+                    
+                    .visible-xs
+                      .form-group.no--margin
+                        input(type="text" value="120").form-control.form-control--counter
+                    
+                  td.cart__td4.hidden-xs
+                    .form-group
+                      input(type="text" value="120").form-control.form-control--counter
+                  td.cart__td5.hidden-xs
+                    strong 19 999 руб
+                  td.cart__td6.hidden-xs
+                    strong 2 399 880 руб
+                  td.cart__td7
+                    
+                    .visible-xs
+                      strong 19 999 руб
+                        small.color--gray &nbsp;х 120
+                      .clear
+                      strong 2 399 880 руб
+                      .clear10
+                        
+                    a(href="#!").cart__links.cart__links--delete
+                      i.ion-close-circled
+                      | удалить
+                    .clear5
+                    a(href="#!").cart__links
+                      i.ion-clipboard
+                      span.hidden-xs посмотреть в каталоге
+                      span.visible-xs-inline-block.no-wrap в каталог
+                tr
+                  td.cart__td1 2
+                  td.cart__td2(width="1")
+                    a(href="#!")
+                      img(src="./tmp/catalog-img-girl-2.png", alt="").img-responsive
+                  td.cart__td3
+                    h4 Платье №324654676546
+                    
+                    table.table
+                      tr
+                        td Цвет: 
+                        td синий
+                      tr
+                        td Размер: 
+                        td 42
+                    
+                    .visible-xs
+                      .form-group.no--margin
+                        input(type="text" value="53").form-control.form-control--counter
+                    
+                  td.cart__td4.hidden-xs
+                    .form-group
+                      input(type="text" value="53").form-control.form-control--counter
+                  td.cart__td5.hidden-xs
+                    strong 3 500 руб
+                  td.cart__td6.hidden-xs
+                    strong 185 500 руб
+                  td.cart__td7
+                    
+                    .visible-xs
+                      strong 3 500 руб
+                        small.color--gray &nbsp;х 53
+                      .clear
+                      strong 185 500 руб
+                      .clear10
+                        
+                    a(href="#!").cart__links.cart__links--delete
+                      i.ion-close-circled
+                      | удалить
+                    .clear5
+                    a(href="#!").cart__links
+                      i.ion-clipboard
+                      span.hidden-xs посмотреть в каталоге
+                      span.visible-xs-inline-block.no-wrap в каталог
+        
+            .cart__total
+              div
+                span итого:
+                strong 2 585 380 
+                sup руб
+              button(type="submit").btn.btn--default.btn--block подтвердить заказ
+        
+        // Ordering
+        .ordering
+          
+          .h2.color--dark Оформление заказа
+          
+          .ordering__body
+            form(action="#!")
+              .row
+                .col-md-3.col-sm-4
+                  .h5 дата доставки
+                  
+                  .div-date-table
+                    .div-date.div-date--day
+                      .form-group
+                        label день
+                        input(type="text" value="12").form-control
+                    .div-date.div-date--month
+                      .form-group
+                        label месяц
+                        input(type="text" value="06").form-control
+                    .div-date.div-date--time
+                      .form-group
+                        label примерное время
+                        input(type="text" value="11:00").form-control
+                      
+                  p Укажите день, месяц и примерное удобное время для получения заказа.
+                  
+                .col-md-3.col-sm-4
+                  .h5 Оплата
+                  
+                  .form__group
+                    label.form__radio
+                      span.span
+                        input(type="radio" name="radio2" checked)
+                        span.input-radio
+                      span.span
+                        span.input-label Наличными курьеру
+                        
+                  .form__group
+                    label.form__radio
+                      span.span
+                        input(type="radio" name="radio2")
+                        span.input-radio
+                      span.span
+                        span.input-label Безналичный платёж при выставлении счета
+                        
+                .col-md-3.col-sm-4
+                  .h5 Доставка
+                  
+                  .form__group
+                    label.form__radio
+                      span.span
+                        input(type="radio" name="radio3")
+                        span.input-radio
+                      span.span
+                        span.input-label Самовывоз
+                        
+                  .form__group
+                    label.form__radio
+                      span.span
+                        input(type="radio" name="radio3" checked)
+                        span.input-radio
+                      span.span
+                        span.input-label Доставка курьером
+                          br
+                          small от 250 руб. или бесплатно в зависимости от покупки
+                          
+                  .form__group
+                    textarea.form-control.form-control--address г. Москва, ул. Перва яделовая, дом 2, офис 3, домофон 456
+                        
+                .col-md-3.col-sm-12
+                  .ordering__total
+                    div
+                      span итого:
+                      strong 2 585 380 
+                      sup руб
+                    button(type="submit").btn.btn--default.btn--block подтвердить заказ
+    
+    include ./_include/_footer
+    //- div(style="height: 1000px; background-color: #000")
+    
+    //[if gte IE 9]
+      <script src='./js/libs/html5shiv/es5-shim.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv.min.js'>
+      <script src='./js/libs/html5shiv/html5shiv-printshiv.min.js'>
+      <script src='./js/libs/html5shiv/respond.min.js'><![endif]
+
+    script(src='./js/libs.js')
+    include ./_include/_footer-js
+    script(src='./js/common.js')
+    include ./_include/_js-body-bottom
