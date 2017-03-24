@@ -5681,6 +5681,8 @@ div.table {
       .cart > table > thead > tr > th.cart__th1 {
         text-align: left;
         width: 35px; }
+        .cart > table > thead > tr > th.cart__th1--order-list {
+          width: 70px; }
       .cart > table > thead > tr > th.cart__th2 {
         width: 70px; }
       .cart > table > thead > tr > th.cart__th3, .cart > table > thead > tr > th.cart__th5, .cart > table > thead > tr > th.cart__th6 {
@@ -5690,14 +5692,25 @@ div.table {
         text-align: left; }
     .cart > table > tbody > tr > td.cart__td1 {
       vertical-align: middle; }
+      .cart > table > tbody > tr > td.cart__td1--order-list {
+        vertical-align: top;
+        border-bottom: 0; }
+        .cart > table > tbody > tr > td.cart__td1--order-list.last {
+          border-bottom: 1px solid #e8e8e8; }
     .cart > table > tbody > tr > td.cart__td2 img {
       max-width: 59px; }
     .cart > table > tbody > tr > td.cart__td5, .cart > table > tbody > tr > td.cart__td6 {
       font-size: 0.875rem; }
+    .cart > table > tbody > tr > td.cart__td7 {
+      white-space: nowrap;
+      width: 1px; }
     .cart > table > tbody > tr > td .table {
       margin-bottom: 0;
       font-weight: 600;
       font-family: "Exo 2 Condensed", sans-serif; }
+      .cart > table > tbody > tr > td .table td {
+        padding-top: 0;
+        padding-bottom: 0; }
     .cart > table > tbody > tr > td h4, .cart > table > tbody > tr > td .h4 {
       margin-bottom: 5px;
       margin-top: -6px; }
@@ -5748,6 +5761,73 @@ div.table {
         font-size: 1rem;
         position: relative;
         top: -16px; }
+    .cart__total--order-list {
+      width: 100%;
+      float: none;
+      padding-top: 15px;
+      padding-bottom: 15px; }
+      .cart__total--order-list::after {
+        clear: both;
+        content: "";
+        display: table; }
+      .cart__total--order-list > div {
+        float: right;
+        margin-bottom: 0; }
+      .cart__total--order-list .btn {
+        float: left;
+        max-width: 230px;
+        margin-top: 2px; }
+
+.status__label {
+  background: #cccccc;
+  color: #535353;
+  height: 20px;
+  line-height: 20px;
+  width: 84px;
+  text-align: center;
+  white-space: nowrap;
+  font-family: "Exo 2 Condensed", sans-serif;
+  text-transform: uppercase; }
+  .status__label--action {
+    background: #f6a313;
+    color: #ffffff; }
+  .status__label--done {
+    color: #ffffff;
+    background: #65d465; }
+
+.order-list__number {
+  font-family: "Exo 2 Condensed", sans-serif;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #818181;
+  line-height: 1.2;
+  margin-bottom: 15px; }
+  .order-list__number strong {
+    color: #535353; }
+
+.order-list__turn {
+  text-decoration: none;
+  font-size: 0.75rem;
+  display: block;
+  color: #9e9e9e;
+  font-family: "Exo 2 Condensed", sans-serif; }
+
+.order-list__row {
+  margin-bottom: 15px;
+  max-height: 145px;
+  overflow: hidden;
+  border-bottom: 1px solid #e8e8e8;
+  transition: all 0.35s ease; }
+  .order-list__row .cart {
+    margin-bottom: 0; }
+  .order-list__row.is-active {
+    max-height: inherit;
+    border-bottom-color: transparent; }
+  .order-list__row + .order-list__row .cart > table > thead > tr > th {
+    opacity: 0; }
+    .order-list__row + .order-list__row .cart > table > thead > tr > th.cart__th1.visible-xs, .order-list__row + .order-list__row .cart > table > thead > tr > th.cart__th7 {
+      opacity: 1; }
 
 /* clear */
 .clear, .clear1, .clear2, .clear3, .clear4, .clear5, .clear6, .clear7, .clear8, .clear9, .clear10, .clear11, .clear12, .clear13, .clear14, .clear15, .clear16, .clear17, .clear18, .clear19, .clear20, .clear21, .clear22, .clear23, .clear24, .clear25, .clear26, .clear27, .clear28, .clear29, .clear30, .clear31, .clear32, .clear33, .clear34, .clear35, .clear36, .clear37, .clear38, .clear39, .clear40, .clear41, .clear42, .clear43, .clear44, .clear45, .clear46, .clear47, .clear48, .clear49, .clear50, .clear51, .clear52, .clear53, .clear54, .clear55, .clear56, .clear57, .clear58, .clear59, .clear60, .clear61, .clear62, .clear63, .clear64, .clear65, .clear66, .clear67, .clear68, .clear69, .clear70, .clear71, .clear72, .clear73, .clear74, .clear75, .clear76, .clear77, .clear78, .clear79, .clear80, .clear81, .clear82, .clear83, .clear84, .clear85, .clear86, .clear87, .clear88, .clear89, .clear90, .clear91, .clear92, .clear93, .clear94, .clear95, .clear96, .clear97, .clear98, .clear99, .clear100, .clear-hr {
@@ -6151,22 +6231,6 @@ div.table {
     width: 100%; }
   .private__terms {
     width: 100%; }
-  .private__discount--991 {
-    float: none;
-    margin-top: 0;
-    width: 100%; }
-    .private__discount--991 .table {
-      width: 100%; }
-      .private__discount--991 .table > div {
-        width: auto !important; }
-    .private__discount--991 b br {
-      display: none; }
-    .private__discount--991 strong {
-      float: right;
-      height: 30px;
-      line-height: 30px;
-      width: 30px;
-      font-size: 0.9375rem; }
   .menu__li1 > a {
     padding: 0 10px; }
   .ordering__total {
@@ -6335,6 +6399,11 @@ div.table {
         margin-left: auto;
         margin-right: auto;
         display: block; }
+      .cart__total--order-list .btn {
+        float: none;
+        margin-top: 0; }
+      .cart__total--order-list > div {
+        float: none; }
     .cart .table {
       margin-bottom: 5px !important; }
       .cart .table td {
@@ -6345,7 +6414,9 @@ div.table {
   .cart > table > thead > tr > th {
     font-size: 0.875rem; }
     .cart > table > thead > tr > th strong {
-      color: #535353; } }
+      color: #535353; }
+  .order-list__row {
+    max-height: 149px; } }
 
 @media only screen and (max-width: 599px) {
   .header__social {
@@ -6408,7 +6479,23 @@ div.table {
     padding-left: 2px;
     padding-right: 2px; }
   .cart > table > tbody > tr > td h4, .cart > table > tbody > tr > td .h4 {
-    font-size: 0.9375rem; } }
+    font-size: 0.9375rem; }
+  .private__discount--480 {
+    float: none;
+    margin-top: 0;
+    width: 100%; }
+    .private__discount--480 .table {
+      width: 100%; }
+      .private__discount--480 .table > div {
+        width: auto !important; }
+    .private__discount--480 b br {
+      display: none; }
+    .private__discount--480 strong {
+      float: right;
+      height: 30px;
+      line-height: 30px;
+      width: 30px;
+      font-size: 0.9375rem; } }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 319px) {

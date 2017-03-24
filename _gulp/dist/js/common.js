@@ -226,6 +226,23 @@ $(document).ready(function(){
     // $(this).next('nav').slideToggle();
   });
 
+  // Private cabinet cart
+  $('.order-list__row').each(function(){
+    var _this = $(this);
+    _this.find('.order-list__turn').on('click', function(){
+      var parents = $(this).parents('.order-list__row');
+      if (parents.hasClass('is-active')) {
+        parents.removeClass('is-active');
+        _this.find('.order-list__turn').text('Развернуть')
+      } else {
+        parents.addClass('is-active');
+        _this.find('.order-list__turn').text('Свернуть')
+      }
+    });
+  });
+  //
+
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();

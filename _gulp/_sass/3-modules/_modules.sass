@@ -755,6 +755,8 @@ div.table
               &1
                 text-align: left
                 width: 35px
+                &--order-list
+                  width: 70px
               &2
                 width: 70px
               &3, &5, &6
@@ -770,16 +772,27 @@ div.table
             &__td
               &1
                 vertical-align: middle
+                &--order-list
+                  vertical-align: top
+                  border-bottom: 0
+                  &.last
+                    border-bottom: 1px solid #e8e8e8
               &2
                 img
                   max-width: 59px
               &5, &6
                 font-size: rem(14)
+              &7
+                white-space: nowrap
+                width: 1px
 
           .table
             margin-bottom: 0
             font-weight: 600
             font-family: $font-exo-condensed
+            td
+              padding-top: 0
+              padding-bottom: 0
           h4, .h4
             margin-bottom: 5px
             margin-top: -6px
@@ -833,3 +846,69 @@ div.table
         font-size: rem(16)
         position: relative
         top: -16px
+    &--order-list
+      width: 100%
+      float: none
+      padding-top: 15px
+      padding-bottom: 15px
+      +clearfix
+      &>div
+        float: right
+        margin-bottom: 0
+      .btn
+        float: left
+        max-width: 230px
+        margin-top: 2px
+
+.status__label
+  background: $color-gray
+  color: $primary-color
+  height: 20px
+  line-height: 20px
+  width: 84px
+  text-align: center
+  white-space: nowrap
+  font-family: $font-exo-condensed
+  text-transform: uppercase
+  &--action
+    background: $color-s-orange
+    color: $color-white
+  &--done
+    color: $color-white
+    background: $color-s-green
+
+.order-list
+  &__number
+    font-family: $font-exo-condensed
+    text-transform: uppercase
+    font-size: rem(14)
+    font-weight: 600
+    color: #818181
+    line-height: 1.2
+    margin-bottom: 15px
+    strong
+      color: $primary-color
+  &__turn
+    text-decoration: none
+    font-size: rem(12)
+    display: block
+    color: #9e9e9e
+    font-family: $font-exo-condensed
+
+.order-list
+  &__row
+    margin-bottom: 15px
+    max-height: 145px
+    overflow: hidden
+    border-bottom: 1px solid #e8e8e8
+    transition: all 0.35s ease
+    .cart
+      margin-bottom: 0
+    &.is-active
+      max-height: inherit
+      border-bottom-color: transparent
+    &+.order-list__row
+      .cart > table > thead > tr > th
+        opacity: 0
+        &.cart__th1.visible-xs, &.cart__th7
+          opacity: 1

@@ -29,7 +29,7 @@ html(lang="ru")
         h1 личный кабинет
         
         // Discount
-        .private__discount.private__discount--991
+        .private__discount.private__discount--480
           .table
             .table-cell
               b ваша скидка 
@@ -55,8 +55,174 @@ html(lang="ru")
                 li
                   a(href="#!") выйти с сайта
             
-          .col-sm-9 2
-    
+          .col-sm-9
+            
+            // Order list
+            .order-list
+              
+              .order-list__row.is-active
+                form(action="#!")
+                  .cart
+                    table
+                      thead
+                        tr
+                          th.cart__th1.visible-xs(colspan="2") заказ 
+                            strong 00233
+                          th.cart__th1.cart__th1--order-list.hidden-xs №
+                          th.cart__th2.hidden-xs &nbsp;
+                          th.cart__th3.hidden-xs описание
+                          th.cart__th4.hidden-xs количество
+                          th.cart__th5.hidden-sm.hidden-xs цена
+                          th.cart__th6.hidden-sm.hidden-xs сумма
+                          th.cart__th7
+                            span.visible-xs.text-right
+                              a(href="#!").order-list__turn Свернуть
+                            span.hidden-xs статус
+                      tbody
+                        tr
+                          td.cart__td1.cart__td1--order-list.hidden-xs
+                            .order-list__number заказ 
+                              strong 00233
+                            a(href="#!").order-list__turn Свернуть
+                          td.cart__td2(width="1")
+                            a(href="#!")
+                              img(src="./tmp/catalog-img-girl-1.png", alt="").img-responsive
+                          td.cart__td3
+                            h4 Платье №324654676546
+                            
+                            table.table
+                              tr
+                                td Цвет: 
+                                td синий
+                              tr
+                                td Размер: 
+                                td 38
+                            
+                            .visible-xs
+                              .form-group.no--margin
+                                input(type="text" value="120").form-control.form-control--counter
+                            
+                          td.cart__td4.hidden-xs
+                            .form-group
+                              input(type="text" value="120").form-control.form-control--counter
+                          td.cart__td5.hidden-sm.hidden-xs
+                            strong 19 999 руб
+                          td.cart__td6.hidden-sm.hidden-xs
+                            strong 2 399 880 руб
+                          td.cart__td7
+                            .visible-sm.visible-xs
+                              strong 19 999 руб
+                                small.color--gray &nbsp;х 120
+                              .clear
+                              strong 2 399 880 руб
+                              .clear10
+                            .status__label.status__label--action В работе
+                        tr
+                          td.cart__td1.cart__td1--order-list.last.hidden-xs &nbsp;
+                          td.cart__td2(width="1")
+                            a(href="#!")
+                              img(src="./tmp/catalog-img-girl-2.png", alt="").img-responsive
+                          td.cart__td3
+                            h4 Платье №324654676546
+                            
+                            table.table
+                              tr
+                                td Цвет: 
+                                td синий
+                              tr
+                                td Размер: 
+                                td 42
+                            
+                            .visible-xs
+                              .form-group.no--margin
+                                input(type="text" value="53").form-control.form-control--counter
+                            
+                          td.cart__td4.hidden-xs
+                            .form-group
+                              input(type="text" value="53").form-control.form-control--counter
+                          td.cart__td5.hidden-sm.hidden-xs
+                            strong 19 999 руб
+                          td.cart__td6.hidden-sm.hidden-xs
+                            strong 2 399 880 руб
+                          td.cart__td7
+                            .visible-sm.visible-xs
+                              strong 19 999 руб
+                                small.color--gray &nbsp;х 53
+                              .clear
+                              strong 2 399 880 руб
+                              .clear10
+                            | &nbsp;
+                    .cart__total.cart__total--order-list
+                      div
+                        span итого:
+                        strong 2 585 380 
+                        sup руб
+                      button(type="submit").btn.btn--default.btn--block подтвердить заказ
+                      
+              .order-list__row
+                form(action="#!")
+                  .cart
+                    table
+                      thead
+                        tr
+                          th.cart__th1.visible-xs(colspan="2") заказ 
+                            strong 00233
+                          th.cart__th1.cart__th1--order-list.hidden-xs №
+                          th.cart__th2.hidden-xs &nbsp;
+                          th.cart__th3.hidden-xs описание
+                          th.cart__th4.hidden-xs количество
+                          th.cart__th5.hidden-sm.hidden-xs цена
+                          th.cart__th6.hidden-sm.hidden-xs сумма
+                          th.cart__th7
+                            span.visible-xs.text-right
+                              a(href="#!").order-list__turn Развернуть
+                            span.hidden-xs статус
+                      tbody
+                        tr
+                          td.cart__td1.cart__td1--order-list.last.hidden-xs
+                            .order-list__number заказ 
+                              strong 00232
+                            a(href="#!").order-list__turn Развернуть
+                          td.cart__td2(width="1")
+                            a(href="#!")
+                              img(src="./tmp/catalog-img-girl-3.png", alt="").img-responsive
+                          td.cart__td3
+                            h4 Платье №324654676546
+                            
+                            table.table
+                              tr
+                                td Цвет: 
+                                td синий
+                              tr
+                                td Размер: 
+                                td 38
+                            
+                            .visible-xs
+                              .form-group.no--margin
+                                input(type="text" value="120").form-control.form-control--counter
+                            
+                          td.cart__td4.hidden-xs
+                            .form-group
+                              input(type="text" value="120").form-control.form-control--counter
+                          td.cart__td5.hidden-sm.hidden-xs
+                            strong 19 999 руб
+                          td.cart__td6.hidden-sm.hidden-xs
+                            strong 2 399 880 руб
+                          td.cart__td7
+                            .visible-sm.visible-xs
+                              strong 19 999 руб
+                                small.color--gray &nbsp;х 120
+                              .clear
+                              strong 2 399 880 руб
+                              .clear10
+                            .status__label.status__label--done Выполнен
+                    .cart__total.cart__total--order-list
+                      div
+                        span итого:
+                        strong 2 585 380 
+                        sup руб
+                      button(type="submit").btn.btn--default.btn--block подтвердить заказ
+                    
     include ./_include/_footer
     //- div(style="height: 1000px; background-color: #000")
     

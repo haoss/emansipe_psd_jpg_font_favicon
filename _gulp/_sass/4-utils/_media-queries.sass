@@ -107,23 +107,7 @@
     &__terms
       width: 100%
     &__discount
-      &--991
-        float: none
-        margin-top: 0
-        width: 100%
-        .table
-          width: 100%
-          &>div
-            width: auto !important
-        b
-          br
-            display: none
-        strong
-          float: right
-          height: 30px
-          line-height: 30px
-          width: 30px
-          font-size: rem(15)
+
   .menu
     &__li1
       &>a
@@ -348,6 +332,13 @@
         margin-left: auto
         margin-right: auto
         display: block
+      &--order-list
+        .btn
+          float: none
+          margin-top: 0
+        &>div
+          float: none
+
     .table
       margin-bottom: 5px !important
       td
@@ -360,6 +351,9 @@
     font-size: rem(14)
     strong
       color: $primary-color
+
+  .order-list__row
+    max-height: 149px
 
 @media only screen and (max-width: 599px)
   .header
@@ -447,6 +441,25 @@
   .cart > table > tbody > tr > td h4, .cart > table > tbody > tr > td .h4
     font-size: rem(15)
 
+  .private
+    &__discount
+      &--480
+        float: none
+        margin-top: 0
+        width: 100%
+        .table
+          width: 100%
+          &>div
+            width: auto !important
+        b
+          br
+            display: none
+        strong
+          float: right
+          height: 30px
+          line-height: 30px
+          width: 30px
+          font-size: rem(15)
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)
