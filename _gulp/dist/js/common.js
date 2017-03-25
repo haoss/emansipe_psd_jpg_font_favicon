@@ -268,6 +268,7 @@ $(document).ready(function(){
     variableWidth: true
   });
 
+  // Product gallery carousel
   $('.product__gallery__left ul').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
