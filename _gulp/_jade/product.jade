@@ -32,8 +32,225 @@ html(lang="ru")
         
         h1 Платье № 3546576
         
+        // Product
+        .product
+          .row
+            .col-lg-6.col-sm-7
+              
+              .product__gallery
+                .product__gallery__left
+                  ul
+                    li
+                      a(href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-1.png', zoomImage: './tmp/img-gallery-big-1.png', 'galleryEvent':'mouseover'").cloudzoom-gallery
+                        img(src="./tmp/img-gallery-small-1.png", alt="")
+                    li
+                      a(href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-2.png', zoomImage: './tmp/img-gallery-big-2.png', 'galleryEvent':'mouseover'").cloudzoom-gallery
+                        img(src="./tmp/img-gallery-small-2.png", alt="")
+                    li
+                      a(href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-3.png', zoomImage: './tmp/img-gallery-big-3.png', 'galleryEvent':'mouseover'").cloudzoom-gallery
+                        img(src="./tmp/img-gallery-small-3.png", alt="")
+                    li
+                      a(href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-1.png', zoomImage: './tmp/img-gallery-big-1.png', 'galleryEvent':'mouseover'").cloudzoom-gallery
+                        img(src="./tmp/img-gallery-small-1.png", alt="")
+                    li
+                      a(href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-2.png', zoomImage: './tmp/img-gallery-big-2.png', 'galleryEvent':'mouseover'").cloudzoom-gallery
+                        img(src="./tmp/img-gallery-small-2.png", alt="")
+                    li
+                      a(href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-3.png', zoomImage: './tmp/img-gallery-big-3.png', 'galleryEvent':'mouseover'").cloudzoom-gallery
+                        img(src="./tmp/img-gallery-small-3.png", alt="")
+                  
+                .product__gallery__center
+                  img#zoom1.cloudzoom(src='./tmp/img-gallery-middle-1.png', data-cloudzoom="zoomImage: './tmp/img-gallery-big-1.png', zoomSizeMode: 'image', animationTime: 0, easeTime: 0, disableOnScreenWidth: 1199")
+                  .product__zoom
+            
+            .col-lg-6.col-sm-5
+              
+              // row
+              .row
+                .col-lg-6
+                  
+                  // Product information
+                  .product__info
+                    // Product table
+                    table.table.table--product
+                      tr
+                        td.first Артикул:
+                        td 
+                          span.color--primary 6876543514
+                      tr
+                        td.first Цвет:
+                        td 
+                          span.color--primary терракотовый
+                      tr
+                        td.first Состав:
+                        td 
+                          span.color--primary хлопок 95%, эластан 5%
+                    
+                    // Product color
+                    .product__label выберите цвет
+                    .product__color
+                      ul
+                        li
+                          a(href="#!")
+                            img(src="./tmp/img-color-1.png", alt="")
+                        li
+                          a(href="#!")
+                            img(src="./tmp/img-color-2.png", alt="")
+                        li
+                          a(href="#!")
+                            img(src="./tmp/img-color-3.png", alt="")
+                        li
+                          a(href="#!")
+                            img(src="./tmp/img-color-4.png", alt="")
+                        li
+                          a(href="#!")
+                            img(src="./tmp/img-color-1.png", alt="")
+                        li
+                          a(href="#!")
+                            img(src="./tmp/img-color-2.png", alt="")
+                        li
+                          a(href="#!")
+                            img(src="./tmp/img-color-3.png", alt="")
+                        li
+                          a(href="#!")
+                            img(src="./tmp/img-color-4.png", alt="")
+                    
+                    // Product size
+                    .product__label выберите размер
+                    .product__size
+                      label.product__size__label
+                        input(type="radio" name="size")
+                        span 38
+                        span.line
+                      label.product__size__label
+                        input(type="radio" name="size")
+                        span 42
+                        span.line
+                      label.product__size__label
+                        input(type="radio" name="size" checked)
+                        span 44
+                        span.line
+                      label.product__size__label
+                        input(type="radio" name="size")
+                        span 46
+                        span.line
+                      label.product__size__label
+                        input(type="radio" name="size")
+                        span 50
+                        span.line
+                      label.product__size__label
+                        input(type="radio" name="size")
+                        span 52
+                        span.line
+                      .clear
+                      .product__count
+                        div
+                          .table
+                            .table-cell
+                              .label укажите количество:
+                            .table-cell
+                              input(type="text" value="120")
+                            .table-cell
+                              .label шт.
+                      
+                    // Product price
+                    .catalog__price.catalog__price--product
+                      div
+                        span
+                          strong 15 999 
+                          sup руб
+                      div
+                        span.old
+                          strong 21 500
+                          small руб
+                      .clear
+                      button(type="submit").btn.btn--default.btn--block Положить в корзину
+                  
+                .col-lg-6.visible-lg
+                  
+                  // Advantages
+                  .advantages.advantages--product
+                    .advantages__block.advantages__block--product
+                      div
+                        .advantages__icon
+                          i.icon.icon--advantages-1
+                      div
+                        p Работа напрямую с производителем и главным офисом
+                        
+                    .advantages__block.advantages__block--product
+                      div
+                        .advantages__icon
+                          i.icon.icon--advantages-2
+                      div
+                        p мы используем только  качественные материалы
+
+                    .advantages__block.advantages__block--product
+                      div
+                        .advantages__icon
+                          i.icon.icon--advantages-3
+                      div
+                        p постоянные Сезонные акции и скидки
+                        
+                    .advantages__block.advantages__block--product
+                      div
+                        .advantages__icon
+                          i.icon.icon--advantages-4
+                      div
+                        p Регулярное обновление ассортимента
+              
+              // Product table
+              .hidden-sm
+                .h3 параметры изделия
+                table.table.table--product
+                  tr
+                    td.first Длина рукава:
+                    td 
+                      span.color--primary Короткие; 3/4
+                  tr
+                    td.first Покрой:
+                    td
+                      span.color--primary прямой; полуприлегающий
+                  tr
+                    td.first Вид застежки:
+                    td
+                      span.color--primary Без застежки; Молния
+                  tr
+                    td.first Вырез горловины:
+                    td
+                      span.color--primary лодочка
+                  tr
+                    td.first Длина изделия:
+                    td
+                      span.color--primary по спинке: 80 см; 
+        
         // Product content
         .product__content
+          
+          // Product table
+          .visible-sm
+            .h2.color--dark параметры изделия
+            table.table.table--product
+              tr
+                td.first Длина рукава:
+                td 
+                  span.color--primary Короткие; 3/4
+              tr
+                td.first Покрой:
+                td
+                  span.color--primary прямой; полуприлегающий
+              tr
+                td.first Вид застежки:
+                td
+                  span.color--primary Без застежки; Молния
+              tr
+                td.first Вырез горловины:
+                td
+                  span.color--primary лодочка
+              tr
+                td.first Длина изделия:
+                td
+                  span.color--primary по спинке: 80 см; 
+                  
           .h2.color--dark Текстовое описание
           
           .product__content__body
@@ -71,7 +288,7 @@ html(lang="ru")
                       .catalog__size__label 46
                       .catalog__size__label 48
                   img(src="./tmp/catalog-img-girl-1.png", alt="").img-responsive
-                .catalog__name очень длинное название са мо го кр ут ог о платья № 23465454 
+                a(href="#!").catalog__name очень длинное название са мо го кр ут ог о платья № 23465454 
                 .catalog__price
                   div
                     span
@@ -97,7 +314,7 @@ html(lang="ru")
                       .catalog__size__label 42
                       .catalog__size__label 43
                   img(src="./tmp/catalog-img-girl-2.png", alt="").img-responsive
-                .catalog__name название Платья № 23465454
+                a(href="#!").catalog__name название Платья № 23465454
                 .catalog__price
                   div
                     span
@@ -121,7 +338,7 @@ html(lang="ru")
                       .catalog__size__name доступные размеры
                       .catalog__size__label 40
                   img(src="./tmp/catalog-img-girl-3.png", alt="").img-responsive
-                .catalog__name название Платья № 23465454
+                a(href="#!").catalog__name название Платья № 23465454
                 .catalog__price
                   div
                     span
@@ -150,7 +367,7 @@ html(lang="ru")
                       .catalog__size__label 46
                       .catalog__size__label 48
                   img(src="./tmp/catalog-img-girl-4.png", alt="").img-responsive
-                .catalog__name название Платья № 23465454
+                a(href="#!").catalog__name название Платья № 23465454
                 .catalog__price
                   div
                     span
@@ -179,7 +396,7 @@ html(lang="ru")
                       .catalog__size__label 46
                       .catalog__size__label 48
                   img(src="./tmp/catalog-img-girl-4.png", alt="").img-responsive
-                .catalog__name название Платья № 23465454
+                a(href="#!").catalog__name название Платья № 23465454
                 .catalog__price
                   div
                     span

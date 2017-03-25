@@ -169,19 +169,25 @@ $(document).ready(function(){
         breakpoint: 479,
         settings: {
           slidesToShow: 1,
-          variableWidth: false
         }
       }
     ]
   });
+
+  $('.catalog__navigation.is-active nav').show();
 
   // Catalog navigation 767px
   $('.catalog__navigation button').on('click', function(e){
     e.preventDefault();
     var width = $(window).width();
 
-    if (width > 767) return;
-    $(this).parent().toggleClass('is-active');
+    if ($(this).parent().hasClass('is-active')) {
+      $(this).parent().removeClass('is-active');
+      $(this).next('nav').slideUp();
+    } else if (!$(this).parent().hasClass('is-active')) {
+      $(this).parent().addClass('is-active');
+      $(this).next('nav').slideDown();
+    }
 
   });
 
@@ -240,8 +246,45 @@ $(document).ready(function(){
       }
     });
   });
-  //
 
+  //Custom select
+  $('select.niceSelect').niceSelect();
+
+  // Readmore
+  $('.has-readmore').readmore({
+    speed: 500,
+    collapsedHeight: 230,
+    moreLink: '<div class="readmore"><a href="#">Подробнее</a></div>',
+    lessLink: '<div class="readmore"><a href="#">Закрыть</a></div>'
+  });
+
+  // Product color carousel
+  $('.product__color ul').slick({
+    dots: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    centerMode: true,
+    variableWidth: true
+  });
+
+  $('.product__gallery__left ul').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    vertical: true,
+    infinite: false
+  });
+
+  CloudZoom.quickStart();
+
+  $('.product__gallery__left .slick-current').addClass('is-active');
+  $('.product__gallery__left .cloudzoom-gallery').on('click', function(e){
+    e.preventDefault();
+  });
+  $('.product__gallery__left .cloudzoom-gallery').on('hover', function(){
+    $('.cloudzoom-gallery').parent().removeClass('is-active');
+    $(this).parent().addClass('is-active');
+  });
 
   // Chrome Smooth Scroll
   try {
@@ -273,7 +316,17 @@ $(window).on('load', function() {
 
 // Window resize
 $(window).on('resize', function(){
+  var width = $(window).width()
   search();
+
+  if (width <= 767 && $('.catalog__navigation').hasClass('is-active')) {
+    $('.catalog__navigation').removeClass('is-active');
+    $('.catalog__navigation nav').hide();
+  }
+
+  // if (width <= 1199) {
+  //
+  // }
 });
 
 // Custom menu img link hover

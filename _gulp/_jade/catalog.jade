@@ -30,7 +30,7 @@ html(lang="ru")
         
         .row
           .col-sm-3
-            
+            include ./_include/_catalog-navigation-catalog
             +banner
             
             
@@ -42,18 +42,20 @@ html(lang="ru")
             .catalog__sorting
               .catalog__sort
                 label сортировать по:
-                select
-                  option(value="возрастанию цены") возрастанию цены
-                  option(value="снижению цены") снижению цены
-                  option(value="возрастанию даты") возрастанию цены
-                  option(value="снижению даты") снижению цены
+                .catalog__select
+                  select.niceSelect
+                    option(value="возрастанию цены") возрастанию цены
+                    option(value="снижению цены") снижению цены
+                    option(value="возрастанию даты") возрастанию цены
+                    option(value="снижению даты") снижению цены
                   
               .catalog__sort.catalog__sort--limit
                 label выводить по:
-                select
-                  option(value='9', selected='selected') 9
-                  option(value='12') 12
-                  option(value='24') 24
+                .catalog__select
+                  select.niceSelect
+                    option(value='18', selected='selected') 18
+                    option(value='36') 36
+                    option(value='54') 54
             
             // Catalog
             .catalog.catalog--inside
@@ -82,7 +84,7 @@ html(lang="ru")
                           .catalog__size__label 48
                       .catalog__label.catalog__label--action акция
                       img(src="./tmp/catalog-img-girl-1.png", alt="").img-responsive
-                    .catalog__name очень длинное название са мо го кр ут ог о платья № 23465454 
+                    a(href="#!").catalog__name очень длинное название са мо го кр ут ог о платья № 23465454 
                     .catalog__price
                       div
                         span
@@ -113,7 +115,7 @@ html(lang="ru")
                           .catalog__size__label 48
                       .catalog__label.catalog__label--sale Скидка
                       img(src="./tmp/catalog-img-girl-2.png", alt="").img-responsive
-                    .catalog__name название Платья № 23465454 
+                    a(href="#!").catalog__name название Платья № 23465454 
                     .catalog__price
                       div
                         span
@@ -148,7 +150,7 @@ html(lang="ru")
                           .catalog__size__label 48
                       .catalog__label.catalog__label--new Новинка
                       img(src="./tmp/catalog-img-girl-3.png", alt="").img-responsive
-                    .catalog__name название Платья № 23465454 
+                    a(href="#!").catalog__name название Платья № 23465454 
                     .catalog__price
                       div
                         span
@@ -178,7 +180,7 @@ html(lang="ru")
                           .catalog__size__label 46
                           .catalog__size__label 48
                       img(src="./tmp/catalog-img-girl-1.png", alt="").img-responsive
-                    .catalog__name название Платья № 23465454 
+                    a(href="#!").catalog__name название Платья № 23465454 
                     .catalog__price
                       div
                         span
@@ -208,7 +210,7 @@ html(lang="ru")
                           .catalog__size__label 46
                           .catalog__size__label 48
                       img(src="./tmp/catalog-img-girl-2.png", alt="").img-responsive
-                    .catalog__name название Платья № 23465454 
+                    a(href="#!").catalog__name название Платья № 23465454 
                     .catalog__price
                       div
                         span
@@ -242,7 +244,7 @@ html(lang="ru")
                           .catalog__size__label 46
                           .catalog__size__label 48
                       img(src="./tmp/catalog-img-girl-3.png", alt="").img-responsive
-                    .catalog__name название Платья № 23465454 
+                    a(href="#!").catalog__name название Платья № 23465454 
                     .catalog__price
                       div
                         span
@@ -272,7 +274,7 @@ html(lang="ru")
                           .catalog__size__label 46
                           .catalog__size__label 48
                       img(src="./tmp/catalog-img-girl-1.png", alt="").img-responsive
-                    .catalog__name название Платья № 23465454 
+                    a(href="#!").catalog__name название Платья № 23465454 
                     .catalog__price
                       div
                         span
@@ -302,7 +304,7 @@ html(lang="ru")
                           .catalog__size__label 46
                           .catalog__size__label 48
                       img(src="./tmp/catalog-img-girl-2.png", alt="").img-responsive
-                    .catalog__name название Платья № 23465454 
+                    a(href="#!").catalog__name название Платья № 23465454 
                     .catalog__price
                       div
                         span
@@ -336,7 +338,7 @@ html(lang="ru")
                           .catalog__size__label 46
                           .catalog__size__label 48
                       img(src="./tmp/catalog-img-girl-3.png", alt="").img-responsive
-                    .catalog__name название Платья № 23465454 
+                    a(href="#!").catalog__name название Платья № 23465454 
                     .catalog__price
                       div
                         span
@@ -347,8 +349,12 @@ html(lang="ru")
             +pagination
               
             // Seo text
-            .seo-text
+            .seo-text.has-readmore
               .seo-text__title женские платья в интернет магазине emansipe
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. 
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. 
+              p Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку.
+              p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. 
               p Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. 
               p Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку. 
 
