@@ -76,6 +76,30 @@
     &__zoom
       display: none
 
+  .filter
+    &__row
+      padding-right: 40px
+      .sup
+        width: 35px
+      &--color
+        padding-right: 30px
+        .sup
+          right: 12px
+
+  .collection
+    &__carousel
+      padding: 0 50px
+    &__frame
+      width: 294px
+      height: 396px
+      background-size: 294px 396px
+      &__name
+        bottom: 80px
+        left: 25px
+      &__label
+        right: -5px
+        top: 155px
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 991px)
   .advantages
@@ -160,6 +184,17 @@
         width: 360px
         height: 480px
 
+  .filter
+    &__row
+      padding-right: 10px
+      .sup
+        display: none
+      &--color
+        padding-right: 30px
+        .sup
+          right: 10px
+          display: block
+
 @media (min-width: 768px) and (max-width: 991px)
   .catalog
     &__navigation
@@ -176,6 +211,24 @@
     &__carousel
       .catalog__name
         height: 20px
+
+  .collection
+    &__carousel
+      padding: 0 0px
+      .slick-slide a img
+        max-width: 170px
+    &__frame
+      width: 220px
+      height: 296px
+      top: 36px
+      background-size: 220px 296px
+      &__name
+        bottom: 50px
+        left: 18px
+      &__label
+        right: -12px
+        top: 133px
+
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 767px)
@@ -391,6 +444,46 @@
         height: 480px
         margin-left: 75px
 
+  .filter
+    &__body
+      display: none
+      position: absolute
+      width: 100%
+      padding: 0 13px 13px 13px
+      box-shadow: 0 0px 40px 0 rgba(0, 0, 0, 0.2)
+    &__block
+      margin-left: -13px
+      margin-right: -13px
+      width: calc(100% + 26px) !important
+    &__row
+      padding-right: 55px
+      .sup
+        width: 50px
+        display: block
+      &--color
+        .sup
+          right: 20px
+    &__head
+      &--top
+        margin-left: -13px
+        margin-right: -13px
+
+  .collection
+    &__carousel
+      padding: 0 0px
+      .slick-slide a img
+        max-width: 290px
+    &__frame
+      width: 355px
+      height: 478px
+      background-size: 355px 478px
+      &__name
+        bottom: 100px
+        left: 30px
+      &__label
+        right: 1px
+        top: 170px
+
 @media only screen and (max-width: 599px)
   .header
     &__social
@@ -525,6 +618,28 @@
         margin-left: 60px
         position: relative
         top: 30px
+
+  .collection
+    margin: 0
+    padding: 0
+    &__carousel
+      padding: 0
+      margin: 0
+      .slick-slide a img
+        max-width: 215px
+    &__frame
+      width: 250px
+      height: 336px
+      background-size: 250px 336px
+      &__name
+        bottom: 67px
+        left: 20px
+      &__label
+        right: -9px
+        top: 145px
+
+  .section__head .h1 .small, .section__head h1 .small
+    right: 0
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 319px)

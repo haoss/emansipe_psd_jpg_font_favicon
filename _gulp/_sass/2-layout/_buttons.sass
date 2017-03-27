@@ -21,7 +21,7 @@
   font-size: rem(14)
   text-transform: uppercase
   font-family: $font-exo-condensed
-  font-weight: 700
+  font-weight: 600
   transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease
 
   &:hover, &:focus, &:active
@@ -56,8 +56,19 @@
     background-color: $color-white
     border-color: $color-s-lightbrown
     text-decoration: none
+    color: $color-s-lightbrown
     &:hover
       background-color: $color-s-lightbrown
+      color: $color-white
+
+  &--unborder
+    background-color: $color-white
+    border-color: $color-white
+    text-decoration: none
+    color: $color-s-lightbrown
+    &:hover
+      background-color: $color-s-lightbrown
+      border-color: $color-s-lightbrown
       color: $color-white
 
   &--feedback, &--more
@@ -66,6 +77,7 @@
 
   &--more
     max-width: 262px
+    color: $color-s-brown
 
   &--mw200
     min-width: 200px

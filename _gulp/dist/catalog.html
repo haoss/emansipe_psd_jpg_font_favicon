@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.7/css/nanoscroller.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
         <link rel="stylesheet" href="./js/libs/cloudzoom/cloudzoom.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -113,8 +114,8 @@
                 <div class="container">
                     <div class="header__contacts">
                         <div class="show">Пн—Вс 10:00—19:00</div>
-                        <div>8 (966) 026-27-27</div>
-                        <div class="hide">8 (909) 952-27-77</div>
+                        <div> <a href="tel:0000000">8 (966) 026-27-27</a></div>
+                        <div class="hide"> <a href="tel:0000000">8 (909) 952-27-77</a></div>
                         <div class="visible-xs"><a href="#!" class="btn btn--phones"><i class="ion-android-arrow-dropleft"></i></a></div>
                     </div><a href="#feedback" class="btn btn--default btn--feedback open-popup-link">Обратная связь </a>
                 </div>
@@ -226,7 +227,7 @@
                 <div class="row">
                     <div class="col-sm-3">
                         <!-- Catalog navigation-->
-                        <div class="catalog__navigation hidden-xs">
+                        <div class="catalog__navigation">
                             <button type="button">Каталог <span class="hidden-sm">продукции</span><i class="ion-chevron-up"></i></button>
                             <nav role="navigation">
                                 <ul>
@@ -255,6 +256,118 @@
                                     </li>
                                 </ul>
                             </nav>
+                        </div>
+                        <!-- Catalog filter-->
+                        <div id="filters" class="filter">
+                            <form action="#!" method="get">
+                                <button type="button" class="filter__button visible-xs">фильтр<i class="ion-chevron-up"></i></button>
+                                <div class="filter__body">
+                                    <div class="filter__block has-hide">
+                                        <div class="filter__head">Основной материал</div>
+                                        <label for="material__0" class="filter__row">
+                                            <input type="checkbox" name="f_material[]" id="material__0"><span class="checkbox"></span><span class="label">Основной материал</span><span class="sup">(234)</span>
+                                        </label>
+                                        <label for="material__1" class="filter__row">
+                                            <input type="checkbox" name="f_material[]" id="material__1"><span class="checkbox"></span><span class="label">Акрил</span><span class="sup">(12)</span>
+                                        </label>
+                                        <label for="material__2" class="filter__row">
+                                            <input type="checkbox" name="f_material[]" id="material__2"><span class="checkbox"></span><span class="label">Вискоза</span><span class="sup">(99)</span>
+                                        </label>
+                                        <label for="material__3" class="filter__row">
+                                            <input type="checkbox" name="f_material[]" checked id="material__3"><span class="checkbox"></span><span class="label">Лайкра</span><span class="sup">(250)</span>
+                                        </label>
+                                        <label for="material__4" class="filter__row">
+                                            <input type="checkbox" name="f_material[]" id="material__4"><span class="checkbox"></span><span class="label">Лен</span><span class="sup">(120)</span>
+                                        </label>
+                                        <label for="material__5" class="filter__row">
+                                            <input type="checkbox" name="f_material[]" checked id="material__5"><span class="checkbox"></span><span class="label">Полиамид</span><span class="sup">(999)</span>
+                                        </label>
+                                        <label for="material__6" class="filter__row unactive">
+                                            <input type="checkbox" name="f_material[]" disabled id="material__6"><span class="checkbox"></span><span class="label">Полимер</span><span class="sup">(0)</span>
+                                        </label>
+                                        <label for="material__7" class="filter__row unactive">
+                                            <input type="checkbox" name="f_material[]" disabled id="material__7"><span class="checkbox"></span><span class="label">Полиэстер</span><span class="sup">(0)</span>
+                                        </label>
+                                        <label for="material__8" class="filter__row unactive">
+                                            <input type="checkbox" name="f_material[]" disabled id="material__8"><span class="checkbox"></span><span class="label">Хлопок</span><span class="sup">(0)</span>
+                                        </label>
+                                        <label for="material__9" class="filter__row unactive">
+                                            <input type="checkbox" name="f_material[]" disabled id="material__9"><span class="checkbox"></span><span class="label">Шелк</span><span class="sup">(0)</span>
+                                        </label>
+                                        <label for="material__10" class="filter__row">
+                                            <input type="checkbox" name="f_material[]" id="material__10"><span class="checkbox"></span><span class="label">Основной материал</span><span class="sup">(234)</span>
+                                        </label>
+                                        <label for="material__11" class="filter__row">
+                                            <input type="checkbox" name="f_material[]" id="material__11"><span class="checkbox"></span><span class="label">Акрил</span><span class="sup">(12)</span>
+                                        </label>
+                                        <label for="material__12" class="filter__row">
+                                            <input type="checkbox" name="f_material[]" id="material__12"><span class="checkbox"></span><span class="label">Вискоза</span><span class="sup">(99)</span>
+                                        </label>
+                                        <label for="material__13" class="filter__row">
+                                            <input type="checkbox" name="f_material[]" checked id="material__13"><span class="checkbox"></span><span class="label">Лайкра</span><span class="sup">(250)</span>
+                                        </label>
+                                        <label for="material__14" class="filter__row">
+                                            <input type="checkbox" name="f_material[]" id="material__14"><span class="checkbox"></span><span class="label">Лен</span><span class="sup">(120)</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter__block has-hide">
+                                        <div class="filter__head">Основной цвет</div>
+                                        <label for="color__0" class="filter__row filter__row--color">
+                                            <input type="checkbox" name="f_color[]" id="color__0"><span class="checkbox"></span><span class="label">бежевый</span><span data-color="edd0ae" class="sup data-color"></span>
+                                        </label>
+                                        <label for="color__1" class="filter__row filter__row--color">
+                                            <input type="checkbox" name="f_color[]" id="color__1"><span class="checkbox"></span><span class="label">белый</span><span data-color="ffffff" class="sup data-color"></span>
+                                        </label>
+                                        <label for="color__2" class="filter__row filter__row--color">
+                                            <input type="checkbox" name="f_color[]" id="color__2"><span class="checkbox"></span><span class="label">бирюзовый</span><span data-color="37fff3" class="sup data-color"></span>
+                                        </label>
+                                        <label for="color__3" class="filter__row filter__row--color">
+                                            <input type="checkbox" name="f_color[]" id="color__3"><span class="checkbox"></span><span class="label">бордовый</span><span data-color="a83434" class="sup data-color"></span>
+                                        </label>
+                                        <label for="color__4" class="filter__row filter__row--color">
+                                            <input type="checkbox" name="f_color[]" id="color__4"><span class="checkbox"></span><span class="label">голубой</span><span data-color="81f2ff" class="sup data-color"></span>
+                                        </label>
+                                    </div>
+                                    <div class="filter__block has-hide">
+                                        <div class="filter__head">размер изделия</div>
+                                        <label for="size__0" class="filter__row filter__row--nosup">
+                                            <input type="checkbox" name="f_size[]" id="size__0"><span class="checkbox"></span><span class="label">38 - 40</span><span class="sup">(234)</span>
+                                        </label>
+                                        <label for="size__1" class="filter__row filter__row--nosup">
+                                            <input type="checkbox" name="f_size[]" id="size__1"><span class="checkbox"></span><span class="label">42 - 44</span><span class="sup">(12)</span>
+                                        </label>
+                                        <label for="size__2" class="filter__row filter__row--nosup">
+                                            <input type="checkbox" name="f_size[]" id="size__2"><span class="checkbox"></span><span class="label">44 - 46</span><span class="sup">(12)</span>
+                                        </label>
+                                        <label for="size__3" class="filter__row filter__row--nosup">
+                                            <input type="checkbox" name="f_size[]" id="size__3"><span class="checkbox"></span><span class="label">48 - 50</span><span class="sup">(12)</span>
+                                        </label>
+                                        <label for="size__4" class="filter__row filter__row--nosup">
+                                            <input type="checkbox" name="f_size[]" id="size__4"><span class="checkbox"></span><span class="label">52 - 54</span><span class="sup">(12)</span>
+                                        </label>
+                                    </div>
+                                    <div class="filter__block filter__block--slider">
+                                        <div class="filter__head">цена изделия</div>
+                                        <div class="filter__slider">
+                                            <div class="range__zero">0</div>
+                                            <div id="filter__range"></div>
+                                        </div>
+                                        <div class="filter__cost table">
+                                            <div class="table-cell"> <span>от</span></div>
+                                            <div class="table-cell">
+                                                <input id="priceMin" type="text" value="5000" class="form-control">
+                                            </div>
+                                            <div class="table-cell"><span>до</span></div>
+                                            <div class="table-cell">
+                                                <input id="priceMax" type="text" value="15000" class="form-control">
+                                            </div>
+                                            <div class="table-cell"><span>руб</span></div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn--border btn--block">Сбросить фильтр</button>
+                                    <button type="button" id="filter__hide" class="btn btn--unborder btn--block visible-xs">Скрыть фильтр</button>
+                                </div>
+                            </form>
                         </div>
                                 <div class="banner hidden-xs"><img src="./tmp/banner.png" alt="" class="img-responsive"></div>
                     </div>
@@ -569,11 +682,11 @@
                             </div>
                             <div class="footer__contacts__row">
                                 <div><i class="ion-android-call"></i></div>
-                                <div>8(966)026-27-27</div>
+                                <div> <a href="tel:000000">8(966)026-27-27</a></div>
                             </div>
                             <div class="footer__contacts__row">
                                 <div><i class="ion-social-whatsapp"></i></div>
-                                <div>8(909)952-27-77 </div>
+                                <div> <a href="tel:000000">8(909)952-27-77 </a></div>
                             </div>
                             <div class="footer__contacts__row">
                                 <div><i class="ion-home"></i></div>
@@ -621,6 +734,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.min.js"></script>
         <script src="./js/libs/cloudzoom/cloudzoom.js"></script>
         <script src="./js/libs/cloudzoom/starzoom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

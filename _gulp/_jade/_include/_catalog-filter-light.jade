@@ -1,0 +1,96 @@
+// Catalog filter
+.filter#filters
+  form(action="#!" method="get")
+    button(type="button").filter__button.visible-xs фильтр
+      i.ion-chevron-up
+        
+    .filter__body
+      
+      .filter__head.filter__head--top Все категории
+      .filter__category.has-hide--category
+        .filter__block.filter__block--category
+          .filter__head.filter__head--category Платья
+          label.filter__row(for="category__0")
+            input(type="checkbox" name="f_category[]")#category__0
+            span.checkbox
+            span.label Mini
+            span.sup (365)
+          label.filter__row(for="category__1")
+            input(type="checkbox" name="f_category[]")#category__1
+            span.checkbox
+            span.label Midi
+            span.sup (365)
+          label.filter__row(for="category__2")
+            input(type="checkbox" name="f_category[]")#category__2
+            span.checkbox
+            span.label Maxi
+            span.sup (365)
+          label.filter__row(for="category__3")
+            input(type="checkbox" name="f_category[]")#category__3
+            span.checkbox
+            span.label Вечерние платья
+            span.sup (365)
+          label.filter__row(for="category__4")
+            input(type="checkbox" name="f_category[]")#category__4
+            span.checkbox
+            span.label Все платья
+            span.sup (365)
+            
+        .filter__block.filter__block--category
+          .filter__head.filter__head--category Костюмы
+          label.filter__row(for="category__5")
+            input(type="checkbox" name="f_category[]")#category__5
+            span.checkbox
+            span.label Все платья
+            span.sup (546)
+            
+        .filter__block.filter__block--category
+          .filter__head.filter__head--category Верхняя одежда
+          label.filter__row(for="category__6")
+            input(type="checkbox" name="f_category[]")#category__6
+            span.checkbox
+            span.label Легкие пальто
+            span.sup (110)
+          label.filter__row(for="category__7")
+            input(type="checkbox" name="f_category[]")#category__7
+            span.checkbox
+            span.label Куртки
+            span.sup (853)
+          label.filter__row(for="category__8")
+            input(type="checkbox" name="f_category[]")#category__8
+            span.checkbox
+            span.label Плащи
+            span.sup (120)
+          label.filter__row(for="category__9")
+            input(type="checkbox" name="f_category[]")#category__9
+            span.checkbox
+            span.label Пальто
+            span.sup (555)
+          label.filter__row(for="category__10")
+            input(type="checkbox" name="f_category[]")#category__10
+            span.checkbox
+            span.label Вся верхняя одежда
+            span.sup (4562)
+          label.filter__row(for="category__11")
+            input(type="checkbox" name="f_category[]")#category__11
+            span.checkbox
+            span.label Легкие пальто
+            span.sup (110)
+          label.filter__row(for="category__12")
+            input(type="checkbox" name="f_category[]")#category__12
+            span.checkbox
+            span.label Куртки
+            span.sup (853)
+          label.filter__row(for="category__13")
+            input(type="checkbox" name="f_category[]")#category__13
+            span.checkbox
+            span.label Плащи
+            span.sup (120)
+          label.filter__row(for="category__14")
+            input(type="checkbox" name="f_category[]")#category__14
+            span.checkbox
+            span.label Пальто
+            span.sup (555)
+      
+      button(type="button").btn.btn--border.btn--block Сбросить фильтр
+      button(type="button")#filter__hide.btn.btn--unborder.btn--block.visible-xs Скрыть фильтр

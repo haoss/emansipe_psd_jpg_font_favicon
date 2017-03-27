@@ -28,7 +28,8 @@ html(lang="ru")
         
         .row
           .col-sm-3
-            
+            include ./_include/_catalog-navigation-catalog
+            include ./_include/_catalog-filter-light
             +banner
             
           .col-sm-9
@@ -38,18 +39,20 @@ html(lang="ru")
             .catalog__sorting
               .catalog__sort
                 label сортировать по:
-                select
-                  option(value="возрастанию цены") возрастанию цены
-                  option(value="снижению цены") снижению цены
-                  option(value="возрастанию даты") возрастанию цены
-                  option(value="снижению даты") снижению цены
+                .catalog__select
+                  select.niceSelect
+                    option(value="возрастанию цены") возрастанию цены
+                    option(value="снижению цены") снижению цены
+                    option(value="возрастанию даты") возрастанию цены
+                    option(value="снижению даты") снижению цены
                   
               .catalog__sort.catalog__sort--limit
                 label выводить по:
-                select
-                  option(value='9', selected='selected') 9
-                  option(value='12') 12
-                  option(value='24') 24
+                .catalog__select
+                  select.niceSelect
+                    option(value='9', selected='selected') 9
+                    option(value='12') 12
+                    option(value='24') 24
             
             // Catalog
             .catalog.catalog--inside

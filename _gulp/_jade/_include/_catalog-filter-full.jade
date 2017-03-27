@@ -1,0 +1,160 @@
+// Catalog filter
+.filter#filters
+  form(action="#!" method="get")
+    button(type="button").filter__button.visible-xs фильтр
+      i.ion-chevron-up
+        
+    .filter__body
+      .filter__block.has-hide
+        .filter__head Основной материал
+        label.filter__row(for="material__0")
+          input(type="checkbox" name="f_material[]")#material__0
+          span.checkbox
+          span.label Основной материал
+          span.sup (234)
+        label.filter__row(for="material__1")
+          input(type="checkbox" name="f_material[]")#material__1
+          span.checkbox
+          span.label Акрил
+          span.sup (12)
+        label.filter__row(for="material__2")
+          input(type="checkbox" name="f_material[]")#material__2
+          span.checkbox
+          span.label Вискоза
+          span.sup (99)
+        label.filter__row(for="material__3")
+          input(type="checkbox" name="f_material[]" checked)#material__3
+          span.checkbox
+          span.label Лайкра
+          span.sup (250)
+        label.filter__row(for="material__4")
+          input(type="checkbox" name="f_material[]")#material__4
+          span.checkbox
+          span.label Лен
+          span.sup (120)
+        label.filter__row(for="material__5")
+          input(type="checkbox" name="f_material[]" checked)#material__5
+          span.checkbox
+          span.label Полиамид
+          span.sup (999)
+        label.filter__row.unactive(for="material__6")
+          input(type="checkbox" name="f_material[]" disabled)#material__6
+          span.checkbox
+          span.label Полимер
+          span.sup (0)
+        label.filter__row.unactive(for="material__7")
+          input(type="checkbox" name="f_material[]" disabled)#material__7
+          span.checkbox
+          span.label Полиэстер
+          span.sup (0)
+        label.filter__row.unactive(for="material__8")
+          input(type="checkbox" name="f_material[]" disabled)#material__8
+          span.checkbox
+          span.label Хлопок
+          span.sup (0)
+        label.filter__row.unactive(for="material__9")
+          input(type="checkbox" name="f_material[]" disabled)#material__9
+          span.checkbox
+          span.label Шелк
+          span.sup (0)
+        label.filter__row(for="material__10")
+          input(type="checkbox" name="f_material[]")#material__10
+          span.checkbox
+          span.label Основной материал
+          span.sup (234)
+        label.filter__row(for="material__11")
+          input(type="checkbox" name="f_material[]")#material__11
+          span.checkbox
+          span.label Акрил
+          span.sup (12)
+        label.filter__row(for="material__12")
+          input(type="checkbox" name="f_material[]")#material__12
+          span.checkbox
+          span.label Вискоза
+          span.sup (99)
+        label.filter__row(for="material__13")
+          input(type="checkbox" name="f_material[]" checked)#material__13
+          span.checkbox
+          span.label Лайкра
+          span.sup (250)
+        label.filter__row(for="material__14")
+          input(type="checkbox" name="f_material[]")#material__14
+          span.checkbox
+          span.label Лен
+          span.sup (120)
+    
+      .filter__block.has-hide
+        .filter__head Основной цвет
+        label.filter__row.filter__row--color(for="color__0")
+          input(type="checkbox" name="f_color[]")#color__0
+          span.checkbox
+          span.label бежевый
+          span.sup.data-color(data-color="edd0ae")
+        label.filter__row.filter__row--color(for="color__1")
+          input(type="checkbox" name="f_color[]")#color__1
+          span.checkbox
+          span.label белый
+          span.sup.data-color(data-color="ffffff")
+        label.filter__row.filter__row--color(for="color__2")
+          input(type="checkbox" name="f_color[]")#color__2
+          span.checkbox
+          span.label бирюзовый
+          span.sup.data-color(data-color="37fff3")
+        label.filter__row.filter__row--color(for="color__3")
+          input(type="checkbox" name="f_color[]")#color__3
+          span.checkbox
+          span.label бордовый
+          span.sup.data-color(data-color="a83434")
+        label.filter__row.filter__row--color(for="color__4")
+          input(type="checkbox" name="f_color[]")#color__4
+          span.checkbox
+          span.label голубой
+          span.sup.data-color(data-color="81f2ff")
+          
+      .filter__block.has-hide
+        .filter__head размер изделия
+        label.filter__row.filter__row--nosup(for="size__0")
+          input(type="checkbox" name="f_size[]")#size__0
+          span.checkbox
+          span.label 38 - 40
+          span.sup (234)
+        label.filter__row.filter__row--nosup(for="size__1")
+          input(type="checkbox" name="f_size[]")#size__1
+          span.checkbox
+          span.label 42 - 44
+          span.sup (12)
+        label.filter__row.filter__row--nosup(for="size__2")
+          input(type="checkbox" name="f_size[]")#size__2
+          span.checkbox
+          span.label 44 - 46
+          span.sup (12)
+        label.filter__row.filter__row--nosup(for="size__3")
+          input(type="checkbox" name="f_size[]")#size__3
+          span.checkbox
+          span.label 48 - 50
+          span.sup (12)
+        label.filter__row.filter__row--nosup(for="size__4")
+          input(type="checkbox" name="f_size[]")#size__4
+          span.checkbox
+          span.label 52 - 54
+          span.sup (12)
+          
+      .filter__block.filter__block--slider
+        .filter__head цена изделия
+        .filter__slider
+          .range__zero 0
+          #filter__range
+        .filter__cost.table
+          .table-cell 
+            span от
+          .table-cell
+            input#priceMin(type='text', value='5000').form-control
+          .table-cell
+            span до
+          .table-cell
+            input#priceMax(type='text', value='15000').form-control
+          .table-cell
+            span руб
+      
+      button(type="button").btn.btn--border.btn--block Сбросить фильтр
+      button(type="button")#filter__hide.btn.btn--unborder.btn--block.visible-xs Скрыть фильтр

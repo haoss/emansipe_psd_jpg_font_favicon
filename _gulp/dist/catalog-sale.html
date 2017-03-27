@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.7/css/nanoscroller.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
         <link rel="stylesheet" href="./js/libs/cloudzoom/cloudzoom.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
         <link rel="stylesheet" href="./css/main.css">
     </head>
     <body>
@@ -113,8 +114,8 @@
                 <div class="container">
                     <div class="header__contacts">
                         <div class="show">Пн—Вс 10:00—19:00</div>
-                        <div>8 (966) 026-27-27</div>
-                        <div class="hide">8 (909) 952-27-77</div>
+                        <div> <a href="tel:0000000">8 (966) 026-27-27</a></div>
+                        <div class="hide"> <a href="tel:0000000">8 (909) 952-27-77</a></div>
                         <div class="visible-xs"><a href="#!" class="btn btn--phones"><i class="ion-android-arrow-dropleft"></i></a></div>
                     </div><a href="#feedback" class="btn btn--default btn--feedback open-popup-link">Обратная связь </a>
                 </div>
@@ -224,6 +225,104 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-3">
+                        <!-- Catalog navigation-->
+                        <div class="catalog__navigation">
+                            <button type="button">Каталог <span class="hidden-sm">продукции</span><i class="ion-chevron-up"></i></button>
+                            <nav role="navigation">
+                                <ul>
+                                    <li class="active"> <span>Платья</span>
+                                        <ul>
+                                            <li><a href="#!">Mini<span>(365)</span></a></li>
+                                            <li class="active"><a href="#!">Midi<span>(210)</span></a></li>
+                                            <li><a href="#!">Maxi<span>(675)</span></a></li>
+                                            <li><a href="#!">Вечерние платья<span>(55)</span></a></li>
+                                            <li class="last"><a href="#!">Все платья<span>(987)</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li> <span>Костюмы</span>
+                                        <ul>
+                                            <li><a href="#!">Все костюмы<span>(546)</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li> <span>Верхняя одежда </span>
+                                        <ul>
+                                            <li><a href="#!">Легкие пальто<span>(110)</span></a></li>
+                                            <li><a href="#!">Куртки<span>(853)</span></a></li>
+                                            <li><a href="#!">Плащи<span>(120)</span></a></li>
+                                            <li><a href="#!">Пальто<span>(555)</span></a></li>
+                                            <li><a href="#!">Вся верхняя одежда<span>(4562)</span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <!-- Catalog filter-->
+                        <div id="filters" class="filter">
+                            <form action="#!" method="get">
+                                <button type="button" class="filter__button visible-xs">фильтр<i class="ion-chevron-up"></i></button>
+                                <div class="filter__body">
+                                    <div class="filter__head filter__head--top">Все категории</div>
+                                    <div class="filter__category has-hide--category">
+                                        <div class="filter__block filter__block--category">
+                                            <div class="filter__head filter__head--category">Платья</div>
+                                            <label for="category__0" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__0"><span class="checkbox"></span><span class="label">Mini</span><span class="sup">(365)</span>
+                                            </label>
+                                            <label for="category__1" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__1"><span class="checkbox"></span><span class="label">Midi</span><span class="sup">(365)</span>
+                                            </label>
+                                            <label for="category__2" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__2"><span class="checkbox"></span><span class="label">Maxi</span><span class="sup">(365)</span>
+                                            </label>
+                                            <label for="category__3" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__3"><span class="checkbox"></span><span class="label">Вечерние платья</span><span class="sup">(365)</span>
+                                            </label>
+                                            <label for="category__4" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__4"><span class="checkbox"></span><span class="label">Все платья</span><span class="sup">(365)</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__block filter__block--category">
+                                            <div class="filter__head filter__head--category">Костюмы</div>
+                                            <label for="category__5" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__5"><span class="checkbox"></span><span class="label">Все платья</span><span class="sup">(546)</span>
+                                            </label>
+                                        </div>
+                                        <div class="filter__block filter__block--category">
+                                            <div class="filter__head filter__head--category">Верхняя одежда</div>
+                                            <label for="category__6" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__6"><span class="checkbox"></span><span class="label">Легкие пальто</span><span class="sup">(110)</span>
+                                            </label>
+                                            <label for="category__7" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__7"><span class="checkbox"></span><span class="label">Куртки</span><span class="sup">(853)</span>
+                                            </label>
+                                            <label for="category__8" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__8"><span class="checkbox"></span><span class="label">Плащи</span><span class="sup">(120)</span>
+                                            </label>
+                                            <label for="category__9" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__9"><span class="checkbox"></span><span class="label">Пальто</span><span class="sup">(555)</span>
+                                            </label>
+                                            <label for="category__10" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__10"><span class="checkbox"></span><span class="label">Вся верхняя одежда</span><span class="sup">(4562)</span>
+                                            </label>
+                                            <label for="category__11" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__11"><span class="checkbox"></span><span class="label">Легкие пальто</span><span class="sup">(110)</span>
+                                            </label>
+                                            <label for="category__12" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__12"><span class="checkbox"></span><span class="label">Куртки</span><span class="sup">(853)</span>
+                                            </label>
+                                            <label for="category__13" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__13"><span class="checkbox"></span><span class="label">Плащи</span><span class="sup">(120)</span>
+                                            </label>
+                                            <label for="category__14" class="filter__row">
+                                                <input type="checkbox" name="f_category[]" id="category__14"><span class="checkbox"></span><span class="label">Пальто</span><span class="sup">(555)</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="btn btn--border btn--block">Сбросить фильтр</button>
+                                    <button type="button" id="filter__hide" class="btn btn--unborder btn--block visible-xs">Скрыть фильтр</button>
+                                </div>
+                            </form>
+                        </div>
                                 <div class="banner hidden-xs"><img src="./tmp/banner.png" alt="" class="img-responsive"></div>
                     </div>
                     <div class="col-sm-9">
@@ -231,20 +330,24 @@
                         <div class="catalog__sorting">
                             <div class="catalog__sort">
                                 <label>сортировать по:</label>
-                                <select>
-                                    <option value="возрастанию цены">возрастанию цены</option>
-                                    <option value="снижению цены">снижению цены</option>
-                                    <option value="возрастанию даты">возрастанию цены</option>
-                                    <option value="снижению даты">снижению цены</option>
-                                </select>
+                                <div class="catalog__select">
+                                    <select class="niceSelect">
+                                        <option value="возрастанию цены">возрастанию цены</option>
+                                        <option value="снижению цены">снижению цены</option>
+                                        <option value="возрастанию даты">возрастанию цены</option>
+                                        <option value="снижению даты">снижению цены</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="catalog__sort catalog__sort--limit">
                                 <label>выводить по:</label>
-                                <select>
-                                    <option value="9" selected="selected">9</option>
-                                    <option value="12">12</option>
-                                    <option value="24">24</option>
-                                </select>
+                                <div class="catalog__select">
+                                    <select class="niceSelect">
+                                        <option value="9" selected="selected">9</option>
+                                        <option value="12">12</option>
+                                        <option value="24">24</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <!-- Catalog-->
@@ -535,11 +638,11 @@
                             </div>
                             <div class="footer__contacts__row">
                                 <div><i class="ion-android-call"></i></div>
-                                <div>8(966)026-27-27</div>
+                                <div> <a href="tel:000000">8(966)026-27-27</a></div>
                             </div>
                             <div class="footer__contacts__row">
                                 <div><i class="ion-social-whatsapp"></i></div>
-                                <div>8(909)952-27-77 </div>
+                                <div> <a href="tel:000000">8(909)952-27-77 </a></div>
                             </div>
                             <div class="footer__contacts__row">
                                 <div><i class="ion-home"></i></div>
@@ -587,6 +690,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.min.js"></script>
         <script src="./js/libs/cloudzoom/cloudzoom.js"></script>
         <script src="./js/libs/cloudzoom/starzoom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="./js/common.js"></script>
     </body>
 </html>

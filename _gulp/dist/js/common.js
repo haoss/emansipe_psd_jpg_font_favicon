@@ -115,7 +115,7 @@ $(document).ready(function(){
     dots: true,
     infinite: true,
     speed: 300,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     draggable: false,
     responsive: [
@@ -187,6 +187,37 @@ $(document).ready(function(){
     } else if (!$(this).parent().hasClass('is-active')) {
       $(this).parent().addClass('is-active');
       $(this).next('nav').slideDown();
+    }
+
+  });
+
+  // Filter navigation 767px
+  $('.filter__button').on('click', function(e){
+    e.preventDefault();
+    var width = $(window).width();
+
+    if ($(this).parents('.filter').hasClass('is-active')) {
+      $(this).parents('.filter').removeClass('is-active');
+      $(this).next('.filter__body').slideUp();
+    } else if (!$(this).parents('.filter').hasClass('is-active')) {
+      $(this).parents('.filter').addClass('is-active');
+      $(this).next('.filter__body').slideDown();
+    }
+
+    if (width <= 767) {
+      $('.has-hide').readmore({
+        speed: 500,
+        collapsedHeight: 130,
+        moreLink: '<div class="filter__more"><a href="#!">Показать фильтр</a></div>',
+        lessLink: '<div class="filter__more"><a href="#!">Скрыть фильтр</a></div>'
+      });
+
+      $('.has-hide--category').readmore({
+        speed: 500,
+        collapsedHeight: 370,
+        moreLink: '<div class="filter__more"><a href="#!">Показать фильтр</a></div>',
+        lessLink: '<div class="filter__more"><a href="#!">Скрыть фильтр</a></div>'
+      });
     }
 
   });
@@ -287,6 +318,127 @@ $(document).ready(function(){
     $(this).parent().addClass('is-active');
   });
 
+  // Data color background
+  $('.data-color').each(function(){
+    $(this).css({
+      background: '#' + $(this).data('color')
+    });
+  });
+
+  // Jquery UI slider
+  $("#filter__range").slider({
+  	min: 0,
+  	max: 20000,
+  	values: [5000,15000],
+  	range: true,
+  	stop: function(event, ui) {
+      $("input#priceMin").val($("#filter__range").slider("values",0));
+      $("input#priceMax").val($("#filter__range").slider("values",1));
+
+      $('.price-range-min.value').html($("#filter__range").slider("values",0));
+      $('.price-range-max.value').html($("#filter__range").slider("values",1));
+    },
+    slide: function(event, ui){
+      $("input#priceMin").val($("#filter__range").slider("values",0));
+      $("input#priceMax").val($("#filter__range").slider("values",1));
+
+      $('.price-range-min.value').html($("#filter__range").slider("values",0));
+      $('.price-range-max.value').html($("#filter__range").slider("values",1));
+    }
+  });
+
+  $("input#priceMin").on('change', function(){
+  	var value1=$("input#priceMin").val();
+  	var value2=$("input#priceMax").val();
+    if(parseInt(value1) > parseInt(value2)){
+  		value1 = value2;
+  		$("input#priceMin").val(value1);
+      $('.price-range-min.value').html(value1);
+  	}
+  	$("#filter__range").slider("values", 0, value1);
+    $('.price-range-min.value').html(value1);
+  });
+
+  $("input#priceMax").on('change', function(){
+  	var value1=$("input#priceMin").val();
+  	var value2=$("input#priceMax").val();
+  	if (value2 > 20000) { value2 = 20000; $("input#priceMax").val(35000)}
+  	if(parseInt(value1) > parseInt(value2)){
+  		value2 = value1;
+  		$("input#priceMax").val(value2);
+      $('.price-range-max.value').html(value2);
+  	}
+  	$("#filter__range").slider("values",1,value2);
+    $('.price-range-max.value').html(value2);
+  });
+
+  $('.ui-slider-handle:eq(0)').append('<span class="price-range-min value">' + $('#filter__range').slider('values', 0 ) + '</span>');
+  $('.ui-slider-handle:eq(1)').append('<span class="price-range-max value">' + $('#filter__range').slider('values', 1 ) + '</span>');
+
+
+  // фильтрация ввода в поля
+  $('input').on('keypress', function(event){
+    var key, keyChar;
+    if(!event) var event = window.event;
+    if (event.keyCode) key = event.keyCode;
+    else if(event.which) key = event.which;
+    if(key==null || key==0 || key==8 || key==13 || key==9 || key==46 || key==37 || key==39 ) return true;
+    keyChar=String.fromCharCode(key);
+    if(!/\d/.test(keyChar))	return false;
+  });
+
+  // Hide filter block
+  $('.has-hide').readmore({
+    speed: 500,
+    collapsedHeight: 130,
+    moreLink: '<div class="filter__more"><a href="#!">Показать фильтр</a></div>',
+    lessLink: '<div class="filter__more"><a href="#!">Скрыть фильтр</a></div>'
+  });
+
+  // Hide filter block
+  $('.has-hide--category').readmore({
+    speed: 500,
+    collapsedHeight: 370,
+    moreLink: '<div class="filter__more"><a href="#!">Показать фильтр</a></div>',
+    lessLink: '<div class="filter__more"><a href="#!">Скрыть фильтр</a></div>'
+  });
+
+
+
+  // Collection carousel
+  $('.collection__carousel ul').slick({
+    slidesToShow: 3,
+    infinity: true,
+    centerMode: true,
+    autoplay: true,
+    easing: 'ease-out',
+    speed: 1000,
+    pauseOnHover: false,
+    arrows: false,
+    dots: true,
+    draggable: false,
+    customPaging : function(slider, i) {
+      return '<div class="slide-page">0' + (i+1) + '</div>';
+    },
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          // fade: true,
+          // cssEase: 'linear'
+        }
+      }
+    ]
+  });
+
+  $('.collection__carousel ul').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+    carouselName();
+  });
+
+  carouselName();
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
@@ -313,6 +465,8 @@ $(window).on('load', function() {
       var slickTrackHeight = $(slickTrack).height();
       $(this).find('.slick-slide').css('height', slickTrackHeight + 'px');
   });
+
+  // carouselName();
 });
 
 // Window resize
@@ -325,9 +479,25 @@ $(window).on('resize', function(){
     $('.catalog__navigation nav').hide();
   }
 
-  // if (width <= 1199) {
-  //
-  // }
+  if (width > 767) {
+    $('.filter').removeClass('is-active');
+    $('.filter__body').removeAttr('style');
+  }
+
+  $('.has-hide').readmore({
+    speed: 500,
+    collapsedHeight: 130,
+    moreLink: '<div class="filter__more"><a href="#!">Показать фильтр</a></div>',
+    lessLink: '<div class="filter__more"><a href="#!">Скрыть фильтр</a></div>'
+  });
+
+  $('.has-hide--category').readmore({
+    speed: 500,
+    collapsedHeight: 370,
+    moreLink: '<div class="filter__more"><a href="#!">Показать фильтр</a></div>',
+    lessLink: '<div class="filter__more"><a href="#!">Скрыть фильтр</a></div>'
+  });
+
 });
 
 // Custom menu img link hover
@@ -355,6 +525,18 @@ function search(){
     });
   }
   // console.log(searchPos.top);
+}
+
+function carouselName(){
+  var carousel = $('.collection__carousel'),
+      current = carousel.find('.slick-current'),
+      name = current.find('a').data('name'),
+      frameName = $('.collection__frame__name')
+  ;
+
+  frameName.text(name);
+
+  // console.log(name);
 }
 
 /*
