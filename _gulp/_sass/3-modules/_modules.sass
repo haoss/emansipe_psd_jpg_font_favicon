@@ -539,23 +539,37 @@
   &__select
     display: inline-block
     vertical-align: middle
-    min-width: 65px
+    min-width: 45px
     .nice-select
       // z-index: 20
       height: 30px
       line-height: 28px
       border-color: transparent
+      padding-left: 5px
+      padding-right: 25px
       // min-width: 65px
+      &::after
+        transform: rotate(-135deg)
       .list
         border: 2px solid $color-s-lightbrown
         border-radius: 0
         box-shadow: none
+        font-size: 13px
+        margin-left: -5px
       .current
         font-weight: 600
-      .option.selected
-        font-weight: 600
-        color: $color-s-brown
-        // background-color: $color-s-lightbrown
+      .option
+        min-height: 35px
+        line-height: 35px
+        padding-left: 10px
+        padding-right: 20px
+        &.selected
+          font-weight: 600
+          color: $color-s-brown
+          // background-color: $color-s-lightbrown
+      &.open
+        &::after
+          transform: rotate(45deg)
 
   &__sort
     font-family: $font-exo-condensed
@@ -1148,6 +1162,7 @@ table.table
     font-weight: 400
     text-align: center
     font-size: rem(13)
+    display: none
     input
       width: 57px
       height: 26px

@@ -266,6 +266,7 @@ $(document).ready(function(){
   // Private cabinet cart
   $('.order-list__row').each(function(){
     var _this = $(this);
+
     _this.find('.order-list__turn').on('click', function(){
       var parents = $(this).parents('.order-list__row');
       if (parents.hasClass('is-active')) {
@@ -276,6 +277,18 @@ $(document).ready(function(){
         _this.find('.order-list__turn').text('Свернуть')
       }
     });
+
+    _this.find('.order__show').on('click', function(){
+      var parents = $(this).parents('.order-list__row');
+      if (parents.hasClass('is-active')) {
+        parents.removeClass('is-active');
+        _this.find('.order-list__turn').text('Развернуть')
+      } else {
+        parents.addClass('is-active');
+        _this.find('.order-list__turn').text('Свернуть')
+      }
+    });
+
   });
 
   //Custom select
@@ -439,6 +452,7 @@ $(document).ready(function(){
 
   carouselName();
 
+  // Product gallery zoom img hide
   $(document).on('mousemove', function(){
     if ($('.cloudzoom-zoom').length > 0) {
       $('.product__zoom').hide();
@@ -447,6 +461,15 @@ $(document).ready(function(){
     }
     // console.log($('.cloudzoom-zoom'));
   });
+
+  // Product size count
+  $(document).on('click', '.product__size', function(e){
+    if ($(this).find('input').is(':checked')) {
+      $('.product__count').slideDown();
+    } else {
+      $('.product__count').slideUp();
+    }
+  })
 
   // Chrome Smooth Scroll
   try {
