@@ -5468,7 +5468,7 @@ label {
   text-transform: none;
   display: inline-block;
   margin-left: 5px;
-  font-weight: 600; }
+  font-weight: 400; }
 
 .catalog__sorting {
   margin-bottom: 25px;
@@ -6132,6 +6132,8 @@ table.table {
     width: 458px;
     height: 611px;
     position: relative; }
+    .product__gallery__center:hover .product__zoom {
+      opacity: 0; }
     .product__gallery__center img {
       max-width: 100%;
       height: auto;
@@ -6143,7 +6145,8 @@ table.table {
   right: 15px;
   bottom: 15px;
   width: 20px;
-  height: 20px; }
+  height: 20px;
+  transition: opacity 0.35s; }
   .product__zoom::before {
     font-family: "Ionicons";
     color: #c6bd83;
@@ -6291,7 +6294,7 @@ table.table {
     transform: translateY(-50%) rotate(180deg); }
   .filter__cost {
     font-size: 0.75rem;
-    font-weight: 400;
+    font-weight: 600;
     color: #535353;
     font-family: "Exo 2 Condensed", sans-serif;
     text-transform: uppercase; }
@@ -6303,7 +6306,7 @@ table.table {
       width: 44px;
       background: #f0f6f9;
       text-align: center;
-      font-weight: 400;
+      font-weight: 600;
       color: #535353;
       padding: 0;
       font-family: "Exo 2 Condensed", sans-serif;
@@ -6470,6 +6473,31 @@ table.table {
       right: 10px;
       top: 195px;
       transform: rotate(-90deg); }
+
+.cloudzoom-lens {
+  border: 1px solid #e5e5e5;
+  box-shadow: none; }
+  .cloudzoom-lens::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5) !important;
+    z-index: 5; }
+  .cloudzoom-lens::before {
+    font-family: "Ionicons";
+    color: #c6bd83;
+    content: "\f263";
+    font-size: 1.4375rem;
+    position: absolute;
+    bottom: 8px;
+    right: 15px;
+    z-index: 10; }
+
+.cloudzoom-tint {
+  opacity: 0 !important; }
 
 /* clear */
 .clear, .clear1, .clear2, .clear3, .clear4, .clear5, .clear6, .clear7, .clear8, .clear9, .clear10, .clear11, .clear12, .clear13, .clear14, .clear15, .clear16, .clear17, .clear18, .clear19, .clear20, .clear21, .clear22, .clear23, .clear24, .clear25, .clear26, .clear27, .clear28, .clear29, .clear30, .clear31, .clear32, .clear33, .clear34, .clear35, .clear36, .clear37, .clear38, .clear39, .clear40, .clear41, .clear42, .clear43, .clear44, .clear45, .clear46, .clear47, .clear48, .clear49, .clear50, .clear51, .clear52, .clear53, .clear54, .clear55, .clear56, .clear57, .clear58, .clear59, .clear60, .clear61, .clear62, .clear63, .clear64, .clear65, .clear66, .clear67, .clear68, .clear69, .clear70, .clear71, .clear72, .clear73, .clear74, .clear75, .clear76, .clear77, .clear78, .clear79, .clear80, .clear81, .clear82, .clear83, .clear84, .clear85, .clear86, .clear87, .clear88, .clear89, .clear90, .clear91, .clear92, .clear93, .clear94, .clear95, .clear96, .clear97, .clear98, .clear99, .clear100, .clear-hr {

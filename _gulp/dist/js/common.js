@@ -439,6 +439,15 @@ $(document).ready(function(){
 
   carouselName();
 
+  $(document).on('mousemove', function(){
+    if ($('.cloudzoom-zoom').length > 0) {
+      $('.product__zoom').hide();
+    } else {
+      $('.product__zoom').show();
+    }
+    // console.log($('.cloudzoom-zoom'));
+  });
+
   // Chrome Smooth Scroll
   try {
     $.browserSelector();
