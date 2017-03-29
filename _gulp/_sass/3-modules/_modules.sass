@@ -444,7 +444,7 @@
     &.is-active
       button[type="button"]
         i
-          transform: translateY(-50%) rotate(-180deg)
+          transform: translateY(-50%) rotate(0deg)
       nav
         // display: block
     button[type="button"]
@@ -469,7 +469,7 @@
         right: 10px
         font-size: rem(14)
         top: 50%
-        transform: translateY(-50%) rotate(0deg)
+        transform: translateY(-50%) rotate(180deg)
         transform-origin: 50% 50%
         transition: transform 0.35s
     nav
@@ -548,8 +548,6 @@
       padding-left: 5px
       padding-right: 25px
       // min-width: 65px
-      &::after
-        transform: rotate(-135deg)
       .list
         border: 2px solid $color-s-lightbrown
         border-radius: 0
@@ -567,9 +565,6 @@
           font-weight: 600
           color: $color-s-brown
           // background-color: $color-s-lightbrown
-      &.open
-        &::after
-          transform: rotate(45deg)
 
   &__sort
     font-family: $font-exo-condensed
@@ -1400,14 +1395,14 @@ table.table
       right: 10px
       font-size: rem(14)
       top: 50%
-      transform: translateY(-50%) rotate(0deg)
+      transform: translateY(-50%) rotate(180deg)
       transform-origin: 50% 50%
       transition: transform 0.35s
 
   &.is-active
     .filter__button
       i
-        transform: translateY(-50%) rotate(180deg)
+        transform: translateY(-50%) rotate(0deg)
 
   &__cost
     font-size: rem(12)

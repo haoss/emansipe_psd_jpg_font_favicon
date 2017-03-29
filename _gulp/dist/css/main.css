@@ -4103,6 +4103,9 @@ button.mfp-close, button.mfp-arrow {
   font-size: 0.5625rem;
   font-family: "Exo 2 Condensed", sans-serif; }
 
+.visible-xxs {
+  display: none !important; }
+
 /* buttons */
 .btn {
   display: inline-block;
@@ -5392,7 +5395,7 @@ label {
   max-width: 262px;
   position: relative; }
   .catalog__navigation.is-active button[type="button"] i {
-    transform: translateY(-50%) rotate(-180deg); }
+    transform: translateY(-50%) rotate(0deg); }
   .catalog__navigation button[type="button"] {
     display: block;
     width: 100%;
@@ -5414,7 +5417,7 @@ label {
       right: 10px;
       font-size: 0.875rem;
       top: 50%;
-      transform: translateY(-50%) rotate(0deg);
+      transform: translateY(-50%) rotate(180deg);
       transform-origin: 50% 50%;
       transition: transform 0.35s; }
   .catalog__navigation nav {
@@ -5491,8 +5494,6 @@ label {
     border-color: transparent;
     padding-left: 5px;
     padding-right: 25px; }
-    .catalog__select .nice-select::after {
-      transform: rotate(-135deg); }
     .catalog__select .nice-select .list {
       border: 2px solid #c6bd83;
       border-radius: 0;
@@ -5509,8 +5510,6 @@ label {
       .catalog__select .nice-select .option.selected {
         font-weight: 600;
         color: #ae9f3d; }
-    .catalog__select .nice-select.open::after {
-      transform: rotate(45deg); }
 
 .catalog__sort {
   font-family: "Exo 2 Condensed", sans-serif;
@@ -6301,11 +6300,11 @@ table.table {
       right: 10px;
       font-size: 0.875rem;
       top: 50%;
-      transform: translateY(-50%) rotate(0deg);
+      transform: translateY(-50%) rotate(180deg);
       transform-origin: 50% 50%;
       transition: transform 0.35s; }
   .filter.is-active .filter__button i {
-    transform: translateY(-50%) rotate(180deg); }
+    transform: translateY(-50%) rotate(0deg); }
   .filter__cost {
     font-size: 0.75rem;
     font-weight: 600;
@@ -7068,7 +7067,7 @@ table.table {
     float: none;
     margin: 0 0 25px 0; }
   .catalog__navigation.is-active button[type="button"] i {
-    transform: translateY(-50%) rotate(-180deg); }
+    transform: translateY(-50%) rotate(0deg); }
   .catalog__navigation button[type="button"] {
     cursor: pointer; }
     .catalog__navigation button[type="button"] i {
@@ -7200,7 +7199,9 @@ table.table {
       left: 30px; }
     .collection__frame__label {
       right: 1px;
-      top: 170px; } }
+      top: 170px; }
+  .filter {
+    margin-bottom: 25px; } }
 
 @media only screen and (max-width: 599px) {
   .header__social {
@@ -7215,6 +7216,8 @@ table.table {
     float: none !important; }
   .hidden-xxs {
     display: none !important; }
+  .visible-xxs {
+    display: block !important; }
   .advantages .row > div:not(:last-child) .advantages__block {
     margin-bottom: 20px; }
   .footer {

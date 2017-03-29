@@ -28,15 +28,20 @@ html(lang="ru")
     .content
       .container
         
+        .h1.visible-xs Женские платья
+          small.catalog__count.hidden-xxs - 12 556 вещей
+        
         .row
           .col-sm-3
-            include ./_include/_catalog-navigation-catalog
+            .hidden-xs
+              include ./_include/_catalog-navigation-catalog
             include ./_include/_catalog-filter-full
             +banner
             
           .col-sm-9
-            h1 Женские платья
-              small.catalog__count - 12 556 вещей
+            .hidden-xs
+              h1 Женские платья
+                small.catalog__count.hidden-xxs - 12 556 вещей
             
             .catalog__sorting
               .catalog__sort

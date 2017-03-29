@@ -306,7 +306,7 @@
       &.is-active
         button[type="button"]
           i
-            transform:  translateY(-50%) rotate(-180deg)
+            transform:  translateY(-50%) rotate(0deg)
       button[type="button"]
         cursor: pointer
         i
@@ -484,6 +484,9 @@
         right: 1px
         top: 170px
 
+  .filter
+    margin-bottom: 25px
+
 @media only screen and (max-width: 599px)
   .header
     &__social
@@ -498,6 +501,8 @@
     float: none !important
   .hidden-xxs
     display: none !important
+  .visible-xxs
+    display: block !important
 
   .advantages
     .row

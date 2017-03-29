@@ -317,7 +317,8 @@ $(document).ready(function(){
     slidesToShow: 4,
     slidesToScroll: 1,
     vertical: true,
-    infinite: false
+    infinite: false,
+    verticalSwiping: true
   });
 
   CloudZoom.quickStart();
