@@ -236,31 +236,19 @@ $(document).ready(function(){
   // Open popup search block
   $(document).on('click', '.link-search', function(e){
     e.preventDefault();
-    e.stopPropagation();
     $('body').css({
       'position': 'fixed',
       'padding-right': '15px'
-    }).addClass('is-search');
+    });
     $('.search').show();
     $('.search__block input').focus();
     search();
   });
 
-  function afaxAdvancedSearch() {
-    var afaxAdvancedSearch = $('.search__block input[type="text"]');
-
-    afaxAdvancedSearch.on('focusout', function () {
-      $('body').removeAttr('style').removeClass('is-search');
-      $('.search').hide();
-      console.log('focus out');
-    });
-  };
-  afaxAdvancedSearch();
-
   // Close popup search block
   $(document).on('click', '.search', function(e){
-    $('body').removeAttr('style').removeClass('is-search');
-    $('.search').hide();
+    $('body').removeAttr('style');
+    $(this).hide();
   });
 
   // Search popup stop close
@@ -400,10 +388,9 @@ $(document).ready(function(){
 
   $('.ui-slider-handle:eq(0)').append('<span class="price-range-min value">' + $('#filter__range').slider('values', 0 ) + '</span>');
   $('.ui-slider-handle:eq(1)').append('<span class="price-range-max value">' + $('#filter__range').slider('values', 1 ) + '</span>');
-
-
+ё
   // фильтрация ввода в поля
-  $('input').on('keypress', function(event){
+  $('.filter__block input').on('keypress', function(event){
     var key, keyChar;
     if(!event) var event = window.event;
     if (event.keyCode) key = event.keyCode;
@@ -428,8 +415,6 @@ $(document).ready(function(){
     moreLink: '<div class="filter__more"><a href="#!">Показать фильтр</a></div>',
     lessLink: '<div class="filter__more"><a href="#!">Скрыть фильтр</a></div>'
   });
-
-
 
   // Collection carousel
   $('.collection__carousel ul').slick({
