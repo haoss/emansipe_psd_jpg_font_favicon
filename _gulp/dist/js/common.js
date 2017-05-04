@@ -236,19 +236,31 @@ $(document).ready(function(){
   // Open popup search block
   $(document).on('click', '.link-search', function(e){
     e.preventDefault();
+    e.stopPropagation();
     $('body').css({
       'position': 'fixed',
       'padding-right': '15px'
-    });
+    }).addClass('is-search');
     $('.search').show();
     $('.search__block input').focus();
     search();
   });
 
+  function afaxAdvancedSearch() {
+    var afaxAdvancedSearch = $('.search__block input[type="text"]');
+
+    afaxAdvancedSearch.on('focusout', function () {
+      $('body').removeAttr('style').removeClass('is-search');
+      $('.search').hide();
+      console.log('focus out');
+    });
+  };
+  afaxAdvancedSearch();
+
   // Close popup search block
   $(document).on('click', '.search', function(e){
-    $('body').removeAttr('style');
-    $(this).hide();
+    $('body').removeAttr('style').removeClass('is-search');
+    $('.search').hide();
   });
 
   // Search popup stop close

@@ -4480,7 +4480,7 @@ label {
     .menu__li1:hover .menu__ul2 {
       transform: translateY(0px);
       opacity: 1;
-      z-index: 225; }
+      visibility: visible; }
     .menu__li1:hover > a {
       color: #ae9f3d; }
       .menu__li1:hover > a::after {
@@ -4516,7 +4516,8 @@ label {
     transition-delay: 0.5s;
     transition: 0.35s;
     opacity: 0;
-    z-index: -1;
+    z-index: 225;
+    visibility: hidden;
     background-color: #ffffff; }
     .menu__ul2 ul {
       padding: 0;
@@ -4568,12 +4569,12 @@ label {
         bottom: -16px;
         margin-left: -21px; }
     .menu__mobile.is-active nav {
-      z-index: 600;
       opacity: 1;
+      visibility: visible;
       transform: translateY(0); }
     .menu__mobile button[type="button"] {
       display: block;
-      width: 130px;
+      width: 160px;
       text-align: center;
       position: relative;
       color: #535353;
@@ -4590,7 +4591,8 @@ label {
       background: transparent;
       transition: color 0.35s;
       margin-bottom: 5px;
-      z-index: 500; }
+      z-index: 500;
+      white-space: nowrap; }
       .menu__mobile button[type="button"]::after, .menu__mobile button[type="button"]::before {
         content: '';
         width: 1px;
@@ -4621,11 +4623,12 @@ label {
       border: 1px solid #ae9f3d;
       position: absolute;
       background: #ffffff;
-      z-index: -1;
+      z-index: 1000;
       width: 100%;
       opacity: 0;
       transform: translateY(10px);
       transition: all 0.35s;
+      visibility: hidden;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }
       .menu__mobile nav ul {
         margin: 0;
@@ -4875,7 +4878,8 @@ label {
   right: 0;
   bottom: 0;
   left: 0;
-  display: none; }
+  display: none;
+  cursor: pointer; }
   .search__background {
     position: absolute;
     top: 0;

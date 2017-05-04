@@ -67,7 +67,8 @@
       .menu__ul2
         transform: translateY(0px)
         opacity: 1
-        z-index: 225
+        // z-index: 225
+        visibility: visible
         // display: block
       &>a
         color: $color-s-brown
@@ -106,7 +107,8 @@
     transition-delay: 0.5s
     transition: 0.35s
     opacity: 0
-    z-index: -1
+    z-index: 225
+    visibility: hidden
     background:
       color: $color-white
     ul
@@ -167,12 +169,13 @@
           bottom: -16px
           margin-left: -21px
       nav
-        z-index: 600
+        // z-index: 600
         opacity: 1
+        visibility: visible
         transform: translateY(0)
     button[type="button"]
       display: block
-      width: 130px
+      width: 160px
       text-align: center
       position: relative
       color: $primary-color
@@ -190,6 +193,7 @@
       transition: color 0.35s
       margin-bottom: 5px
       z-index: 500
+      white-space: nowrap
       &::after, &::before
         content: ''
         width: 1px
@@ -222,11 +226,12 @@
       border: 1px solid $color-s-brown
       position: absolute
       background: $color-white
-      z-index: -1
+      z-index: 1000
       width: 100%
       opacity: 0
       transform: translateY(10px)
       transition: all 0.35s
+      visibility: hidden
       // display: none
       // opacity: 0
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2)
