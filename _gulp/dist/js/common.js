@@ -388,7 +388,7 @@ $(document).ready(function(){
 
   $('.ui-slider-handle:eq(0)').append('<span class="price-range-min value">' + $('#filter__range').slider('values', 0 ) + '</span>');
   $('.ui-slider-handle:eq(1)').append('<span class="price-range-max value">' + $('#filter__range').slider('values', 1 ) + '</span>');
-ё
+
   // фильтрация ввода в поля
   $('.filter__block input').on('keypress', function(event){
     var key, keyChar;
