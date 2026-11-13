@@ -1,122 +1,211 @@
-"use strict";
+'use strict';
 
-var gulp = require('gulp'),
-  browserSync = require('browser-sync'),
-  sass = require('gulp-sass'),
-  uncss = require('gulp-uncss'),
-  autoprefixer = require('gulp-autoprefixer'),
-  sourcemaps = require('gulp-sourcemaps'),
-  rename = require("gulp-rename"),
-  plumber = require('gulp-plumber'),
-  spritesmith = require('gulp.spritesmith'),
-  buffer = require('vinyl-buffer'),
-  merge = require('merge-stream'),
-  cheerio = require('gulp-cheerio'),
-  jadeInheritance = require('gulp-jade-inheritance'),
-  jade = require('gulp-jade'),
-  changed = require('gulp-changed'),
-  cached = require('gulp-cached'),
-  gulpif = require('gulp-if'),
-  minifycss = require('gulp-minify-css'),
-  uglify = require('gulp-uglifyjs'),
-  concat = require('gulp-concat'),
-  filter = require('gulp-filter');
+import gulp from 'gulp';
+import gulpif from 'gulp-if';
+import pug from 'gulp-pug';
+import plumber from 'gulp-plumber';
+import browserSync from 'browser-sync';
+import * as dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+import autoprefixer from 'gulp-autoprefixer';
+import sourcemaps from 'gulp-sourcemaps';
+import cleanCSS from 'gulp-clean-css';
+import tinypng from 'gulp-tinypng';
+import { rimraf } from 'rimraf';
+import rename from 'gulp-rename';
+import wait from 'gulp-wait2';
+import fs from 'fs';
+import crypto from 'crypto';
+import realFavicon from 'gulp-real-favicon';
+import changed, { compareLastModifiedTime } from 'gulp-changed';
 
-var plugins = require("gulp-load-plugins")();
+const sass = gulpSass(dartSass);
 
-gulp.task('sprite-image', function () {
-  var spriteData = gulp.src('./img/img-sprite/*.png').pipe(spritesmith({
-    imgName: 'sprite.png',
-    cssName: '_sprite.sass',
-    algorithm : 'top-down'
-  }));
-  // Pipe image stream through image optimizer and onto disk
-  var imgStream = spriteData.img
-    // DEV: We must buffer our stream into a Buffer for `imagemin`
-    .pipe(buffer())
-    .pipe(gulp.dest('./dist/img/'));
+// Ключ активации для оптимизации 500 бесплатных картинок в месяц на сайте https://tinypng.com/
+const TINYPNG_API = process.env.TINYPNG_API || 'GuAIy8BmW79-zVDoYRzRR_9eVe-QnhlN';
 
-  // Pipe CSS stream through CSS optimizer and onto disk
-  var cssStream = spriteData.css
-    .pipe(gulp.dest('./_sass/1-base/'));
+// Pug (инкрементальная компиляция через gulp-changed)
+gulp.task('pug', () =>
+  new Promise((resolve, reject) => {
+    gulp.src(['_pug/*.pug', '!_pug/_include/**', '!_pug/_email/**'])
+      .pipe(changed('dist', {
+        extension: '.html',
+        hasChanged: async (file, targetPath) => {
+          if (/(?:^|[\\/])modals?\.pug$/i.test(file.path)) {
+            return file;  // modals.pug всегда перекомпилировать
+          }
+          return compareLastModifiedTime(file, targetPath);
+        }
+      }))
+      .pipe(plumber())
+      .pipe(pug({ pretty: '    ' }))
+      .pipe(gulp.dest('dist'))
+      .on('end', resolve)
+      .on('error', reject);
+  })
+);
 
-  // Return a merged stream to handle both `end` events
-  return merge(imgStream, cssStream);
-});
+// Pug (полная перекомпиляция всех верхнеуровневых страниц)
+gulp.task('pug_all', () =>
+  new Promise((resolve, reject) => {
+    gulp.src(['_pug/*.pug', '!_pug/_include/**', '!_pug/_email/**'])
+      .pipe(plumber())
+      .pipe(pug({ pretty: '    ' }))
+      .pipe(gulp.dest('dist'))
+      .on('end', resolve)
+      .on('error', reject);
+  })
+);
 
-gulp.task('sass', function() {
-  gulp.src('./_sass/main.sass')
+// SCSS → style.min.css (Level 2 CleanCSS + автохеширование в _head.pug)
+gulp.task('scss', function () {
+  const scssSource = fs.existsSync('_scss/main.scss')
+    ? '_scss/main.scss'
+    : (fs.existsSync('_sass/main.sass') ? '_sass/main.sass' : '_scss/main.scss');
+
+  return gulp.src(scssSource)
+    .pipe(wait(200))
     .pipe(plumber())
-    .pipe(plugins.sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(sass({
-  		includePaths: require('node-bourbon').includePaths
-  	}).on('error', sass.logError))
-    .pipe(autoprefixer({ browsers: ['last 2 versions'], cascade: true }))
-    .pipe(plugins.sourcemaps.write("./"))
-    .pipe(gulp.dest('./dist/css/'))
-    .pipe(rename({suffix: '.min', prefix : ''}))
-    .pipe(minifycss())
-    .pipe(gulp.dest('./dist/css/'))
-    .pipe(browserSync.reload({stream:true}));
-});
-
-// jade
-gulp.task('jade', function() {
-  gulp.src('./_jade/**/*.jade')
-    .pipe(changed('./dist/', {extension: '.html'}))
-    .pipe(gulpif(global.isWatching, cached('jade')))
-    .pipe(jadeInheritance({basedir: './_jade/'}))
-    .pipe(filter(function (file) {
-      return !/\/_/.test(file.path) && !/^_/.test(file.relative);
+      loadPaths: ['.'],
+      silenceDeprecations: ['import', 'global-builtin', 'color-functions', 'if-function']
+    }).on('error', sass.logError))
+    .pipe(autoprefixer({ cascade: false }))
+    .pipe(cleanCSS({
+      debug: true,
+      level: {
+        1: { specialComments: 0 },
+        2: {
+          mergeMedia: true,
+          mergeAdjacentRules: true,
+          removeDuplicateRules: true,
+          removeDuplicateMediaBlocks: true
+        }
+      },
+      compatibility: '*'
+    }, (details) => {
+      const orig = (details.stats.originalSize / 1024).toFixed(1);
+      const min = (details.stats.minifiedSize / 1024).toFixed(1);
+      console.log(`[clean-css] ${details.name}: ${orig}KB → ${min}KB (-${(details.stats.efficiency * 100).toFixed(0)}%)`);
     }))
-    .pipe(plumber())
-    .pipe(jade({
-      pretty: '    '
-    }))
-    .pipe(gulp.dest('./dist/'))
+    .pipe(rename('style.min.css'))
+    .pipe(sourcemaps.write('/'))
+    .pipe(gulp.dest('dist/css/'))
+    .on('data', function (file) {
+      if (file.path && file.path.endsWith('style.min.css') && file.contents) {
+        const hash = crypto.createHash('md5').update(file.contents).digest('hex').slice(0, 10);
+        const headFile = '_pug/_include/_head.pug';
+        if (fs.existsSync(headFile)) {
+          const content = fs.readFileSync(headFile, 'utf8');
+          const updated = content.replace(
+            /link\(rel=['"]stylesheet['"],\s*href=['"]\.\/css\/style\.min\.css(?:\?[^'"]*)?['"]\)/g,
+            `link(rel='stylesheet', href='./css/style.min.css?v=${hash}')`
+          );
+          if (content !== updated) {
+            fs.writeFileSync(headFile, updated, 'utf8');
+            console.log(`[hash] _head.pug: обновлен хеш стилей (?v=${hash})`);
+          }
+        }
+      }
+    })
+    .pipe(browserSync.stream());
 });
 
-gulp.task('scripts', function() {
-	return gulp.src([
-		'./dist/js/libs/modernizr/modernizr.js',
-		'./dist/js/libs/jquery/jquery-2.2.4.min.js',
-		'./dist/js/libs/jquery/jquery-migrate-1.4.1.min.js',
-		'./dist/js/libs/plugins-scroll/plugins-scroll.js',
-		'./dist/js/libs/magnific-popup/jquery.magnific-popup.min.js'
-		])
-		.pipe(concat('libs.js'))
-		// .pipe(uglify()) //Minify libs.js
-		.pipe(gulp.dest('./dist/js/'));
+// Tinypng
+gulp.task('tiny', function () {
+  return gulp.src('_tinypng/**/*.{png,jpg}')
+    .pipe(tinypng(TINYPNG_API))
+    .pipe(gulp.dest('dist/images/tinypng/'));
 });
 
-gulp.task('setWatch', function() {
-  global.isWatching = true;
+gulp.task('rimraf', function () {
+  return rimraf('.gulp');
 });
 
-// Html
-gulp.task('html', function(){
-  gulp.src('./dist/*.html');
-});
+gulp.task('compress', gulp.series('tiny', 'rimraf'));
 
-// Static server
-gulp.task('browser-sync', function() {
-  browserSync.init({
-    server: {
-      baseDir: "./"
+// Favicon tasks
+const FAVICON_DATA_FILE = 'faviconData.json';
+
+gulp.task('favicon-1-generate', function (done) {
+  realFavicon.generateFavicon({
+    masterPicture: './_favicon/favicon.png',
+    dest: './dist/favicon/',
+    iconsPath: './favicon/',
+    design: {
+      ios: {
+        pictureAspect: 'noChange'
+      },
+      desktopBrowser: {},
+      windows: {
+        pictureAspect: 'noChange',
+        backgroundColor: '#da532c',
+        onConflict: 'override'
+      },
+      androidChrome: {
+        pictureAspect: 'noChange',
+        themeColor: '#ffffff',
+        manifest: {
+          name: 'projectName',
+          display: 'browser',
+          orientation: 'notSet',
+          onConflict: 'override'
+        }
+      },
+      safariPinnedTab: {
+        pictureAspect: 'blackAndWhite',
+        threshold: 53.90625,
+        themeColor: '#5bbad5'
+      }
     },
-    notify: false,
-    reloadDelay: 3000
+    settings: {
+      scalingAlgorithm: 'Mitchell',
+      errorOnImageTooSmall: false
+    },
+    markupFile: FAVICON_DATA_FILE
+  }, function () {
+    done();
   });
 });
 
-gulp.task('watch', ['setWatch'], function () {
-  gulp.watch('./_sass/**/*.sass', ['sass']);
-  gulp.watch('./_jade/**/*.jade', ['jade']);
-  gulp.watch('./dist/libs/**/*.js', ['scripts']);
-  gulp.watch('./img/img-sprite/*.png', ['sprite-image']);
-  gulp.watch('./img/svg-sprite/*.svg', ['sprite-svg']);
-  gulp.watch('./dist/js/*.js').on("change", browserSync.reload);
-	gulp.watch('./dist/*.html').on('change', browserSync.reload);
+gulp.task('favicon-2-inject', function () {
+  return gulp.src(['./dist/index.html'])
+    .pipe(realFavicon.injectFaviconMarkups(JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).favicon.html_code))
+    .pipe(gulp.dest('./dist/'));
 });
 
-gulp.task('default', ['browser-sync','watch']);
+gulp.task('favicon-3-check-for-update', function (done) {
+  const currentVersion = JSON.parse(fs.readFileSync(FAVICON_DATA_FILE)).version;
+  realFavicon.checkForUpdates(currentVersion, function (err) {
+    if (err) {
+      throw err;
+    }
+    done();
+  });
+});
+
+// Watch
+gulp.task('watch', () => {
+  global.watch = true;
+
+  // Отслеживаем только файлы верхнего уровня _pug/*.pug (исключаем _include и _email,
+  // чтобы при правке инклюдов не пересобирались все 60+ страниц проекта)
+  gulp.watch(['_pug/*.pug', '!_pug/_include/**', '!_pug/_email/**'], gulp.series('pug'));
+  gulp.watch('dist/*.html').on('change', browserSync.reload);
+
+  gulp.watch(['_scss/**/*.scss', '_sass/**/*.{sass,scss}'], gulp.series('scss'));
+  gulp.watch('dist/js/*.js').on('change', browserSync.reload);
+  gulp.watch('dist/css/*.css').on('change', browserSync.reload);
+});
+
+// Browser-sync
+gulp.task('browser-sync', function () {
+  browserSync.init({
+    server: { baseDir: './' },
+    notify: false
+  });
+});
+
+// Default
+gulp.task('default', gulp.parallel('browser-sync', 'watch'));

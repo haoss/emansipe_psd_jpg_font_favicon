@@ -34,85 +34,85 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
         <link rel="stylesheet" href="./js/libs/cloudzoom/cloudzoom.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/style.min.css?v=195adb78a0">
     </head>
     <body>
         <!-- Preloader-->
-        <div id="feedback" class="popup mfp-hide">
+        <div class="popup mfp-hide" id="feedback">
             <div class="popup__title">обратный звонок</div>
             <form action="#!">
                 <div class="form-group">
                     <label class="hidden">Ваше имя</label>
-                    <input type="text" placeholder="Ваше имя" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваше имя">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Ваш телефон</label>
-                    <input type="text" placeholder="Ваш телефон" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваш телефон">
                 </div>
-                <button type="submit" class="btn btn--default btn--block">перезвоните мне </button>
+                <button class="btn btn--default btn--block" type="submit">перезвоните мне </button>
             </form>
         </div>
-        <div id="enter" class="popup mfp-hide">
+        <div class="popup mfp-hide" id="enter">
             <div class="popup__title">войти на сайт</div>
             <form action="#!">
                 <div class="form-group">
                     <label class="hidden">Ваш логин</label>
-                    <input type="text" placeholder="Ваш логин" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваш логин">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Ваш пароль</label>
-                    <input type="text" placeholder="Ваш пароль" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваш пароль">
                 </div>
-                <button type="submit" class="btn btn--default btn--block">войти на сайт</button>
+                <button class="btn btn--default btn--block" type="submit">войти на сайт</button>
                 <div class="clear10"></div>
                 <div class="row row--popup">
-                    <div class="col-xs-6 text-center"><a href="#forgot-password" class="open-popup-link"><small>Забыли пароль?</small></a></div>
-                    <div class="col-xs-6 text-center"><a href="#" class="open-popup-register"> <small>Зарегистрироваться</small></a></div>
+                    <div class="col-xs-6 text-center"><a class="open-popup-link" href="#forgot-password"><small>Забыли пароль?</small></a></div>
+                    <div class="col-xs-6 text-center"><a class="open-popup-register" href="#"> <small>Зарегистрироваться</small></a></div>
                 </div>
             </form>
         </div>
-        <div id="forgot-password" class="popup mfp-hide">
+        <div class="popup mfp-hide" id="forgot-password">
             <div class="popup__title">забыли пароль?</div>
             <form action="#!">
                 <div class="form-group">
                     <label class="hidden">Ваш логин</label>
-                    <input type="text" placeholder="Ваш логин" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваш логин">
                 </div>
-                <button type="submit" class="btn btn--default btn--block">востановить доступ на сайт</button>
+                <button class="btn btn--default btn--block" type="submit">востановить доступ на сайт</button>
                 <div class="clear10"></div>
-                <div class="text-center"><a href="#" class="open-popup-register"> <small>Зарегистрироваться</small></a></div>
+                <div class="text-center"><a class="open-popup-register" href="#"> <small>Зарегистрироваться</small></a></div>
             </form>
         </div>
-        <div id="register" class="popup mfp-hide">
+        <div class="popup mfp-hide" id="register">
             <div class="popup__title">регистрация</div>
             <form action="#!">
                 <div class="form-group">
                     <label class="hidden">Название организации</label>
-                    <input type="text" placeholder="Название организации" class="form-control">
+                    <input class="form-control" type="text" placeholder="Название организации">
                 </div>
                 <div class="form-group">
                     <label class="hidden">ФИО</label>
-                    <input type="text" placeholder="ФИО" class="form-control">
+                    <input class="form-control" type="text" placeholder="ФИО">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Телефон</label>
-                    <input type="text" placeholder="Телефон" class="form-control">
+                    <input class="form-control" type="text" placeholder="Телефон">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Ваш email</label>
-                    <input type="email" placeholder="Ваш email" class="form-control">
+                    <input class="form-control" type="email" placeholder="Ваш email">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Пароль</label>
-                    <input type="password" placeholder="Пароль" class="form-control">
+                    <input class="form-control" type="password" placeholder="Пароль">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Повторите пароль</label>
-                    <input type="password" placeholder="Повторите пароль" class="form-control">
+                    <input class="form-control" type="password" placeholder="Повторите пароль">
                 </div>
-                <button type="submit" class="btn btn--default btn--block">войти на сайт</button>
+                <button class="btn btn--default btn--block" type="submit">войти на сайт</button>
                 <div class="clear10"></div>
-                <div class="text-center"><a href="#" class="open-popup-enter"> <small>Вернуться на страницу входа</small></a></div>
+                <div class="text-center"><a class="open-popup-enter" href="#"> <small>Вернуться на страницу входа</small></a></div>
             </form>
         </div>
         <div class="loader">
@@ -136,8 +136,8 @@
                         <div class="show">Пн—Вс 10:00—19:00</div>
                         <div> <a href="tel:0000000">8 (966) 026-27-27</a></div>
                         <div class="hide"> <a href="tel:0000000">8 (909) 952-27-77</a></div>
-                        <div class="visible-xs"><a href="#!" class="btn btn--phones"><i class="ion-android-arrow-dropleft"></i></a></div>
-                    </div><a href="#feedback" class="btn btn--default btn--feedback open-popup-link">Обратная связь </a>
+                        <div class="visible-xs"><a class="btn btn--phones" href="#!"><i class="ion-android-arrow-dropleft"></i></a></div>
+                    </div><a class="btn btn--default btn--feedback open-popup-link" href="#feedback">Обратная связь </a>
                 </div>
             </div>
             <div class="header__bottom">
@@ -153,14 +153,14 @@
                         </div>
                         <div class="col-sm-3 col-xs-6">
                             <div class="header__links">
-                                <div><a href="#!" class="link-search"><i class="icon icon--search"></i></a><a href="#enter" class="open-popup-link"><i class="icon icon--user"></i></a><a href="#!"><i class="icon icon--cart"></i><span>99</span></a></div>
+                                <div><a class="link-search" href="#!"><i class="icon icon--search"></i></a><a class="open-popup-link" href="#enter"><i class="icon icon--user"></i></a><a href="#!"><i class="icon icon--cart"></i><span>99</span></a></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Menu-->
-            <nav role="navigation" class="menu">
+            <nav class="menu" role="navigation">
                 <div class="container">
                     <ul class="menu__ul1 hidden-xs">
                         <li class="menu__li1"><a href="#!">Новинки</a></li>
@@ -173,7 +173,7 @@
                                     <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-3.png">Коктейльные платья</a></li>
                                     <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-4.png">Сарафаны</a></li>
                                     <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-5.png">SEXY платья</a></li>
-                                </ul><img src="./img/drop-menu-1.png" alt="" class="menu__img">
+                                </ul><img class="menu__img" src="./img/drop-menu-1.png" alt="">
                             </div>
                         </li>
                         <li class="menu__li1"><a href="#!">Костюмы</a></li>
@@ -185,7 +185,7 @@
                                     <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-2.png">Куртки</a></li>
                                     <li class="menu__li2"><a href="#!">Плащи</a></li>
                                     <li class="menu__li2"><a href="#!">Пальто</a></li>
-                                </ul><img src="./img/drop-menu-1.png" alt="" class="menu__img">
+                                </ul><img class="menu__img" src="./img/drop-menu-1.png" alt="">
                             </div>
                         </li>
                         <li class="menu__li1"><a href="#!">О компании</a></li>
@@ -281,91 +281,91 @@
                             </div>
                         </div>
                         <!-- Catalog filter-->
-                        <div id="filters" class="filter">
+                        <div class="filter" id="filters">
                             <form action="#!" method="get">
-                                <button type="button" class="filter__button visible-xs">фильтр<i class="ion-chevron-up"></i></button>
+                                <button class="filter__button visible-xs" type="button">фильтр<i class="ion-chevron-up"></i></button>
                                 <div class="filter__body">
                                     <div class="filter__block has-hide">
                                         <div class="filter__head">Основной материал</div>
-                                        <label for="material__0" class="filter__row">
+                                        <label class="filter__row" for="material__0">
                                             <input type="checkbox" name="f_material[]" id="material__0"><span class="checkbox"></span><span class="label">Основной материал</span><span class="sup">(234)</span>
                                         </label>
-                                        <label for="material__1" class="filter__row">
+                                        <label class="filter__row" for="material__1">
                                             <input type="checkbox" name="f_material[]" id="material__1"><span class="checkbox"></span><span class="label">Акрил</span><span class="sup">(12)</span>
                                         </label>
-                                        <label for="material__2" class="filter__row">
+                                        <label class="filter__row" for="material__2">
                                             <input type="checkbox" name="f_material[]" id="material__2"><span class="checkbox"></span><span class="label">Вискоза</span><span class="sup">(99)</span>
                                         </label>
-                                        <label for="material__3" class="filter__row">
+                                        <label class="filter__row" for="material__3">
                                             <input type="checkbox" name="f_material[]" checked id="material__3"><span class="checkbox"></span><span class="label">Лайкра</span><span class="sup">(250)</span>
                                         </label>
-                                        <label for="material__4" class="filter__row">
+                                        <label class="filter__row" for="material__4">
                                             <input type="checkbox" name="f_material[]" id="material__4"><span class="checkbox"></span><span class="label">Лен</span><span class="sup">(120)</span>
                                         </label>
-                                        <label for="material__5" class="filter__row">
+                                        <label class="filter__row" for="material__5">
                                             <input type="checkbox" name="f_material[]" checked id="material__5"><span class="checkbox"></span><span class="label">Полиамид</span><span class="sup">(999)</span>
                                         </label>
-                                        <label for="material__6" class="filter__row unactive">
+                                        <label class="filter__row unactive" for="material__6">
                                             <input type="checkbox" name="f_material[]" disabled id="material__6"><span class="checkbox"></span><span class="label">Полимер</span><span class="sup">(0)</span>
                                         </label>
-                                        <label for="material__7" class="filter__row unactive">
+                                        <label class="filter__row unactive" for="material__7">
                                             <input type="checkbox" name="f_material[]" disabled id="material__7"><span class="checkbox"></span><span class="label">Полиэстер</span><span class="sup">(0)</span>
                                         </label>
-                                        <label for="material__8" class="filter__row unactive">
+                                        <label class="filter__row unactive" for="material__8">
                                             <input type="checkbox" name="f_material[]" disabled id="material__8"><span class="checkbox"></span><span class="label">Хлопок</span><span class="sup">(0)</span>
                                         </label>
-                                        <label for="material__9" class="filter__row unactive">
+                                        <label class="filter__row unactive" for="material__9">
                                             <input type="checkbox" name="f_material[]" disabled id="material__9"><span class="checkbox"></span><span class="label">Шелк</span><span class="sup">(0)</span>
                                         </label>
-                                        <label for="material__10" class="filter__row">
+                                        <label class="filter__row" for="material__10">
                                             <input type="checkbox" name="f_material[]" id="material__10"><span class="checkbox"></span><span class="label">Основной материал</span><span class="sup">(234)</span>
                                         </label>
-                                        <label for="material__11" class="filter__row">
+                                        <label class="filter__row" for="material__11">
                                             <input type="checkbox" name="f_material[]" id="material__11"><span class="checkbox"></span><span class="label">Акрил</span><span class="sup">(12)</span>
                                         </label>
-                                        <label for="material__12" class="filter__row">
+                                        <label class="filter__row" for="material__12">
                                             <input type="checkbox" name="f_material[]" id="material__12"><span class="checkbox"></span><span class="label">Вискоза</span><span class="sup">(99)</span>
                                         </label>
-                                        <label for="material__13" class="filter__row">
+                                        <label class="filter__row" for="material__13">
                                             <input type="checkbox" name="f_material[]" checked id="material__13"><span class="checkbox"></span><span class="label">Лайкра</span><span class="sup">(250)</span>
                                         </label>
-                                        <label for="material__14" class="filter__row">
+                                        <label class="filter__row" for="material__14">
                                             <input type="checkbox" name="f_material[]" id="material__14"><span class="checkbox"></span><span class="label">Лен</span><span class="sup">(120)</span>
                                         </label>
                                     </div>
                                     <div class="filter__block has-hide">
                                         <div class="filter__head">Основной цвет</div>
-                                        <label for="color__0" class="filter__row filter__row--color">
-                                            <input type="checkbox" name="f_color[]" id="color__0"><span class="checkbox"></span><span class="label">бежевый</span><span data-color="edd0ae" class="sup data-color"></span>
+                                        <label class="filter__row filter__row--color" for="color__0">
+                                            <input type="checkbox" name="f_color[]" id="color__0"><span class="checkbox"></span><span class="label">бежевый</span><span class="sup data-color" data-color="edd0ae"></span>
                                         </label>
-                                        <label for="color__1" class="filter__row filter__row--color">
-                                            <input type="checkbox" name="f_color[]" id="color__1"><span class="checkbox"></span><span class="label">белый</span><span data-color="ffffff" class="sup data-color"></span>
+                                        <label class="filter__row filter__row--color" for="color__1">
+                                            <input type="checkbox" name="f_color[]" id="color__1"><span class="checkbox"></span><span class="label">белый</span><span class="sup data-color" data-color="ffffff"></span>
                                         </label>
-                                        <label for="color__2" class="filter__row filter__row--color">
-                                            <input type="checkbox" name="f_color[]" id="color__2"><span class="checkbox"></span><span class="label">бирюзовый</span><span data-color="37fff3" class="sup data-color"></span>
+                                        <label class="filter__row filter__row--color" for="color__2">
+                                            <input type="checkbox" name="f_color[]" id="color__2"><span class="checkbox"></span><span class="label">бирюзовый</span><span class="sup data-color" data-color="37fff3"></span>
                                         </label>
-                                        <label for="color__3" class="filter__row filter__row--color">
-                                            <input type="checkbox" name="f_color[]" id="color__3"><span class="checkbox"></span><span class="label">бордовый</span><span data-color="a83434" class="sup data-color"></span>
+                                        <label class="filter__row filter__row--color" for="color__3">
+                                            <input type="checkbox" name="f_color[]" id="color__3"><span class="checkbox"></span><span class="label">бордовый</span><span class="sup data-color" data-color="a83434"></span>
                                         </label>
-                                        <label for="color__4" class="filter__row filter__row--color">
-                                            <input type="checkbox" name="f_color[]" id="color__4"><span class="checkbox"></span><span class="label">голубой</span><span data-color="81f2ff" class="sup data-color"></span>
+                                        <label class="filter__row filter__row--color" for="color__4">
+                                            <input type="checkbox" name="f_color[]" id="color__4"><span class="checkbox"></span><span class="label">голубой</span><span class="sup data-color" data-color="81f2ff"></span>
                                         </label>
                                     </div>
                                     <div class="filter__block has-hide">
                                         <div class="filter__head">размер изделия</div>
-                                        <label for="size__0" class="filter__row filter__row--nosup">
+                                        <label class="filter__row filter__row--nosup" for="size__0">
                                             <input type="checkbox" name="f_size[]" id="size__0"><span class="checkbox"></span><span class="label">38 - 40</span><span class="sup">(234)</span>
                                         </label>
-                                        <label for="size__1" class="filter__row filter__row--nosup">
+                                        <label class="filter__row filter__row--nosup" for="size__1">
                                             <input type="checkbox" name="f_size[]" id="size__1"><span class="checkbox"></span><span class="label">42 - 44</span><span class="sup">(12)</span>
                                         </label>
-                                        <label for="size__2" class="filter__row filter__row--nosup">
+                                        <label class="filter__row filter__row--nosup" for="size__2">
                                             <input type="checkbox" name="f_size[]" id="size__2"><span class="checkbox"></span><span class="label">44 - 46</span><span class="sup">(12)</span>
                                         </label>
-                                        <label for="size__3" class="filter__row filter__row--nosup">
+                                        <label class="filter__row filter__row--nosup" for="size__3">
                                             <input type="checkbox" name="f_size[]" id="size__3"><span class="checkbox"></span><span class="label">48 - 50</span><span class="sup">(12)</span>
                                         </label>
-                                        <label for="size__4" class="filter__row filter__row--nosup">
+                                        <label class="filter__row filter__row--nosup" for="size__4">
                                             <input type="checkbox" name="f_size[]" id="size__4"><span class="checkbox"></span><span class="label">52 - 54</span><span class="sup">(12)</span>
                                         </label>
                                     </div>
@@ -378,21 +378,21 @@
                                         <div class="filter__cost table">
                                             <div class="table-cell"> <span>от</span></div>
                                             <div class="table-cell">
-                                                <input id="priceMin" type="text" value="5000" class="form-control">
+                                                <input class="form-control" id="priceMin" type="text" value="5000">
                                             </div>
                                             <div class="table-cell"><span>до</span></div>
                                             <div class="table-cell">
-                                                <input id="priceMax" type="text" value="15000" class="form-control">
+                                                <input class="form-control" id="priceMax" type="text" value="15000">
                                             </div>
                                             <div class="table-cell"><span>руб</span></div>
                                         </div>
                                     </div>
-                                    <button type="button" class="btn btn--border btn--block">Сбросить фильтр</button>
-                                    <button type="button" id="filter__hide" class="btn btn--unborder btn--block visible-xs">Скрыть фильтр</button>
+                                    <button class="btn btn--border btn--block" type="button">Сбросить фильтр</button>
+                                    <button class="btn btn--unborder btn--block visible-xs" type="button" id="filter__hide">Скрыть фильтр</button>
                                 </div>
                             </form>
                         </div>
-                                <div class="banner hidden-xs"><img src="./tmp/banner.png" alt="" class="img-responsive"></div>
+                                <div class="banner hidden-xs"><img class="img-responsive" src="./tmp/banner.png" alt=""></div>
                     </div>
                     <div class="col-sm-9">
                         <div class="hidden-xs">
@@ -426,7 +426,7 @@
                             <div class="row">
                                 <div class="col-sm-4 col-xs-6 col-xxs-12">
                                     <div class="catalog__block">
-                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                        <div class="catalog__img"><a class="catalog__link" href="#!"></a>
                                             <div class="catalog__hover">
                                                 <div class="catalog__shadow"></div>
                                                 <div class="catalog__line1"><i></i></div>
@@ -443,8 +443,8 @@
                                                     <div class="catalog__size__label">48</div>
                                                 </div>
                                             </div>
-                                            <div class="catalog__label catalog__label--action">акция</div><img src="./tmp/catalog-img-girl-1.png" alt="" class="img-responsive">
-                                        </div><a href="#!" class="catalog__name">очень длинное название са мо го кр ут ог о платья № 23465454 </a>
+                                            <div class="catalog__label catalog__label--action">акция</div><img class="img-responsive" src="./tmp/catalog-img-girl-1.png" alt="">
+                                        </div><a class="catalog__name" href="#!">очень длинное название са мо го кр ут ог о платья № 23465454 </a>
                                         <div class="catalog__price">
                                             <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
                                         </div>
@@ -452,7 +452,7 @@
                                 </div>
                                 <div class="col-sm-4 col-xs-6 col-xxs-12">
                                     <div class="catalog__block">
-                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                        <div class="catalog__img"><a class="catalog__link" href="#!"></a>
                                             <div class="catalog__hover">
                                                 <div class="catalog__shadow"></div>
                                                 <div class="catalog__line1"><i></i></div>
@@ -469,8 +469,8 @@
                                                     <div class="catalog__size__label">48</div>
                                                 </div>
                                             </div>
-                                            <div class="catalog__label catalog__label--sale">Скидка</div><img src="./tmp/catalog-img-girl-2.png" alt="" class="img-responsive">
-                                        </div><a href="#!" class="catalog__name">название Платья № 23465454 </a>
+                                            <div class="catalog__label catalog__label--sale">Скидка</div><img class="img-responsive" src="./tmp/catalog-img-girl-2.png" alt="">
+                                        </div><a class="catalog__name" href="#!">название Платья № 23465454 </a>
                                         <div class="catalog__price">
                                             <div><span><strong>12 999 </strong><sup>руб</sup></span></div>
                                             <div><span class="old"><strong>21 999 </strong><sup>руб</sup></span></div>
@@ -479,7 +479,7 @@
                                 </div>
                                 <div class="col-sm-4 col-xs-6 col-xxs-12">
                                     <div class="catalog__block">
-                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                        <div class="catalog__img"><a class="catalog__link" href="#!"></a>
                                             <div class="catalog__hover">
                                                 <div class="catalog__shadow"></div>
                                                 <div class="catalog__line1"><i></i></div>
@@ -496,8 +496,8 @@
                                                     <div class="catalog__size__label">48</div>
                                                 </div>
                                             </div>
-                                            <div class="catalog__label catalog__label--new">Новинка</div><img src="./tmp/catalog-img-girl-3.png" alt="" class="img-responsive">
-                                        </div><a href="#!" class="catalog__name">название Платья № 23465454 </a>
+                                            <div class="catalog__label catalog__label--new">Новинка</div><img class="img-responsive" src="./tmp/catalog-img-girl-3.png" alt="">
+                                        </div><a class="catalog__name" href="#!">название Платья № 23465454 </a>
                                         <div class="catalog__price">
                                             <div><span><strong>9 999 </strong><sup>руб</sup></span></div>
                                         </div>
@@ -505,7 +505,7 @@
                                 </div>
                                 <div class="col-sm-4 col-xs-6 col-xxs-12">
                                     <div class="catalog__block">
-                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                        <div class="catalog__img"><a class="catalog__link" href="#!"></a>
                                             <div class="catalog__hover">
                                                 <div class="catalog__shadow"></div>
                                                 <div class="catalog__line1"><i></i></div>
@@ -521,8 +521,8 @@
                                                     <div class="catalog__size__label">46</div>
                                                     <div class="catalog__size__label">48</div>
                                                 </div>
-                                            </div><img src="./tmp/catalog-img-girl-1.png" alt="" class="img-responsive">
-                                        </div><a href="#!" class="catalog__name">название Платья № 23465454 </a>
+                                            </div><img class="img-responsive" src="./tmp/catalog-img-girl-1.png" alt="">
+                                        </div><a class="catalog__name" href="#!">название Платья № 23465454 </a>
                                         <div class="catalog__price">
                                             <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
                                         </div>
@@ -530,7 +530,7 @@
                                 </div>
                                 <div class="col-sm-4 col-xs-6 col-xxs-12">
                                     <div class="catalog__block">
-                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                        <div class="catalog__img"><a class="catalog__link" href="#!"></a>
                                             <div class="catalog__hover">
                                                 <div class="catalog__shadow"></div>
                                                 <div class="catalog__line1"><i></i></div>
@@ -546,8 +546,8 @@
                                                     <div class="catalog__size__label">46</div>
                                                     <div class="catalog__size__label">48</div>
                                                 </div>
-                                            </div><img src="./tmp/catalog-img-girl-2.png" alt="" class="img-responsive">
-                                        </div><a href="#!" class="catalog__name">название Платья № 23465454 </a>
+                                            </div><img class="img-responsive" src="./tmp/catalog-img-girl-2.png" alt="">
+                                        </div><a class="catalog__name" href="#!">название Платья № 23465454 </a>
                                         <div class="catalog__price">
                                             <div><span><strong>12 999 </strong><sup>руб</sup></span></div>
                                             <div><span class="old"><strong>21 999 </strong><sup>руб</sup></span></div>
@@ -556,7 +556,7 @@
                                 </div>
                                 <div class="col-sm-4 col-xs-6 col-xxs-12">
                                     <div class="catalog__block">
-                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                        <div class="catalog__img"><a class="catalog__link" href="#!"></a>
                                             <div class="catalog__hover">
                                                 <div class="catalog__shadow"></div>
                                                 <div class="catalog__line1"><i></i></div>
@@ -572,8 +572,8 @@
                                                     <div class="catalog__size__label">46</div>
                                                     <div class="catalog__size__label">48</div>
                                                 </div>
-                                            </div><img src="./tmp/catalog-img-girl-3.png" alt="" class="img-responsive">
-                                        </div><a href="#!" class="catalog__name">название Платья № 23465454 </a>
+                                            </div><img class="img-responsive" src="./tmp/catalog-img-girl-3.png" alt="">
+                                        </div><a class="catalog__name" href="#!">название Платья № 23465454 </a>
                                         <div class="catalog__price">
                                             <div><span><strong>9 999 </strong><sup>руб</sup></span></div>
                                         </div>
@@ -581,7 +581,7 @@
                                 </div>
                                 <div class="col-sm-4 col-xs-6 col-xxs-12">
                                     <div class="catalog__block">
-                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                        <div class="catalog__img"><a class="catalog__link" href="#!"></a>
                                             <div class="catalog__hover">
                                                 <div class="catalog__shadow"></div>
                                                 <div class="catalog__line1"><i></i></div>
@@ -597,8 +597,8 @@
                                                     <div class="catalog__size__label">46</div>
                                                     <div class="catalog__size__label">48</div>
                                                 </div>
-                                            </div><img src="./tmp/catalog-img-girl-1.png" alt="" class="img-responsive">
-                                        </div><a href="#!" class="catalog__name">название Платья № 23465454 </a>
+                                            </div><img class="img-responsive" src="./tmp/catalog-img-girl-1.png" alt="">
+                                        </div><a class="catalog__name" href="#!">название Платья № 23465454 </a>
                                         <div class="catalog__price">
                                             <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
                                         </div>
@@ -606,7 +606,7 @@
                                 </div>
                                 <div class="col-sm-4 col-xs-6 col-xxs-12">
                                     <div class="catalog__block">
-                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                        <div class="catalog__img"><a class="catalog__link" href="#!"></a>
                                             <div class="catalog__hover">
                                                 <div class="catalog__shadow"></div>
                                                 <div class="catalog__line1"><i></i></div>
@@ -622,8 +622,8 @@
                                                     <div class="catalog__size__label">46</div>
                                                     <div class="catalog__size__label">48</div>
                                                 </div>
-                                            </div><img src="./tmp/catalog-img-girl-2.png" alt="" class="img-responsive">
-                                        </div><a href="#!" class="catalog__name">название Платья № 23465454 </a>
+                                            </div><img class="img-responsive" src="./tmp/catalog-img-girl-2.png" alt="">
+                                        </div><a class="catalog__name" href="#!">название Платья № 23465454 </a>
                                         <div class="catalog__price">
                                             <div><span><strong>12 999 </strong><sup>руб</sup></span></div>
                                             <div><span class="old"><strong>21 999 </strong><sup>руб</sup></span></div>
@@ -632,7 +632,7 @@
                                 </div>
                                 <div class="col-sm-4 col-xs-6 col-xxs-12">
                                     <div class="catalog__block">
-                                        <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                        <div class="catalog__img"><a class="catalog__link" href="#!"></a>
                                             <div class="catalog__hover">
                                                 <div class="catalog__shadow"></div>
                                                 <div class="catalog__line1"><i></i></div>
@@ -648,8 +648,8 @@
                                                     <div class="catalog__size__label">46</div>
                                                     <div class="catalog__size__label">48</div>
                                                 </div>
-                                            </div><img src="./tmp/catalog-img-girl-3.png" alt="" class="img-responsive">
-                                        </div><a href="#!" class="catalog__name">название Платья № 23465454 </a>
+                                            </div><img class="img-responsive" src="./tmp/catalog-img-girl-3.png" alt="">
+                                        </div><a class="catalog__name" href="#!">название Платья № 23465454 </a>
                                         <div class="catalog__price">
                                             <div><span><strong>9 999 </strong><sup>руб</sup></span></div>
                                         </div>
@@ -752,7 +752,7 @@
         -->
         <script src="./js/libs.js"></script>
         <!-- Footer js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.7/javascripts/jquery.nanoscroller.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>

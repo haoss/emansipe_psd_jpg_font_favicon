@@ -34,85 +34,85 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
         <link rel="stylesheet" href="./js/libs/cloudzoom/cloudzoom.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/style.min.css?v=195adb78a0">
     </head>
     <body>
         <!-- Preloader-->
-        <div id="feedback" class="popup mfp-hide">
+        <div class="popup mfp-hide" id="feedback">
             <div class="popup__title">обратный звонок</div>
             <form action="#!">
                 <div class="form-group">
                     <label class="hidden">Ваше имя</label>
-                    <input type="text" placeholder="Ваше имя" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваше имя">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Ваш телефон</label>
-                    <input type="text" placeholder="Ваш телефон" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваш телефон">
                 </div>
-                <button type="submit" class="btn btn--default btn--block">перезвоните мне </button>
+                <button class="btn btn--default btn--block" type="submit">перезвоните мне </button>
             </form>
         </div>
-        <div id="enter" class="popup mfp-hide">
+        <div class="popup mfp-hide" id="enter">
             <div class="popup__title">войти на сайт</div>
             <form action="#!">
                 <div class="form-group">
                     <label class="hidden">Ваш логин</label>
-                    <input type="text" placeholder="Ваш логин" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваш логин">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Ваш пароль</label>
-                    <input type="text" placeholder="Ваш пароль" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваш пароль">
                 </div>
-                <button type="submit" class="btn btn--default btn--block">войти на сайт</button>
+                <button class="btn btn--default btn--block" type="submit">войти на сайт</button>
                 <div class="clear10"></div>
                 <div class="row row--popup">
-                    <div class="col-xs-6 text-center"><a href="#forgot-password" class="open-popup-link"><small>Забыли пароль?</small></a></div>
-                    <div class="col-xs-6 text-center"><a href="#" class="open-popup-register"> <small>Зарегистрироваться</small></a></div>
+                    <div class="col-xs-6 text-center"><a class="open-popup-link" href="#forgot-password"><small>Забыли пароль?</small></a></div>
+                    <div class="col-xs-6 text-center"><a class="open-popup-register" href="#"> <small>Зарегистрироваться</small></a></div>
                 </div>
             </form>
         </div>
-        <div id="forgot-password" class="popup mfp-hide">
+        <div class="popup mfp-hide" id="forgot-password">
             <div class="popup__title">забыли пароль?</div>
             <form action="#!">
                 <div class="form-group">
                     <label class="hidden">Ваш логин</label>
-                    <input type="text" placeholder="Ваш логин" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваш логин">
                 </div>
-                <button type="submit" class="btn btn--default btn--block">востановить доступ на сайт</button>
+                <button class="btn btn--default btn--block" type="submit">востановить доступ на сайт</button>
                 <div class="clear10"></div>
-                <div class="text-center"><a href="#" class="open-popup-register"> <small>Зарегистрироваться</small></a></div>
+                <div class="text-center"><a class="open-popup-register" href="#"> <small>Зарегистрироваться</small></a></div>
             </form>
         </div>
-        <div id="register" class="popup mfp-hide">
+        <div class="popup mfp-hide" id="register">
             <div class="popup__title">регистрация</div>
             <form action="#!">
                 <div class="form-group">
                     <label class="hidden">Название организации</label>
-                    <input type="text" placeholder="Название организации" class="form-control">
+                    <input class="form-control" type="text" placeholder="Название организации">
                 </div>
                 <div class="form-group">
                     <label class="hidden">ФИО</label>
-                    <input type="text" placeholder="ФИО" class="form-control">
+                    <input class="form-control" type="text" placeholder="ФИО">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Телефон</label>
-                    <input type="text" placeholder="Телефон" class="form-control">
+                    <input class="form-control" type="text" placeholder="Телефон">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Ваш email</label>
-                    <input type="email" placeholder="Ваш email" class="form-control">
+                    <input class="form-control" type="email" placeholder="Ваш email">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Пароль</label>
-                    <input type="password" placeholder="Пароль" class="form-control">
+                    <input class="form-control" type="password" placeholder="Пароль">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Повторите пароль</label>
-                    <input type="password" placeholder="Повторите пароль" class="form-control">
+                    <input class="form-control" type="password" placeholder="Повторите пароль">
                 </div>
-                <button type="submit" class="btn btn--default btn--block">войти на сайт</button>
+                <button class="btn btn--default btn--block" type="submit">войти на сайт</button>
                 <div class="clear10"></div>
-                <div class="text-center"><a href="#" class="open-popup-enter"> <small>Вернуться на страницу входа</small></a></div>
+                <div class="text-center"><a class="open-popup-enter" href="#"> <small>Вернуться на страницу входа</small></a></div>
             </form>
         </div>
         <div class="loader">
@@ -136,8 +136,8 @@
                         <div class="show">Пн—Вс 10:00—19:00</div>
                         <div> <a href="tel:0000000">8 (966) 026-27-27</a></div>
                         <div class="hide"> <a href="tel:0000000">8 (909) 952-27-77</a></div>
-                        <div class="visible-xs"><a href="#!" class="btn btn--phones"><i class="ion-android-arrow-dropleft"></i></a></div>
-                    </div><a href="#feedback" class="btn btn--default btn--feedback open-popup-link">Обратная связь </a>
+                        <div class="visible-xs"><a class="btn btn--phones" href="#!"><i class="ion-android-arrow-dropleft"></i></a></div>
+                    </div><a class="btn btn--default btn--feedback open-popup-link" href="#feedback">Обратная связь </a>
                 </div>
             </div>
             <div class="header__bottom">
@@ -153,14 +153,14 @@
                         </div>
                         <div class="col-sm-3 col-xs-6">
                             <div class="header__links">
-                                <div><a href="#!" class="link-search"><i class="icon icon--search"></i></a><a href="#enter" class="open-popup-link"><i class="icon icon--user"></i></a><a href="#!"><i class="icon icon--cart"></i><span>99</span></a></div>
+                                <div><a class="link-search" href="#!"><i class="icon icon--search"></i></a><a class="open-popup-link" href="#enter"><i class="icon icon--user"></i></a><a href="#!"><i class="icon icon--cart"></i><span>99</span></a></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Menu-->
-            <nav role="navigation" class="menu">
+            <nav class="menu" role="navigation">
                 <div class="container">
                     <ul class="menu__ul1 hidden-xs">
                         <li class="menu__li1"><a href="#!">Новинки</a></li>
@@ -173,7 +173,7 @@
                                     <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-3.png">Коктейльные платья</a></li>
                                     <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-4.png">Сарафаны</a></li>
                                     <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-5.png">SEXY платья</a></li>
-                                </ul><img src="./img/drop-menu-1.png" alt="" class="menu__img">
+                                </ul><img class="menu__img" src="./img/drop-menu-1.png" alt="">
                             </div>
                         </li>
                         <li class="menu__li1"><a href="#!">Костюмы</a></li>
@@ -185,7 +185,7 @@
                                     <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-2.png">Куртки</a></li>
                                     <li class="menu__li2"><a href="#!">Плащи</a></li>
                                     <li class="menu__li2"><a href="#!">Пальто</a></li>
-                                </ul><img src="./img/drop-menu-1.png" alt="" class="menu__img">
+                                </ul><img class="menu__img" src="./img/drop-menu-1.png" alt="">
                             </div>
                         </li>
                         <li class="menu__li1"><a href="#!">О компании</a></li>
@@ -258,7 +258,7 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th colspan="3" class="cart__th1 visible-xs">заказ <strong>00233</strong></th>
+                                    <th class="cart__th1 visible-xs" colspan="3">заказ <strong>00233</strong></th>
                                     <th class="cart__th1 hidden-xs">№</th>
                                     <th class="cart__th2 hidden-xs">&nbsp;</th>
                                     <th class="cart__th3 hidden-xs">описание</th>
@@ -271,7 +271,7 @@
                             <tbody>
                                 <tr>
                                     <td class="cart__td1">1</td>
-                                    <td width="1" class="cart__td2"><a href="#!"><img src="./tmp/catalog-img-girl-1.png" alt="" class="img-responsive"></a></td>
+                                    <td class="cart__td2" width="1"><a href="#!"><img class="img-responsive" src="./tmp/catalog-img-girl-1.png" alt=""></a></td>
                                     <td class="cart__td3">
                                         <h4>Платье №324654676546</h4>
                                         <table class="table">
@@ -286,13 +286,13 @@
                                         </table>
                                         <div class="visible-xs">
                                             <div class="form-group no--margin">
-                                                <input type="text" value="120" class="form-control form-control--counter">
+                                                <input class="form-control form-control--counter" type="text" value="120">
                                             </div>
                                         </div>
                                     </td>
                                     <td class="cart__td4 hidden-xs">
                                         <div class="form-group">
-                                            <input type="text" value="120" class="form-control form-control--counter">
+                                            <input class="form-control form-control--counter" type="text" value="120">
                                         </div>
                                     </td>
                                     <td class="cart__td5 hidden-xs"><strong>19 999 руб</strong></td>
@@ -301,13 +301,13 @@
                                         <div class="visible-xs"><strong>19 999 руб<small class="color--gray">&nbsp;х 120</small></strong>
                                             <div class="clear"></div><strong>2 399 880 руб</strong>
                                             <div class="clear10"></div>
-                                        </div><a href="#!" class="cart__links cart__links--delete"><i class="ion-close-circled"></i>удалить</a>
-                                        <div class="clear5"></div><a href="#!" class="cart__links"><i class="ion-clipboard"></i><span class="hidden-xs">посмотреть в каталоге</span><span class="visible-xs-inline-block no-wrap">в каталог</span></a>
+                                        </div><a class="cart__links cart__links--delete" href="#!"><i class="ion-close-circled"></i>удалить</a>
+                                        <div class="clear5"></div><a class="cart__links" href="#!"><i class="ion-clipboard"></i><span class="hidden-xs">посмотреть в каталоге</span><span class="visible-xs-inline-block no-wrap">в каталог</span></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="cart__td1">2</td>
-                                    <td width="1" class="cart__td2"><a href="#!"><img src="./tmp/catalog-img-girl-2.png" alt="" class="img-responsive"></a></td>
+                                    <td class="cart__td2" width="1"><a href="#!"><img class="img-responsive" src="./tmp/catalog-img-girl-2.png" alt=""></a></td>
                                     <td class="cart__td3">
                                         <h4>Платье №324654676546</h4>
                                         <table class="table">
@@ -322,13 +322,13 @@
                                         </table>
                                         <div class="visible-xs">
                                             <div class="form-group no--margin">
-                                                <input type="text" value="53" class="form-control form-control--counter">
+                                                <input class="form-control form-control--counter" type="text" value="53">
                                             </div>
                                         </div>
                                     </td>
                                     <td class="cart__td4 hidden-xs">
                                         <div class="form-group">
-                                            <input type="text" value="53" class="form-control form-control--counter">
+                                            <input class="form-control form-control--counter" type="text" value="53">
                                         </div>
                                     </td>
                                     <td class="cart__td5 hidden-xs"><strong>3 500 руб</strong></td>
@@ -337,15 +337,15 @@
                                         <div class="visible-xs"><strong>3 500 руб<small class="color--gray">&nbsp;х 53</small></strong>
                                             <div class="clear"></div><strong>185 500 руб</strong>
                                             <div class="clear10"></div>
-                                        </div><a href="#!" class="cart__links cart__links--delete"><i class="ion-close-circled"></i>удалить</a>
-                                        <div class="clear5"></div><a href="#!" class="cart__links"><i class="ion-clipboard"></i><span class="hidden-xs">посмотреть в каталоге</span><span class="visible-xs-inline-block no-wrap">в каталог</span></a>
+                                        </div><a class="cart__links cart__links--delete" href="#!"><i class="ion-close-circled"></i>удалить</a>
+                                        <div class="clear5"></div><a class="cart__links" href="#!"><i class="ion-clipboard"></i><span class="hidden-xs">посмотреть в каталоге</span><span class="visible-xs-inline-block no-wrap">в каталог</span></a>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                         <div class="cart__total">
                             <div><span>итого:</span><strong>2 585 380 </strong><sup>руб</sup></div>
-                            <button type="submit" class="btn btn--default btn--block">подтвердить заказ</button>
+                            <button class="btn btn--default btn--block" type="submit">подтвердить заказ</button>
                         </div>
                     </div>
                 </form>
@@ -361,19 +361,19 @@
                                         <div class="div-date div-date--day">
                                             <div class="form-group">
                                                 <label>день</label>
-                                                <input type="text" value="12" class="form-control">
+                                                <input class="form-control" type="text" value="12">
                                             </div>
                                         </div>
                                         <div class="div-date div-date--month">
                                             <div class="form-group">
                                                 <label>месяц</label>
-                                                <input type="text" value="06" class="form-control">
+                                                <input class="form-control" type="text" value="06">
                                             </div>
                                         </div>
                                         <div class="div-date div-date--time">
                                             <div class="form-group">
                                                 <label>примерное время</label>
-                                                <input type="text" value="11:00" class="form-control">
+                                                <input class="form-control" type="text" value="11:00">
                                             </div>
                                         </div>
                                     </div>
@@ -407,7 +407,7 @@
                                 <div class="col-md-3 col-sm-12">
                                     <div class="ordering__total">
                                         <div><span>итого:</span><strong>2 585 380 </strong><sup>руб</sup></div>
-                                        <button type="submit" class="btn btn--default btn--block">подтвердить заказ</button>
+                                        <button class="btn btn--default btn--block" type="submit">подтвердить заказ</button>
                                     </div>
                                 </div>
                             </div>
@@ -478,7 +478,7 @@
         -->
         <script src="./js/libs.js"></script>
         <!-- Footer js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.7/javascripts/jquery.nanoscroller.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
