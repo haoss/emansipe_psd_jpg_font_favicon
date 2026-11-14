@@ -1,0 +1,70 @@
+// === СЕТКА ===
+$root-font-size: 16px;
+$grid-columns: 12;
+$grid-gutter-width: 30px;
+
+$grid-breakpoints: (
+  xs:    0,
+  xs360: 360px,
+  xs480: 480px,
+  sm:    576px,
+  md:    768px,
+  lg:    992px,
+  xl:    1200px,
+  xxl:   1330px,
+  xxxl:  1650px
+);
+
+$container-max-widths: (
+  sm:  540px,
+  md:  720px,
+  lg:  960px,
+  xl:  1140px,
+  xxl: 1310px
+);
+
+// === BOOTSTRAP 5 (из node_modules) ===
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/variables-dark";
+@import "node_modules/bootstrap/scss/maps";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/images";
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/containers";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/transitions";
+@import "node_modules/bootstrap/scss/utilities/api";
+@import "node_modules/bootstrap/scss/root";
+@import "node_modules/bootstrap/scss/type";
+
+// === СЛОЙ СОВМЕСТИМОСТИ BOOTSTRAP 3 -> 5 ===
+@import "0-vendors/bootstrap-compat";
+
+// === BASE ===
+@import "1-base/font";
+@import "1-base/sprite";
+@import "1-base/variables";
+@import "1-base/mixins";
+@import "1-base/functions";
+// @import "1-base/normalize";
+@import "1-base/base";
+// @import "1-base/breadcrumbs";
+
+// === LAYOUT ===
+@import "2-layout/buttons";
+@import "2-layout/carousel";
+@import "2-layout/forms";
+@import "2-layout/gallery";
+@import "2-layout/menu";
+@import "2-layout/pagination";
+@import "2-layout/header";
+@import "2-layout/footer";
+
+// === MODULES ===
+@import "3-modules/modules";
+
+// === UTILS ===
+@import "4-utils/clear";
+@import "4-utils/media-queries";

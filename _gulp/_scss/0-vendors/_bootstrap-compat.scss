@@ -1,0 +1,213 @@
+/* Bootstrap 3 -> Bootstrap 5 Migration & Compatibility Layer */
+
+// 1. Grid columns: .col-xs-* support
+@for $i from 1 through 12 {
+  .col-xs-#{$i} {
+    @extend .col-#{$i};
+  }
+}
+.col-xs {
+  @extend .col;
+}
+.col-xs-auto {
+  @extend .col-auto;
+}
+
+// 2. Grid offsets
+@for $i from 1 through 11 {
+  .col-xs-offset-#{$i} {
+    @extend .offset-#{$i};
+  }
+  .col-sm-offset-#{$i} {
+    @extend .offset-sm-#{$i};
+  }
+  .col-md-offset-#{$i} {
+    @extend .offset-md-#{$i};
+  }
+  .col-lg-offset-#{$i} {
+    @extend .offset-lg-#{$i};
+  }
+}
+
+// 3. Grid push / pull
+@media (min-width: 768px) {
+  @for $i from 1 through 11 {
+    .col-sm-push-#{$i} {
+      position: relative;
+      left: percentage(calc($i / 12));
+    }
+    .col-sm-pull-#{$i} {
+      position: relative;
+      right: percentage(calc($i / 12));
+    }
+    .col-md-push-#{$i} {
+      position: relative;
+      left: percentage(calc($i / 12));
+    }
+    .col-md-pull-#{$i} {
+      position: relative;
+      right: percentage(calc($i / 12));
+    }
+  }
+
+  // Flexbox order mapping for header layout (push-3 / pull-6)
+  .col-sm-push-3 {
+    order: 2;
+  }
+  .col-sm-pull-6 {
+    order: 1;
+  }
+  .col-sm-3:last-child {
+    order: 3;
+  }
+}
+
+// 4. Responsive images
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+// 5. Alignment & float utilities
+.pull-left {
+  float: left !important;
+}
+.pull-right {
+  float: right !important;
+}
+.center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// 6. Form group vertical rhythm
+.form-group {
+  margin-bottom: 15px;
+}
+
+// 7. Responsive visibility classes (Bootstrap 3 breakpoint model)
+@media (max-width: 767.98px) {
+  .hidden-xs {
+    display: none !important;
+  }
+  .visible-xs {
+    display: block !important;
+  }
+  .visible-xs-inline {
+    display: inline !important;
+  }
+  .visible-xs-inline-block {
+    display: inline-block !important;
+  }
+  table.visible-xs {
+    display: table !important;
+  }
+  tr.visible-xs {
+    display: table-row !important;
+  }
+  th.visible-xs,
+  td.visible-xs {
+    display: table-cell !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .visible-xs,
+  .visible-xs-inline,
+  .visible-xs-inline-block {
+    display: none !important;
+  }
+  table.visible-xs,
+  tr.visible-xs,
+  th.visible-xs,
+  td.visible-xs {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hidden-sm {
+    display: none !important;
+  }
+  .visible-sm {
+    display: block !important;
+  }
+  .visible-sm-inline {
+    display: inline !important;
+  }
+  .visible-sm-inline-block {
+    display: inline-block !important;
+  }
+  table.visible-sm {
+    display: table !important;
+  }
+  tr.visible-sm {
+    display: table-row !important;
+  }
+  th.visible-sm,
+  td.visible-sm {
+    display: table-cell !important;
+  }
+}
+
+@media (max-width: 767.98px), (min-width: 992px) {
+  .visible-sm,
+  .visible-sm-inline,
+  .visible-sm-inline-block {
+    display: none !important;
+  }
+  table.visible-sm,
+  tr.visible-sm,
+  th.visible-sm,
+  td.visible-sm {
+    display: none !important;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  .hidden-md {
+    display: none !important;
+  }
+  .visible-md {
+    display: block !important;
+  }
+  .visible-md-inline {
+    display: inline !important;
+  }
+  .visible-md-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (max-width: 991.98px), (min-width: 1200px) {
+  .visible-md,
+  .visible-md-inline,
+  .visible-md-inline-block {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hidden-lg {
+    display: none !important;
+  }
+  .visible-lg {
+    display: block !important;
+  }
+  .visible-lg-inline {
+    display: inline !important;
+  }
+  .visible-lg-inline-block {
+    display: inline-block !important;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .visible-lg,
+  .visible-lg-inline,
+  .visible-lg-inline-block {
+    display: none !important;
+  }
+}

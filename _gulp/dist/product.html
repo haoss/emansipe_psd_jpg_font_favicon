@@ -34,85 +34,85 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
         <link rel="stylesheet" href="./js/libs/cloudzoom/cloudzoom.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
-        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/style.min.css?v=195adb78a0">
     </head>
     <body>
         <!-- Preloader-->
-        <div id="feedback" class="popup mfp-hide">
+        <div class="popup mfp-hide" id="feedback">
             <div class="popup__title">обратный звонок</div>
             <form action="#!">
                 <div class="form-group">
                     <label class="hidden">Ваше имя</label>
-                    <input type="text" placeholder="Ваше имя" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваше имя">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Ваш телефон</label>
-                    <input type="text" placeholder="Ваш телефон" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваш телефон">
                 </div>
-                <button type="submit" class="btn btn--default btn--block">перезвоните мне </button>
+                <button class="btn btn--default btn--block" type="submit">перезвоните мне </button>
             </form>
         </div>
-        <div id="enter" class="popup mfp-hide">
+        <div class="popup mfp-hide" id="enter">
             <div class="popup__title">войти на сайт</div>
             <form action="#!">
                 <div class="form-group">
                     <label class="hidden">Ваш логин</label>
-                    <input type="text" placeholder="Ваш логин" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваш логин">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Ваш пароль</label>
-                    <input type="text" placeholder="Ваш пароль" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваш пароль">
                 </div>
-                <button type="submit" class="btn btn--default btn--block">войти на сайт</button>
+                <button class="btn btn--default btn--block" type="submit">войти на сайт</button>
                 <div class="clear10"></div>
                 <div class="row row--popup">
-                    <div class="col-xs-6 text-center"><a href="#forgot-password" class="open-popup-link"><small>Забыли пароль?</small></a></div>
-                    <div class="col-xs-6 text-center"><a href="#" class="open-popup-register"> <small>Зарегистрироваться</small></a></div>
+                    <div class="col-xs-6 text-center"><a class="open-popup-link" href="#forgot-password"><small>Забыли пароль?</small></a></div>
+                    <div class="col-xs-6 text-center"><a class="open-popup-register" href="#"> <small>Зарегистрироваться</small></a></div>
                 </div>
             </form>
         </div>
-        <div id="forgot-password" class="popup mfp-hide">
+        <div class="popup mfp-hide" id="forgot-password">
             <div class="popup__title">забыли пароль?</div>
             <form action="#!">
                 <div class="form-group">
                     <label class="hidden">Ваш логин</label>
-                    <input type="text" placeholder="Ваш логин" class="form-control">
+                    <input class="form-control" type="text" placeholder="Ваш логин">
                 </div>
-                <button type="submit" class="btn btn--default btn--block">востановить доступ на сайт</button>
+                <button class="btn btn--default btn--block" type="submit">востановить доступ на сайт</button>
                 <div class="clear10"></div>
-                <div class="text-center"><a href="#" class="open-popup-register"> <small>Зарегистрироваться</small></a></div>
+                <div class="text-center"><a class="open-popup-register" href="#"> <small>Зарегистрироваться</small></a></div>
             </form>
         </div>
-        <div id="register" class="popup mfp-hide">
+        <div class="popup mfp-hide" id="register">
             <div class="popup__title">регистрация</div>
             <form action="#!">
                 <div class="form-group">
                     <label class="hidden">Название организации</label>
-                    <input type="text" placeholder="Название организации" class="form-control">
+                    <input class="form-control" type="text" placeholder="Название организации">
                 </div>
                 <div class="form-group">
                     <label class="hidden">ФИО</label>
-                    <input type="text" placeholder="ФИО" class="form-control">
+                    <input class="form-control" type="text" placeholder="ФИО">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Телефон</label>
-                    <input type="text" placeholder="Телефон" class="form-control">
+                    <input class="form-control" type="text" placeholder="Телефон">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Ваш email</label>
-                    <input type="email" placeholder="Ваш email" class="form-control">
+                    <input class="form-control" type="email" placeholder="Ваш email">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Пароль</label>
-                    <input type="password" placeholder="Пароль" class="form-control">
+                    <input class="form-control" type="password" placeholder="Пароль">
                 </div>
                 <div class="form-group">
                     <label class="hidden">Повторите пароль</label>
-                    <input type="password" placeholder="Повторите пароль" class="form-control">
+                    <input class="form-control" type="password" placeholder="Повторите пароль">
                 </div>
-                <button type="submit" class="btn btn--default btn--block">войти на сайт</button>
+                <button class="btn btn--default btn--block" type="submit">войти на сайт</button>
                 <div class="clear10"></div>
-                <div class="text-center"><a href="#" class="open-popup-enter"> <small>Вернуться на страницу входа</small></a></div>
+                <div class="text-center"><a class="open-popup-enter" href="#"> <small>Вернуться на страницу входа</small></a></div>
             </form>
         </div>
         <div class="loader">
@@ -136,8 +136,8 @@
                         <div class="show">Пн—Вс 10:00—19:00</div>
                         <div> <a href="tel:0000000">8 (966) 026-27-27</a></div>
                         <div class="hide"> <a href="tel:0000000">8 (909) 952-27-77</a></div>
-                        <div class="visible-xs"><a href="#!" class="btn btn--phones"><i class="ion-android-arrow-dropleft"></i></a></div>
-                    </div><a href="#feedback" class="btn btn--default btn--feedback open-popup-link">Обратная связь </a>
+                        <div class="visible-xs"><a class="btn btn--phones" href="#!"><i class="ion-android-arrow-dropleft"></i></a></div>
+                    </div><a class="btn btn--default btn--feedback open-popup-link" href="#feedback">Обратная связь </a>
                 </div>
             </div>
             <div class="header__bottom">
@@ -153,14 +153,14 @@
                         </div>
                         <div class="col-sm-3 col-xs-6">
                             <div class="header__links">
-                                <div><a href="#!" class="link-search"><i class="icon icon--search"></i></a><a href="#enter" class="open-popup-link"><i class="icon icon--user"></i></a><a href="#!"><i class="icon icon--cart"></i><span>99</span></a></div>
+                                <div><a class="link-search" href="#!"><i class="icon icon--search"></i></a><a class="open-popup-link" href="#enter"><i class="icon icon--user"></i></a><a href="#!"><i class="icon icon--cart"></i><span>99</span></a></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <!-- Menu-->
-            <nav role="navigation" class="menu">
+            <nav class="menu" role="navigation">
                 <div class="container">
                     <ul class="menu__ul1 hidden-xs">
                         <li class="menu__li1"><a href="#!">Новинки</a></li>
@@ -173,7 +173,7 @@
                                     <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-3.png">Коктейльные платья</a></li>
                                     <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-4.png">Сарафаны</a></li>
                                     <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-5.png">SEXY платья</a></li>
-                                </ul><img src="./img/drop-menu-1.png" alt="" class="menu__img">
+                                </ul><img class="menu__img" src="./img/drop-menu-1.png" alt="">
                             </div>
                         </li>
                         <li class="menu__li1"><a href="#!">Костюмы</a></li>
@@ -185,7 +185,7 @@
                                     <li class="menu__li2"><a href="#!" data-img="./img/drop-menu-2.png">Куртки</a></li>
                                     <li class="menu__li2"><a href="#!">Плащи</a></li>
                                     <li class="menu__li2"><a href="#!">Пальто</a></li>
-                                </ul><img src="./img/drop-menu-1.png" alt="" class="menu__img">
+                                </ul><img class="menu__img" src="./img/drop-menu-1.png" alt="">
                             </div>
                         </li>
                         <li class="menu__li1"><a href="#!">О компании</a></li>
@@ -253,15 +253,15 @@
                             <div class="product__gallery">
                                 <div class="product__gallery__left">
                                     <ul>
-                                        <li><a href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-1.png', zoomImage: './tmp/img-gallery-big-1.png', 'galleryEvent':'mouseover'" class="cloudzoom-gallery"><img src="./tmp/img-gallery-small-1.png" alt=""></a></li>
-                                        <li><a href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-2.png', zoomImage: './tmp/img-gallery-big-2.png', 'galleryEvent':'mouseover'" class="cloudzoom-gallery"><img src="./tmp/img-gallery-small-2.png" alt=""></a></li>
-                                        <li><a href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-3.png', zoomImage: './tmp/img-gallery-big-3.png', 'galleryEvent':'mouseover'" class="cloudzoom-gallery"><img src="./tmp/img-gallery-small-3.png" alt=""></a></li>
-                                        <li><a href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-1.png', zoomImage: './tmp/img-gallery-big-1.png', 'galleryEvent':'mouseover'" class="cloudzoom-gallery"><img src="./tmp/img-gallery-small-1.png" alt=""></a></li>
-                                        <li><a href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-2.png', zoomImage: './tmp/img-gallery-big-2.png', 'galleryEvent':'mouseover'" class="cloudzoom-gallery"><img src="./tmp/img-gallery-small-2.png" alt=""></a></li>
-                                        <li><a href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-3.png', zoomImage: './tmp/img-gallery-big-3.png', 'galleryEvent':'mouseover'" class="cloudzoom-gallery"><img src="./tmp/img-gallery-small-3.png" alt=""></a></li>
+                                        <li><a class="cloudzoom-gallery" href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-1.png', zoomImage: './tmp/img-gallery-big-1.png', 'galleryEvent':'mouseover'"><img src="./tmp/img-gallery-small-1.png" alt=""></a></li>
+                                        <li><a class="cloudzoom-gallery" href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-2.png', zoomImage: './tmp/img-gallery-big-2.png', 'galleryEvent':'mouseover'"><img src="./tmp/img-gallery-small-2.png" alt=""></a></li>
+                                        <li><a class="cloudzoom-gallery" href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-3.png', zoomImage: './tmp/img-gallery-big-3.png', 'galleryEvent':'mouseover'"><img src="./tmp/img-gallery-small-3.png" alt=""></a></li>
+                                        <li><a class="cloudzoom-gallery" href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-1.png', zoomImage: './tmp/img-gallery-big-1.png', 'galleryEvent':'mouseover'"><img src="./tmp/img-gallery-small-1.png" alt=""></a></li>
+                                        <li><a class="cloudzoom-gallery" href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-2.png', zoomImage: './tmp/img-gallery-big-2.png', 'galleryEvent':'mouseover'"><img src="./tmp/img-gallery-small-2.png" alt=""></a></li>
+                                        <li><a class="cloudzoom-gallery" href="#" data-cloudzoom="useZoom: '#zoom1', image: './tmp/img-gallery-middle-3.png', zoomImage: './tmp/img-gallery-big-3.png', 'galleryEvent':'mouseover'"><img src="./tmp/img-gallery-small-3.png" alt=""></a></li>
                                     </ul>
                                 </div>
-                                <div class="product__gallery__center"><img id="zoom1" src="./tmp/img-gallery-middle-1.png" data-cloudzoom="zoomImage: './tmp/img-gallery-big-1.png', zoomSizeMode: 'image', animationTime: 0, easeTime: 0, disableOnScreenWidth: 1199" class="cloudzoom">
+                                <div class="product__gallery__center"><img class="cloudzoom" id="zoom1" src="./tmp/img-gallery-middle-1.png" data-cloudzoom="zoomImage: './tmp/img-gallery-big-1.png', zoomSizeMode: 'image', animationTime: 0, easeTime: 0, disableOnScreenWidth: 1199">
                                     <div class="product__zoom"></div>
                                 </div>
                             </div>
@@ -362,7 +362,7 @@
                                             <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
                                             <div><span class="old"><strong>21 500</strong><small>руб</small></span></div>
                                             <div class="clear"></div>
-                                            <button type="submit" class="btn btn--default btn--block">Положить в корзину</button>
+                                            <button class="btn btn--default btn--block" type="submit">Положить в корзину</button>
                                         </div>
                                     </div>
                                 </div>
@@ -479,7 +479,7 @@
                     <div class="catalog__viewed">
                         <div class="catalog__carousel__block"> 
                             <div class="catalog__block">
-                                <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                <div class="catalog__img"><a class="catalog__link" href="#!"></a>
                                     <div class="catalog__hover">
                                         <div class="catalog__shadow"></div>
                                         <div class="catalog__line1"><i></i></div>
@@ -495,8 +495,8 @@
                                             <div class="catalog__size__label">46</div>
                                             <div class="catalog__size__label">48</div>
                                         </div>
-                                    </div><img src="./tmp/catalog-img-girl-1.png" alt="" class="img-responsive">
-                                </div><a href="#!" class="catalog__name">очень длинное название са мо го кр ут ог о платья № 23465454 </a>
+                                    </div><img class="img-responsive" src="./tmp/catalog-img-girl-1.png" alt="">
+                                </div><a class="catalog__name" href="#!">очень длинное название са мо го кр ут ог о платья № 23465454 </a>
                                 <div class="catalog__price">
                                     <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
                                 </div>
@@ -504,7 +504,7 @@
                         </div>
                         <div class="catalog__carousel__block"> 
                             <div class="catalog__block">
-                                <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                <div class="catalog__img"><a class="catalog__link" href="#!"></a>
                                     <div class="catalog__hover">
                                         <div class="catalog__shadow"></div>
                                         <div class="catalog__line1"><i></i></div>
@@ -517,8 +517,8 @@
                                             <div class="catalog__size__label">42</div>
                                             <div class="catalog__size__label">43</div>
                                         </div>
-                                    </div><img src="./tmp/catalog-img-girl-2.png" alt="" class="img-responsive">
-                                </div><a href="#!" class="catalog__name">название Платья № 23465454</a>
+                                    </div><img class="img-responsive" src="./tmp/catalog-img-girl-2.png" alt="">
+                                </div><a class="catalog__name" href="#!">название Платья № 23465454</a>
                                 <div class="catalog__price">
                                     <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
                                 </div>
@@ -526,7 +526,7 @@
                         </div>
                         <div class="catalog__carousel__block"> 
                             <div class="catalog__block">
-                                <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                <div class="catalog__img"><a class="catalog__link" href="#!"></a>
                                     <div class="catalog__hover">
                                         <div class="catalog__shadow"></div>
                                         <div class="catalog__line1"><i></i></div>
@@ -537,8 +537,8 @@
                                             <div class="catalog__size__name">доступные размеры</div>
                                             <div class="catalog__size__label">40</div>
                                         </div>
-                                    </div><img src="./tmp/catalog-img-girl-3.png" alt="" class="img-responsive">
-                                </div><a href="#!" class="catalog__name">название Платья № 23465454</a>
+                                    </div><img class="img-responsive" src="./tmp/catalog-img-girl-3.png" alt="">
+                                </div><a class="catalog__name" href="#!">название Платья № 23465454</a>
                                 <div class="catalog__price">
                                     <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
                                 </div>
@@ -546,32 +546,7 @@
                         </div>
                         <div class="catalog__carousel__block"> 
                             <div class="catalog__block">
-                                <div class="catalog__img"><a href="#!" class="catalog__link"></a>
-                                    <div class="catalog__hover">
-                                        <div class="catalog__shadow"></div>
-                                        <div class="catalog__line1"><i></i></div>
-                                        <div class="catalog__line2"><i></i></div>
-                                        <div class="catalog__line3"><i></i></div>
-                                        <div class="catalog__line4"><i></i></div>
-                                        <div class="catalog__size">
-                                            <div class="catalog__size__name">доступные размеры</div>
-                                            <div class="catalog__size__label">40</div>
-                                            <div class="catalog__size__label">42</div>
-                                            <div class="catalog__size__label">43</div>
-                                            <div class="catalog__size__label">44</div>
-                                            <div class="catalog__size__label">46</div>
-                                            <div class="catalog__size__label">48</div>
-                                        </div>
-                                    </div><img src="./tmp/catalog-img-girl-4.png" alt="" class="img-responsive">
-                                </div><a href="#!" class="catalog__name">название Платья № 23465454</a>
-                                <div class="catalog__price">
-                                    <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="catalog__carousel__block"> 
-                            <div class="catalog__block">
-                                <div class="catalog__img"><a href="#!" class="catalog__link"></a>
+                                <div class="catalog__img"><a class="catalog__link" href="#!"></a>
                                     <div class="catalog__hover">
                                         <div class="catalog__shadow"></div>
                                         <div class="catalog__line1"><i></i></div>
@@ -587,8 +562,33 @@
                                             <div class="catalog__size__label">46</div>
                                             <div class="catalog__size__label">48</div>
                                         </div>
-                                    </div><img src="./tmp/catalog-img-girl-4.png" alt="" class="img-responsive">
-                                </div><a href="#!" class="catalog__name">название Платья № 23465454</a>
+                                    </div><img class="img-responsive" src="./tmp/catalog-img-girl-4.png" alt="">
+                                </div><a class="catalog__name" href="#!">название Платья № 23465454</a>
+                                <div class="catalog__price">
+                                    <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog__carousel__block"> 
+                            <div class="catalog__block">
+                                <div class="catalog__img"><a class="catalog__link" href="#!"></a>
+                                    <div class="catalog__hover">
+                                        <div class="catalog__shadow"></div>
+                                        <div class="catalog__line1"><i></i></div>
+                                        <div class="catalog__line2"><i></i></div>
+                                        <div class="catalog__line3"><i></i></div>
+                                        <div class="catalog__line4"><i></i></div>
+                                        <div class="catalog__size">
+                                            <div class="catalog__size__name">доступные размеры</div>
+                                            <div class="catalog__size__label">40</div>
+                                            <div class="catalog__size__label">42</div>
+                                            <div class="catalog__size__label">43</div>
+                                            <div class="catalog__size__label">44</div>
+                                            <div class="catalog__size__label">46</div>
+                                            <div class="catalog__size__label">48</div>
+                                        </div>
+                                    </div><img class="img-responsive" src="./tmp/catalog-img-girl-4.png" alt="">
+                                </div><a class="catalog__name" href="#!">название Платья № 23465454</a>
                                 <div class="catalog__price">
                                     <div><span><strong>15 999 </strong><sup>руб</sup></span></div>
                                 </div>
@@ -660,7 +660,7 @@
         -->
         <script src="./js/libs.js"></script>
         <!-- Footer js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nanoscroller/0.8.7/javascripts/jquery.nanoscroller.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
